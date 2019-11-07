@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>클린벨 청소요금계산</title>
+  <link href="http://www.cleanbell.co.kr/index_files/css" rel="stylesheet">
+  <link rel="stylesheet" href="../css-v2/reset.css">
+  <link rel="stylesheet" href="../css-v2/jquery-ui.min.css">
+  <link rel="stylesheet" href="../css-v2/owl.carousel.css">
+  <link rel="stylesheet" href="../css-v2/default.css">
+  <link rel="stylesheet" href="../css-v4/cleaner.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-640.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub-640.css">
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js-v2/cleaner.js"></script>
+  <script src="../js-v2/lottie.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <header id="header" style="border-bottom-color:rgba(10,10,10,0.1);">
+      <div class="inner">
+        <h1 id="logo"><a href="cleaner_main.html"><img src="../images-v2/logo.png" alt="클린벨"></a></h1>
+        <a href="javascript:void(0)" class="showDropmenu"></a>
+        <nav id="nav">
+          <ul id="gnb">
+            <li class="cleanbellDrop">
+              <div class="cleanbell-dropmenu">
+                <ul>
+                  <li><a href="javascript:void(0)">청소업체 검색</a></li>
+                  <li><a href="javascript:void(0)">청소업체 선택 TIP</a></li>
+                  <li><a href="javascript:void(0)">신청내역조회</a></li>
+                  <li><a href="javascript:void(0)">손없는날</a></li>
+                  <li class="dropwidth100"><a href="javascript:void(0)">고객센터</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <article id="container" class="subcontainer">
+      <div class="topBanner rate">
+        <div class="inner">
+          <h2><span class="lato">26,345</span>건의<span class="textblock mblock"></span>견적데이터를 기반으로 <span class="mblock"></span>산정된 시세입니다.</h2>
+        </div>
+      </div>
+      <div class="searchTab">
+        <div class="inner">
+          <div class="searchTabTop">
+            <h4>청소요금 <span class="mblock"></span>미리 알아보기</h4>
+            <span>클린벨의 누적데이터를 통해 계산된 예상가격을 확인해보세요.</span>
+          </div>
+          <div class="searchTabMid">
+            <ul>
+              <li>
+                <dl class="cleanerLocation">
+                  <dt>지역</dt>
+                  <dd>
+                    <a href="javascript:void(0)" id="locationDisplay" onclick="">서울 서대문구</a>
+                    <ol>
+                      <li class="firstSelect">
+                        <div>
+                          <h5><span class="lato">1</span>차 지역 선택</h5>
+                          <span>시/도를 선택하세요.</span>
+                        </div>
+                        <div>
+                          <table>
+                            <colgroup>
+                              <col style="width:25%">
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <td><input type="checkbox" value="" id="location_1_1" checked><label for="location_1_1">서울</label></td>
+                                <td><input type="checkbox" value="" id="location_1_2"><label for="location_1_2">경기</label></td>
+                                <td><input type="checkbox" value="" id="location_1_3"><label for="location_1_3">인천</label></td>
+                                <td><input type="checkbox" value="" id="location_1_4"><label for="location_1_4">강원</label></td>
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" value="" id="location_2_1"><label for="location_2_1">제주</label></td>
+                                <td><input type="checkbox" value="" id="location_2_2"><label for="location_2_2">대전</label></td>
+                                <td><input type="checkbox" value="" id="location_2_3"><label for="location_2_3">충북</label></td>
+                                <td><input type="checkbox" value="" id="location_2_4"><label for="location_2_4">충남/세종</label></td>
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" value="" id="location_3_1"><label for="location_3_1">부산</label></td>
+                                <td><input type="checkbox" value="" id="location_3_2"><label for="location_3_2">울산</label></td>
+                                <td><input type="checkbox" value="" id="location_3_3"><label for="location_3_3">경남</label></td>
+                                <td><input type="checkbox" value="" id="location_3_4"><label for="location_3_4">대구</label></td>
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" value="" id="location_4_1"><label for="location_4_1">경북</label></td>
+                                <td><input type="checkbox" value="" id="location_4_2"><label for="location_4_2">광주</label></td>
+                                <td><input type="checkbox" value="" id="location_4_3"><label for="location_4_3">전남</label></td>
+                                <td><input type="checkbox" value="" id="location_4_4"><label for="location_4_4">전주/전북</label></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </li>
+                      <li class="secondSelect">
+                        <div>
+                          <h5><span class="lato">2</span>차 지역 선택</h5>
+                          <span>서대문구</span>
+                        </div>
+                        <div>
+                          <table>
+                            <colgroup>
+                              <col style="width:25%">
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <td><input type="checkbox" value="" id="location_5_1"><label for="location_5_1">강남구</label></td>
+                                <td><input type="checkbox" value="" id="location_5_2"><label for="location_5_2">강동구</label></td>
+                                <td><input type="checkbox" value="" id="location_5_3"><label for="location_5_3">강서구</label></td>
+                                <td><input type="checkbox" value="" id="location_5_4"><label for="location_5_4">관악구</label></td>
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" value="" id="location_6_1"><label for="location_6_1">구로구</label></td>
+                                <td><input type="checkbox" value="" id="location_6_2"><label for="location_6_2">노원구</label></td>
+                                <td><input type="checkbox" value="" id="location_6_3"><label for="location_6_3">도봉구</label></td>
+                                <td><input type="checkbox" value="" id="location_6_4"><label for="location_6_4">동대문구</label></td>
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" value="" id="location_7_1"><label for="location_7_1">동작구</label></td>
+                                <td><input type="checkbox" value="" id="location_7_2"><label for="location_7_2">마포구</label></td>
+                                <td><input type="checkbox" value="" id="location_7_3" checked><label for="location_7_3">서대문구</label></td>
+                                <td><input type="checkbox" value="" id="location_7_4"><label for="location_7_4">서초구</label></td>
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" value="" id="location_8_1"><label for="location_8_1">성동구</label></td>
+                                <td><input type="checkbox" value="" id="location_8_2"><label for="location_8_2">성북구</label></td>
+                                <td><input type="checkbox" value="" id="location_8_3"><label for="location_8_3">송파구</label></td>
+                                <td><input type="checkbox" value="" id="location_8_4"><label for="location_8_4">양천구</label></td>
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" value="" id="location_9_1"><label for="location_9_1">영등포구</label></td>
+                                <td><input type="checkbox" value="" id="location_9_2"><label for="location_9_2">용산구</label></td>
+                                <td><input type="checkbox" value="" id="location_9_3"><label for="location_9_3">은평구</label></td>
+                                <td><input type="checkbox" value="" id="location_9_4"><label for="location_9_4">종로구</label></td>
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" value="" id="location_10_1"><label for="location_10_1">중구</label></td>
+                                <td><input type="checkbox" value="" id="location_10_2"><label for="location_10_2">중랑구</label></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a href="javascript:void(0)" class="selectComplete-location">지역 선택 완료</a>
+                        </div>
+                      </li>
+                    </ol>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl class="cleanerStruct">
+                  <dt>구조</dt>
+                  <dd>
+                    <a href="javascript:void(0)" id="selectStruct" onclick="">아파트</a>
+                    <ol>
+                      <li><a href="javascript:void(0)">아파트</a></li>
+                      <li><a href="javascript:void(0)">빌라</a></li>
+                      <li><a href="javascript:void(0)">주택</a></li>
+                      <li><a href="javascript:void(0)">오피스텔</a></li>
+                      <li><a href="javascript:void(0)">원룸</a></li>
+                      <li><a href="javascript:void(0)">사무실</a></li>
+                      <li><a href="javascript:void(0)">상가</a></li>
+                      <li><a href="javascript:void(0)">공장</a></li>
+                      <li><a href="javascript:void(0)">거주청소</a></li>
+                    </ol>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl class="cleanerSize">
+                  <dt>평수</dt>
+                  <dd><input type="text" placeholder="48" class="lato">평</dd>
+                </dl>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="searchMarket">시세검색</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <form action="">
+      <div class="searchResult">
+        <div id="loading"><span>시세 검색중 입니다.</span></div>
+        <div class="searchResultTop">
+          <div class="inner">
+            <dl>
+              <dt><strong>서울 서대문구</strong> 지역의 <strong>아파트 <span class="lato">48</span>평</strong> 청소요금 <span class="textblock"></span>시세검색 결과 입니다.</dt>
+              <dd>
+                <div class="chartShape left">
+                  <ul>
+                    <li><span class="lato" style="background:#6131ce"></span><strong>35<small>만</small></strong></li>
+                    <li><span class="lato" style="background:#4cc6f7"></span><strong>45<small>만</small></strong></li>
+                    <li><span class="lato" style="background:#9dec96"></span><strong>27<small>만</small></strong></li>
+                  </ul>
+                </div>
+                <div class="chartTxt right">
+                  <dl>
+                    <dt>
+                      <strong>평균가</strong><span class="lato">350,000</span>원
+                    </dt>
+                    <dd>
+                      <strong>최고가</strong><span class="lato">450,000</span>원
+                      <small>이용고객만족도 <strong>90%</strong></small>
+                    </dd>
+                    <dd>
+                      <strong>최저가</strong><span class="lato">270,000</span>원
+                      <small>이용고객만족도 <strong>70%</strong></small>
+                    </dd>
+                  </dl>
+                </div>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="searchResultBottom">
+          <div class="inner">
+            <dl class="cleanerKinds">
+              <dt>청소종류를 선택하세요</dt>
+              <dd>
+                <a href="javascript:void(0)" id="selectDisplay" class="select-01" onclick="">입주청소</a>
+                <ol>
+                  <li><a href="javascript:void(0)" data-rel="select-01"><span>입주청소</span></a></li>
+                  <li><a href="javascript:void(0)" data-rel="select-02"><span>이사청소</span></a></li>
+                  <li><a href="javascript:void(0)" data-rel="select-03"><span>인테리어 후 청소</span></a></li>
+                  <li><a href="javascript:void(0)" data-rel="select-04"><span>정기청소</span></a></li>
+                  <li><a href="javascript:void(0)" data-rel="select-05"><span>거주청소</span></a></li>
+                </ol>
+              </dd>
+            </dl>
+            <a href="javascript:void(0)" class="cleanerSeach findCleaner">청소 업체 찾기</a>
+          </div>
+        </div>
+      </div>
+      </form>
+    </article>
+    <footer>
+      <div class="inner">
+        <span class="caution">클린벨은 통신판매중개자로서 청소서비스의 주거래 당사자가 아니며, 청소서비스의 분쟁과 계약사항은 회원사와 당사자간에 있습니다.</span>
+        <div class="f_contents">
+          <ul class="busyInfo">
+            <li>클린벨 · ㈜ 컨트롤에프</li>
+            <li>대표 : 최광근</li>
+            <li>사업자등록번호 : <span class="lato">585-86-00882</span></li>
+            <li>통신판매업번호 : <span class="lato">2017-인천계양-0583호</span></li>
+            <li class="lato">E-mail : help@cleanbell.co.kr</li>
+            <li class="lato">FAX : 070-5165-8603</li>
+          </ul>
+          <ul class="csCenter">
+            <li>클린벨 고객센터</li>
+            <li class="lato">1600-1701</li>
+            <li>영업시간 : <span class="lato">09:00 ~ 18:00</span><span class="textblock mblock"></span>(공휴일휴무)</li>
+          </ul>
+          <ol>
+            <li><a href="">개인정보취급방침</a></li>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">클린벨 입점문의</a></li>
+          </ol>
+        </div>
+        <div class="f_bottom">
+          <span class="copyright lato">Copyright © CLEANBELL </span>
+          <ul>
+            <li><img src="../images-v4/snsIcon_f.png" alt="페이스북"></li>
+            <li><img src="../images-v4/snsIcon_b.png" alt="블로그"></li>
+            <li><img src="../images-v4/snsIcon_i.png" alt="인스타그램"></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!--// 청소업체 찾기 -->
+    <div id="modal-main" class="modalpopup">
+      <div class="inner">
+        <div class="modal_survey-main">
+          <a href="#" onclick="return false;" class="closeModal"></a>
+          <div class="surveyBoxes-main">
+            <!--// 기본정보를 입력해주세요! -->
+            <section id="step1-main">
+              <h3><span>기본정보</span>를 입력해주세요.</h3>
+              <div class="gaugebar g1"></div>
+              <form action="">
+                <div class="inputbox">
+                  <ul>
+                    <li>
+                      <label for="">예약자명</label>
+                      <input type="text" placeholder="정다운">
+                    </li>
+                  </ul>
+                  <ul>
+                    <li id="phoneNum">
+                      <label for="">휴대전화</label>
+                      <input type="tel" placeholder="010-1234-5678">
+                      <input type="button" class="btn_cert_1" value="인증번호발송" id="btn-cert-1">
+                    </li>
+                    <li id="phoneCert">
+                      <input type="text" placeholder="123456">
+                      <label for="" class="gabageTime">3:00</label>
+                      <input type="button" class="btn_cert_2" value="인증번호확인" id="btn-cert-2">
+                    </li>
+                  </ul>
+                </div>
+                <div class="step_check">
+                  <input type="checkbox" checked id="step1_agree">
+                  <label for="step1_agree"><span></span>클린벨 <strong>이용약관</strong> 및 <strong>개인정보 취급방침</strong>에 대해 동의합니다. (필수)</label>
+                  <input type="checkbox" id="step2_agree">
+                  <label for="step2_agree"><span></span>이사업체도 같이 추천해주세요. (선택)</label>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#" onclick="return false;" class="prevStep">이전</a></dt>
+                    <dd><a href="#" onclick="return false;" class="nextStep">다음단계로</a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <!-- 기본정보를 입력해주세요! //-->
+            <!--// 청소날짜와 이사날짜를 선택하세요. -->
+            <section>
+              <h3><span>청소날짜</span>와 <span>이사날짜</span>를 선택하세요.</h3>
+              <div class="gaugebar g2"></div>
+              <form action="">
+                <div class="calendarbox">
+                  <ul>
+                    <li class="calTab on"><div class="selectCleanDate"><strong>청소일</strong>을 선택하세요.</div></li>
+                    <li class="calTab v2"><div class="selectMoveDate"><strong>이사일</strong>을 선택하세요.</div></li>
+                  </ul>
+                </div>
+                <div class="multiDate">
+                  <div id="selectCleanDate"></div>
+                  <div id="selectMoveDate"></div>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#" onclick="return false;" class="prevStep">이전</a></dt>
+                    <dd><a href="#" onclick="return false;" class="nextStep 2thStep">다음단계로</a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <!-- 청소날짜와 이사날짜를 선택하세요. //-->
+            <!--// 청소종류를 선택하세요. -->
+            <section>
+              <h3><span>청소종류</span>를 선택하세요.</h3>
+              <div class="gaugebar g3"></div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dt class="howcleanTab">
+                      <ul>
+                        <li class="cleanTab" data-rel="howclean01"><div class="normalClean"><small></small>일반 청소</div></li>
+                        <li class="cleanTab" data-rel="howclean02"><div class="oneroomClean"><small></small>원룸 청소<span class="mblock"> </span>(소형 청소)</div></li>
+                      </ul>
+                    </dt>
+                    <dd class="howclean">
+                      <h4>청소 종류</h4>
+                      <ol>
+                        <li>
+                          <input type="checkbox" name="cleankinds" value="" id="cleankinds01">
+                          <label for="cleankinds01" class="addhow">입주청소<span>신축건물 첫 입주 시</span></label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="cleankinds" value="" id="cleankinds02">
+                          <label for="cleankinds02">이사청소<span>이전 거주자가 만든 오염 제거 시</span></label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="cleankinds" value="" id="cleankinds03">
+                          <label for="cleankinds03">인테리어 후 청소<span>인테리어 후 하는 청소</span></label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="cleankinds" value="" id="cleankinds04">
+                          <label for="cleankinds04">정기청소<span>정기적으로 진행하는 청소</span></label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="cleankinds" value="" id="cleankinds05">
+                          <label for="cleankinds05">거주청소<span>짐이 있는 상태에서 청소</span></label>
+                        </li>
+                      </ol>
+                      <span class="howcleanTip">신축건물 첫 입주시</span>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#" onclick="return false;" class="prevStep">이전</a></dt>
+                    <dd><a href="#" onclick="return false;" class="nextStep 3thStep">다음단계로</a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <!-- 청소종류를 선택하세요. //-->
+            <!--// 공간 넓이와 공간 종류를 선택하세요. -->
+            <section>
+              <h3><span>공간 넓이</span>와 <span>공간 종류</span>를 선택하세요.</h3>
+              <div class="gaugebar g4"></div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dt class="spaceSelect">
+                      <label for="spaceSize">공간 넓이</label>
+                      <input type="text" placeholder="숫자로 입력하세요." id="spaceSize">
+                      <span>
+                        <input type="button" value="평" id="spaceKor" class="spaceBtn on">
+                        <input type="button" value="m" id="spaceEng" class="spaceBtn"><label for="spaceEng">2</label>
+                      </span>
+                    </dt>
+                    <dd class="description">
+                      청소견적은 <strong>공급면적</strong> 또는 <strong>분양평수</strong>로 계산됩니다.<br>
+                      만약, 실평수나 전용면적으로 입력시에는 현장에서 <strong>추가요금</strong>이 발생될 수 있습니다.
+                    </dd>
+                    <dd class="spaceCheckList">
+                      <h4>공간 종류</h4>
+                      <ol>
+                        <li>
+                          <input type="checkbox" name="" id="spaceApt" class="spaceCheck">
+                          <label for="spaceApt">아파트</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="spaceSin" class="spaceCheck">
+                          <label for="spaceSin">단독주택</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="spaceVil" class="spaceCheck">
+                          <label for="spaceVil">빌라/연립</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="spaceOne" class="spaceCheck">
+                          <label for="spaceOne">원룸</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="spaceOfc" class="spaceCheck">
+                          <label for="spaceOfc">사무실</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="spaceMal" class="spaceCheck">
+                          <label for="spaceMal">상가</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="spaceFac" class="spaceCheck">
+                          <label for="spaceFac">공장</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="spaceDi" class="spaceCheck">
+                          <label for="spaceDi">직접입력</label>
+                        </li>
+                        <li class="spaceDiInput">
+                          <input type="text" name="" placeholder="공간 종류를 입력하세요.">
+                        </li>
+                      </ol>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#" onclick="return false;" class="prevStep">이전</a></dt>
+                    <dd><a href="#" onclick="return false;" class="nextStep 4thStep">다음단계로</a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <!-- 공간 넓이와 공간 종류를 선택하세요. //-->
+            <!--// 공간 구조와 개수를 선택하세요. -->
+            <section class="spaceSection">
+              <h3><span>공간 구조</span>와 <span>개수</span>를 선택하세요.</h3>
+              <div class="gaugebar g4"></div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dd>
+                      <h4>공간의 구조</h4>
+                      <ol>
+                        <li>
+                          <input type="checkbox" name="" value="" class="spaceStr" id="structNor">
+                          <label for="structNor">일반형</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" class="spaceStr" id="structFlr">
+                          <label for="structFlr">복층형</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" class="spaceStr" id="structTer">
+                          <label for="structTer">테라스 있음</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" value="" class="spaceStr" id="structExp">
+                          <label for="structExp">베란다 확장형</label>
+                        </li>
+                      </ol>
+                    </dd>
+                    <dd>
+                      <h4>공간 개수</h4>
+                      <ul>
+                        <li>
+                          <label for="btnRoom">방</label>
+                          <div class="numberBox">
+                            <button type="button" name="button" class="spaceMinus" data-quantity="minus" data-field="btnRoom"><span></span></button>
+                            <input type="text" name="btnRoom" id="btnRoom" value="1" class="lato">
+                            <button type="button" name="button" class="spacePlus" data-quantity="plus" data-field="btnRoom"><span></span></button>
+                          </div>
+                        </li>
+                        <li>
+                          <label for="btnToilet">화장실</label>
+                          <div class="numberBox">
+                            <button type="button" name="button" class="spaceMinus" data-quantity="minus" data-field="btnToilet"><span></span></button>
+                            <input type="text" name="btnToilet" id="btnToilet" value="1" class="lato">
+                            <button type="button" name="button" class="spacePlus" data-quantity="plus" data-field="btnToilet"><span></span></button>
+                          </div>
+                        </li>
+                        <li>
+                          <label for="btnVeranda">베란다</label>
+                          <div class="numberBox">
+                            <button type="button" name="button" class="spaceMinus" data-quantity="minus" data-field="btnVeranda"><span></span></button>
+                            <input type="text" name="btnVeranda" id="btnVeranda" value="0" class="lato">
+                            <button type="button" name="button" class="spacePlus" data-quantity="plus" data-field="btnVeranda"><span></span></button>
+                          </div>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#" onclick="return false;" class="prevStep">이전</a></dt>
+                    <dd><a href="#" onclick="return false;" class="nextStep 5thStep">다음단계로</a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <!-- 공간 구조와 개수를 선택하세요. //-->
+            <section class="addService">
+              <h3><span>추가로 원하시는 서비스나 요청사항</span>을<span class="textblock mblock"></span>알려주세요.</h3>
+              <div class="gaugebar g5"></div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dd>
+                      <h4>기본 청소 범위 외 청소서비스<div><small>중복선택가능</small><small>추가요금발생</small></div></h4>
+                      <ol class="add1016">
+                        <li>
+                          <input type="checkbox" value="" id="addService01">
+                          <label for="addService01">
+                            <h5>새집증후군</h5>
+                            <span>피톤치드를 집안전체에 분사하여 살균하는 작업</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input type="checkbox" value="" id="addService02">
+                          <label for="addService02">
+                            <h5>줄눈시공</h5>
+                            <span>타일 사이사이 곰팡이 방지를 위한 시공</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input type="checkbox" value="" id="addService03">
+                          <label for="addService03">
+                            <h5>마루광택</h5>
+                            <span>마루 기스보호와 광택을 위한 시공</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input type="checkbox" value="" id="addService04">
+                          <label for="addService04">
+                            <h5>스티커, 시트지제거</h5>
+                            <span>현관, 신발장, 유리창, 콘센트의 스티커 제거</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input type="checkbox" value="" id="addService05">
+                          <label for="addService05">
+                            <h5>베란다 곰팡이제거</h5>
+                            <span>벽지곰팡이는 제거하기 어렵습니다.</span>
+                          </label>
+                        </li>
+                        <li>
+                          <input type="checkbox" value="" id="addService06">
+                          <label for="addService06">
+                            <h5>페인트 흔적제거</h5>
+                            <span>창틀, 바닥, 몰딩 등에 있는 페인트 제거</span>
+                          </label>
+                        </li>
+                      </ol>
+                      <span>빌트인 가전 청소는 <span>전문적인 분해 청소가 아닙니다.</span></span>
+                    </dd>
+                    <dd>
+                      <h4>요청사항</h4>
+                      <textarea name="name" rows="8" cols="80" placeholder="요청사항이 있다면 입력해주세요."></textarea>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#" onclick="return false;" class="prevStep">이전</a></dt>
+                    <dd><a href="#" onclick="return false;" class="nextStep 6thStep">다음단계로</a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <!--// 고객님의 주소를 입력해주세요. -->
+            <section class="addressSection">
+              <h3><span>고객님의 주소</span>를 입력해주세요.</h3>
+              <div class="gaugebar g5"></div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dt>
+                      <label for="postcode-main">우편번호</label>
+                      <input type="text" placeholder="우편번호" id="postcode-main">
+                      <input type="button" onclick="execDaumPostcode()" value="우편번호 검색">
+                    </dt>
+                    <dd>
+                      <label for="">주소</label>
+                      <input type="text" id="address-main" placeholder="주소">
+                      <input type="text" id="detailAddress-main" placeholder="상세주소">
+                      <input type="hidden" id="extraAddress-main" placeholder="참고항목">
+                    </dd>
+                  </dl>
+                  <a href="#" onclick="return false;" class="idontknow">주소를 잘 몰라요</a>
+                </div>
+                <div class="inputbox v2">
+                  <ul>
+                    <li>
+                      <label for="">청소지역 선택</label>
+                      <div class="select-style">
+                        <select name="" id="">
+                          <option value="">시/도 선택</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <label for="">&nbsp;</label>
+                      <div class="select-style">
+                        <select name="" id="">
+                          <option value="">시/구/군 선택</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#" onclick="return false;" class="prevStep">이전</a></dt>
+                    <dd><a href="./companyList_01.html" onclick="" class="finalStep">조건에 맞는 업체 확인하기</a></dd>
+                  </dl>
+                </div>
+                <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+                <script>
+                    function execDaumPostcode() {
+                        new daum.Postcode({
+                            oncomplete: function(data) {
+                                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                                var addr = ''; // 주소 변수
+                                var extraAddr = ''; // 참고항목 변수
+
+                                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                                    addr = data.roadAddress;
+                                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                                    addr = data.jibunAddress;
+                                }
+
+                                // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                                if(data.userSelectedType === 'R'){
+                                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                                        extraAddr += data.bname;
+                                    }
+                                    // 건물명이 있고, 공동주택일 경우 추가한다.
+                                    if(data.buildingName !== '' && data.apartment === 'Y'){
+                                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                                    }
+                                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                                    if(extraAddr !== ''){
+                                        extraAddr = ' (' + extraAddr + ')';
+                                    }
+                                    // 조합된 참고항목을 해당 필드에 넣는다.
+                                    document.getElementById("extraAddress-main").value = extraAddr;
+
+                                } else {
+                                    document.getElementById("extraAddress-main").value = '';
+                                }
+
+                                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                                document.getElementById('postcode-main').value = data.zonecode;
+                                document.getElementById("address-main").value = addr;
+                                // 커서를 상세주소 필드로 이동한다.
+                                document.getElementById("detailAddress-main").focus();
+                            }
+                        }).open();
+                    }
+                </script>
+              </form>
+            </section>
+            <!-- 고객님의 주소를 입력해주세요. //-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 청소업체 찾기 //-->
+    <!--// 원룸클릭시 -->
+    <div id="modal-one" class="modalpopup">
+      <div class="inner">
+        <div class="modal_survey-main">
+          <a href="#" onclick="return false;" class="closeModal"></a>
+          <div class="surveyBoxes-main">
+            <!--// 공간 타입을 선택하세요. -->
+            <section class="modal-one-first">
+              <h3><span>공간 타입</span>을 선택하세요.</h3>
+              <div class="gaugebar g4"></div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dd>
+                      <h4>공간 타입</h4>
+                      <ol>
+                        <li>
+                          <input type="checkbox" name="" id="onespace-1" class="spaceCheck">
+                          <label for="onespace-1">기본형<small>방 1 + 화장실 1</small></label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="onespace-2" class="spaceCheck">
+                          <label for="onespace-2">분리형<small>방 1 + 거실 1 + 화장실 1</small></label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="onespace-3" class="spaceCheck">
+                          <label for="onespace-3">발코니형<small>방 1 + 화장실 1 + 발코니 1</small></label>
+                        </li>
+                        <li>
+                          <input type="checkbox" name="" id="onespace-4" class="spaceCheck">
+                          <label for="onespace-4">복층형<small>방 1 + 거실 1<span class="mblock"></span> + 화장실 1 + 계단 1	</small></label>
+                        </li>
+                      </ol>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#none" class="prevStep"><span>이전</span></a></dt>
+                    <dd><a href="#none" class="nextStep one-1stStep"><span>다음단계로</span></a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <!-- 공간 타입을 선택하세요. //-->
+            <section class="addService">
+              <h3><span>추가로 원하시는 서비스나 요청사항</span>을<span class="textblock mblock"></span>알려주세요.</h3>
+              <div class="gaugebar g5"></div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dd>
+                      <h4>기본 청소 범위 외 청소서비스<div><small>중복선택가능</small><small>추가요금발생</small></div></h4>
+                      <ol>
+                        <li>
+                          <input type="checkbox" value="" class="otherclean" id="one-otherclean-1">
+                          <label for="one-otherclean-1">빌트인 냉장고</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" value="" class="otherclean" id="one-otherclean-2">
+                          <label for="one-otherclean-2">오븐</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" value="" class="otherclean" id="one-otherclean-3">
+                          <label for="one-otherclean-3">빌트인 세탁기</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" value="" class="otherclean" id="one-otherclean-4">
+                          <label for="one-otherclean-4">식기세척기</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" value="" class="otherclean" id="otherclean-5">
+                          <label for="otherclean-5">에어컨</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" value="" class="otherclean" id="otherclean-6">
+                          <label for="otherclean-6">없음</label>
+                        </li>
+                      </ol>
+                      <span>빌트인 가전 청소는 <span>전문적인 분해 청소가 아닙니다.</span></span>
+                    </dd>
+                    <dd>
+                      <h4>요청사항</h4>
+                      <textarea name="name" rows="8" cols="80" placeholder="요청사항이 있다면 입력해주세요."></textarea>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#" onclick="return false;" class="prevStep">이전</a></dt>
+                    <dd><a href="#" onclick="return false;" class="nextStep 6thStep">다음단계로</a></dd>
+                  </dl>
+                </div>
+              </form>
+            </section>
+            <!--// 고객님의 주소를 입력해주세요. -->
+            <section class="addressSection">
+              <h3><span>고객님의 주소</span>를 입력해주세요.</h3>
+              <div class="gaugebar g5"></div>
+              <form action="">
+                <div class="inputbox">
+                  <dl>
+                    <dt>
+                      <label for="postcode-one">우편번호</label>
+                      <input type="text" placeholder="우편번호" id="postcode-one">
+                      <input type="button" onclick="execDaumPostcodeOne()" value="우편번호 검색">
+                    </dt>
+                    <dd>
+                      <label for="">주소</label>
+                      <input type="text" id="address-one" placeholder="주소">
+                      <input type="text" id="detailAddress-one" placeholder="상세주소">
+                      <input type="hidden" id="extraAddress-one" placeholder="참고항목">
+                    </dd>
+                  </dl>
+                  <a href="#" onclick="return false;" class="idontknow">주소를 잘 몰라요</a>
+                </div>
+                <div class="inputbox v2">
+                  <ul>
+                    <li>
+                      <label for="">청소지역 선택</label>
+                      <div class="select-style">
+                        <select name="" id="">
+                          <option value="">시/도 선택</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <label for="">&nbsp;</label>
+                      <div class="select-style">
+                        <select name="" id="">
+                          <option value="">시/구/군 선택</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="step_arrow">
+                  <dl>
+                    <dt><a href="#" onclick="return false;" class="prevStep">이전</a></dt>
+                    <dd><a href="./companyList_01.html" onclick="" class="finalStep">조건에 맞는 업체 확인하기</a></dd>
+                  </dl>
+                </div>
+                <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+                <script>
+                    function execDaumPostcodeOne() {
+                        new daum.Postcode({
+                            oncomplete: function(data) {
+                                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                                var addr = ''; // 주소 변수
+                                var extraAddr = ''; // 참고항목 변수
+
+                                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                                    addr = data.roadAddress;
+                                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                                    addr = data.jibunAddress;
+                                }
+
+                                // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                                if(data.userSelectedType === 'R'){
+                                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                                        extraAddr += data.bname;
+                                    }
+                                    // 건물명이 있고, 공동주택일 경우 추가한다.
+                                    if(data.buildingName !== '' && data.apartment === 'Y'){
+                                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                                    }
+                                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                                    if(extraAddr !== ''){
+                                        extraAddr = ' (' + extraAddr + ')';
+                                    }
+                                    // 조합된 참고항목을 해당 필드에 넣는다.
+                                    document.getElementById("extraAddress-one").value = extraAddr;
+
+                                } else {
+                                    document.getElementById("extraAddress-one").value = '';
+                                }
+
+                                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                                document.getElementById('postcode-one').value = data.zonecode;
+                                document.getElementById("address-one").value = addr;
+                                // 커서를 상세주소 필드로 이동한다.
+                                document.getElementById("detailAddress-one").focus();
+                            }
+                        }).open();
+                    }
+                </script>
+              </form>
+            </section>
+            <!-- 고객님의 주소를 입력해주세요. //-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 원룸클릭시 //-->
+    <div id="modal-close-1" class="modalpopup">
+      <div class="inner small">
+        <div class="modal_quotation_top">
+          <h3>검색을 끝내시겠어요?</h3>
+          <span class="two">정말 검색을 그만두시겠어요?</span>
+          <span class="one">아직 작성이 끝나지 않았습니다.</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="modal_close">검색종료</a></dt>
+          <dd><a href="#none" class="go_ok">계속검색</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div id="modal-close-2" class="modalpopup">
+      <div class="inner small">
+        <div class="modal_quotation_top">
+          <h3>검색을 끝내시겠어요?</h3>
+          <span class="two">정말 검색을 그만두시겠어요?</span>
+          <span class="one">20%만 더 작성하시면 돼요!</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="modal_close">검색종료</a></dt>
+          <dd><a href="#none" class="go_ok">계속검색</a></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <script src="../js-v2/bodymovin.js"></script>
+  <script src="../js-v2/loading.js"></script>
+</body>
+</html>

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>클린벨</title>
+  <link rel="stylesheet" href="../css-v2/reset.css">
+  <link rel="stylesheet" href="../css-v2/jquery-ui.min.css">
+  <link rel="stylesheet" href="../css-v2/owl.carousel.css">
+  <link rel="stylesheet" href="../css-v2/default.css">
+  <link rel="stylesheet" href="../css-v4/cleaner.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-640.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub-640.css">
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js-v2/cleaner.js"></script>
+  <style>
+    .ui-datepicker{width:172px;}
+    .ui-state-active{color:#fff !important;background:#6131ce !important;}
+    .ui-datepicker .ui-datepicker-header{margin:15px 0 0;}
+    .ui-datepicker th{padding:15px 0;}
+    .ui-datepicker td span, .ui-datepicker td a{margin:0 auto;padding:5px 0;border-radius:3px;}
+    @media (max-width:640px) {
+      .ui-datepicker{top:90px !important;left:40px !important;right:40px;width:calc(100% - 80px);}
+      .ui-datepicker th{padding:15px 0 10px;}
+      .ui-datepicker td span, .ui-datepicker td a{margin:1px auto;}
+    }
+  </style>
+</head>
+<body>
+	<div id="wrap">
+    <div id="loadingCompany">
+      <div class="balls">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <span>업체 조회중 입니다.</span>
+    </div>
+    <!--// 헤더 -->
+    <header id="header" class="pc">
+      <div class="inner">
+        <h1 id="logo"><a href="http://www.cleanbell.co.kr/"><img src="../images-v2/logo.png" alt="클린벨"></a></h1>
+        <!-- <a href="#" onclick="return false;" class="hd-floatBtn checkAppDetail">신청 내역 확인</a>
+        <a href="#" onclick="return false;" class="f_floatBtn findCleaner">청소 업체 찾기</a> -->
+      </div>
+    </header>
+    <!-- 헤더 //-->
+		<article id="container" class="subcontainer">
+			<div class="companyList nohead">
+				<div class="inner">
+					<div class="filter pc">
+						<dl>
+							<dt><input type="submit" id="filter-search" value=""><label for="filter-search"><img src="../images-v4/filter-search.png" alt="search">검색</label></dt>
+							<dd class="filCalendar">
+								<h4>청소일</h4>
+								<script>
+								$(document).on('ready', function(){
+									$('#filCal').datepicker({
+										inline:true,
+                    dateFormat:'yy-mm-dd',
+                    altFormat:'D',
+										showOtherMonths:true,
+										showMonthAfterYear:true,
+										monthNames: [ '. 01', '. 02', '. 03', '. 04', '. 05', '. 06', '. 07', '. 08', '. 09', '. 10', '. 11', '. 12' ],
+										dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+                    onClose:function(){
+                      $('.filCalendar').removeClass('float');
+                      var date = new Date($('#filCal').datepicker(
+                        {dateFormat:'yy-mm-dd'}
+                      ).val()),
+                      week = new Array('일', '월', '화', '수', '목', '금', '토');
+                      if(week[date.getDay()]!=undefined){
+                        $('#filCal').val($('#filCal').val()+"  "+"("+(week[date.getDay()])+")");
+                      }
+                    }
+									});
+                  $('#filCal').datepicker('setDate', 'today');
+								});
+								</script>
+								<div id="calendarChange">
+                  <div class="CalendarBox">
+  									<input type="text" name="" value="2019-05-01 (수)" id="filCal" class="">
+  									<label for="filCal"></label>
+  								</div>
+                </div>
+							</dd>
+							<dd>
+								<h4>결제방법</h4>
+								<ul class="filter-checkbox">
+									<li><input type="checkbox" id="pay-cash"><label for="pay-cash"><span></span>현금</label></li>
+									<li><input type="checkbox" id="pay-card"><label for="pay-card"><span></span>카드결제 가능</label></li>
+									<li><input type="checkbox" id="pay-cashbill"><label for="pay-cashbill"><span></span>현금영수증 발행</label></li>
+									<li><input type="checkbox" id="pay-taxbill"><label for="pay-taxbill"><span></span>세금계산서 발행</label></li>
+								</ul>
+							</dd>
+							<dd>
+								<h4>품질</h4>
+								<ul class="filter-checkbox">
+									<li><input type="checkbox" id="qual-package"><label for="qual-package"><span></span>패키지 상품 할인</label></li>
+									<li><input type="checkbox" id="qual-bargain"><label for="qual-bargain"><span></span>가격 흥정</label></li>
+									<li><input type="checkbox" id="qual-eco"><label for="qual-eco"><span></span>친환경 세제</label></li>
+									<li><input type="checkbox" id="qual-steam"><label for="qual-steam"><span></span>스팀청소</label></li>
+									<li><input type="checkbox" id="qual-oneday"><label for="qual-oneday"><span></span>하루 1집 청소</label></li>
+								</ul>
+							</dd>
+							<dd>
+								<h4>부가서비스 <a href="#" onclick="return false" class="priceCheck">시세 확인하기</a></h4>
+                <div class="ftip">*가격이 <span class="lato">10%</span> 상승할 수 있습니다.</div>
+								<ul class="filter-checkbox">
+									<li><input type="checkbox" id="serv-newhome"><label for="serv-newhome"><span></span>새집증후군</label></li>
+									<li><input type="checkbox" id="serv-sink"><label for="serv-sink"><span></span>싱크대 연마</label></li>
+									<li><input type="checkbox" id="serv-silicon"><label for="serv-silicon"><span></span>실리콘 시공</label></li>
+									<li><input type="checkbox" id="serv-woodflr"><label for="serv-woodflr"><span></span>마루 광택</label></li>
+								</ul>
+							</dd>
+							<dd>
+								<h4>인력구성</h4>
+								<ul class="filter-checkbox">
+									<li><input type="checkbox" id="man-kor"><label for="man-kor"><span></span>내국인만</label></li>
+								</ul>
+							</dd>
+						</dl>
+					</div><!--.filter-->
+          <div class="appBar-top mobile">
+            <dl>
+              <dt class="filCalendar">
+								<script>
+								$(document).on('ready', function(){
+									$('#calendarChangeM').datepicker({
+										inline:true,
+                    dateFormat:'yy-mm-dd',
+										showOtherMonths:true,
+										showMonthAfterYear:true,
+										monthNames: [ '. 01', '. 02', '. 03', '. 04', '. 05', '. 06', '. 07', '. 08', '. 09', '. 10', '. 11', '. 12' ],
+										dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+                    onClose:function(){
+                      $('.CalendarBox.M').removeClass('datepicker-M');
+                      var date = new Date($('#calendarChangeM').datepicker(
+                        {dateFormat:'yy-mm-dd'}
+                      ).val()),
+                      week = new Array('일', '월', '화', '수', '목', '금', '토');
+                      if(week[date.getDay()]!=undefined){
+                        $('#calendarChangeM').val($('#calendarChangeM').val()+"  "+"("+(week[date.getDay()])+")");
+                      }
+                    }
+									});
+                  $('#calendarChangeM').datepicker('setDate', 'today');
+                  $('#calendarChangeM').click(function(){
+                    $('.CalendarBox.M').addClass('datepicker-M');
+                    $('.Mfilter').removeClass('on');
+                    $('.MfilterBox').removeClass('on');
+                    $('.Moption').removeClass('on');
+                    $('.MoptionBox').removeClass('on');
+                  });
+								});
+								</script>
+                <div class="CalendarBox M">
+                  <h4>청소일</h4>
+									<input type="text" name="" value="2019-05-01 (수)" id="calendarChangeM" class="lato">
+									<label for="calendarChangeM"></label>
+                  <input type="button" class="openBarCal">
+								</div>
+							</dt>
+              <dd>
+                <ul>
+                  <li class="Mfilter">
+                    <a href="#none"><strong>상세조건</strong></a>
+                    <div class="MfilterBox">
+                      <ol>
+                        <li><a href="#none" class="filterTab active" data-rel="filter-1">결제방법</a></li>
+                        <li><a href="#none" class="filterTab" data-rel="filter-2">품질</a></li>
+                        <li><a href="#none" class="filterTab" data-rel="filter-3">부가서비스</a></li>
+                        <li><a href="#none" class="filterTab" data-rel="filter-4">인력구성</a></li>
+                      </ol>
+                      <div id="filter-1" class="fCheckBox">
+        								<ul class="filter-checkbox">
+        									<li><input type="checkbox" id="pay-cash-m" checked><label for="pay-cash-m"><span></span>현금</label></li>
+        									<li><input type="checkbox" id="pay-cashbill-m"><label for="pay-cashbill-m"><span></span>현금영수증 발행</label></li>
+        									<li><input type="checkbox" id="pay-card-m"><label for="pay-card-m"><span></span>카드결제 가능</label></li>
+        									<li><input type="checkbox" id="pay-taxbill-m"><label for="pay-taxbill-m"><span></span>세금계산서 발행</label></li>
+        								</ul>
+        							</div>
+        							<div id="filter-2" class="fCheckBox">
+        								<ul class="filter-checkbox">
+        									<li><input type="checkbox" id="qual-package-m"><label for="qual-package-m"><span></span>패키지 상품 할인</label></li>
+        									<li><input type="checkbox" id="qual-bargain-m"><label for="qual-bargain-m"><span></span>가격 흥정</label></li>
+        									<li><input type="checkbox" id="qual-eco-m"><label for="qual-eco-m"><span></span>친환경 세제</label></li>
+        									<li><input type="checkbox" id="qual-steam-m"><label for="qual-steam-m"><span></span>스팀청소</label></li>
+        									<li><input type="checkbox" id="qual-oneday-m"><label for="qual-oneday-m"><span></span>하루 1집 청소</label></li>
+                          <li><input type="checkbox" id="qual-cheap-m"><label for="qual-cheap-m"><span></span>저렴한 업체</label></li>
+        								</ul>
+        							</div>
+        							<div id="filter-3" class="fCheckBox">
+        								<ul class="filter-checkbox">
+        									<li><input type="checkbox" id="serv-newhome-m"><label for="serv-newhome-m"><span></span>새집증후군</label></li>
+        									<li><input type="checkbox" id="serv-joint-m"><label for="serv-joint-m"><span></span>줄눈시공</label></li>
+                          <li><input type="checkbox" id="serv-woodflr-m"><label for="serv-woodflr-m"><span></span>마루 광택</label></li>
+                          <li><input type="checkbox" id="serv-sticker-m"><label for="serv-sticker-m"><span></span>스티커, 시트지 제거</label></li>
+        									<li><input type="checkbox" id="serv-veranda-m"><label for="serv-veranda-m"><span></span>베란다 곰팡이제거</label></li>
+                          <li><input type="checkbox" id="serv-paint-m"><label for="serv-paint-m"><span></span>페인트 흔적제거</label></li>
+        								</ul>
+                        <div class="ftip">*가격이 <span class="lato">10%</span> 상승할 수 있습니다.<a href="#" onclick="return false" class="priceCheck">시세 확인하기</a></div>
+        							</div>
+        							<div id="filter-4" class="fCheckBox">
+        								<ul class="filter-checkbox">
+        									<li><input type="checkbox" id="man-kor-m"><label for="man-kor-m"><span></span>내국인만</label></li>
+        								</ul>
+        							</div>
+                      <dl class="filterBtn">
+                        <dt><a href="#none" class="mfilter-cancel">취소</a></dt>
+                        <dd><input type="submit" value="적용" class="mfilter-apply"></dd>
+                      </dl>
+                    </div>
+                  </li><!--.Mfilter-->
+                  <li class="Moption">
+                    <a href="#none"><strong>정렬순서</strong></a>
+                    <div class="MoptionBox">
+                      <ol>
+                        <li><a href="javascript:void(0)" class="optionTab active">평점높은순</a></li>
+                        <li><a href="javascript:void(0)" class="optionTab">후기건수순</a></li>
+                        <li><a href="javascript:void(0)" class="optionTab">상담건수순</a></li>
+                      </ol>
+                      <small>클린벨 광고는 정렬이 되지 않습니다.</small>
+                    </div>
+                  </li><!--.Moption-->
+                </ul>
+              </dd>
+            </dl>
+          </div>
+				</div><!--.inner-->
+        <div class="addList">
+          <div class="addTop mobile">
+            <div class="inner">
+              <h5>클린벨 레드(Red) 광고<span title="클린벨과 계약하여 동륵된 청소업체 입니다.&#013;고객님의 평수, 지역 등 기준에 따라 결정되었습니다."></span></h5>
+              <div class="addBox">
+                <a href="">
+                  <dl>
+                    <dt class="crown crown-gold">
+                      <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                    </dt>
+                    <dd>
+                      <h3>극한클리닝</h3>
+                      <ol class="grade">
+                        <li class="grade-1">신규</li>
+                        <li class="grade-3 lato">TOP 20</li>
+                      </ol>
+                      <small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+                      <ul>
+                        <li><strong class="star lato">4.5</strong></li>
+                        <li>상담건수<strong class="lato">1,000+</strong></li>
+                        <li>후기<strong class="lato">10,000+</strong></li>
+                      </ul>
+                      <ol class="hashtag">
+                        <li><span class="lato">#</span>경력<span class="lato">2</span>년</li>
+                        <li><span class="lato">#AS 5</span>일</li>
+                        <li><span class="lato">#</span>여성팀</li>
+                        <li><span class="lato">#</span>내국인</li>
+                      </ol>
+                    </dd>
+                  </dl>
+                </a>
+              </div><!--.addBox-->
+              <div class="addBox">
+                <a href="" class="premium">
+                  <dl>
+                    <dt class="crown crown-silver">
+                      <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                    </dt>
+                    <dd>
+                      <h3>극한클리닝</h3>
+                      <ol class="grade">
+                        <li class="grade-1">신규</li>
+                        <li class="grade-3 lato">TOP 20</li>
+                      </ol>
+                      <small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+                      <ul>
+                        <li><strong class="star lato">4.5</strong></li>
+                        <li>상담건수<strong class="lato">1,000+</strong></li>
+                        <li>후기<strong class="lato">10,000+</strong></li>
+                      </ul>
+                      <ol class="hashtag">
+                        <li><span class="lato">#</span>경력<span class="lato">2</span>년</li>
+                        <li><span class="lato">#AS 5</span>일</li>
+                        <li><span class="lato">#</span>여성팀</li>
+                        <li><span class="lato">#</span>내국인</li>
+                      </ol>
+                    </dd>
+                  </dl>
+                </a>
+              </div><!--.addBox-->
+              <div class="addBox">
+                <a href="" class="checked">
+                  <dl>
+                    <dt class="crown crown-brass">
+                      <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                    </dt>
+                    <dd>
+                      <h3>극한클리닝</h3>
+                      <ol class="grade">
+                        <li class="grade-1">신규</li>
+                        <li class="grade-3 lato">TOP 20</li>
+                      </ol>
+                      <small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+                      <ul>
+                        <li><strong class="star lato">4.5</strong></li>
+                        <li>상담건수<strong class="lato">1,000+</strong></li>
+                        <li>후기<strong class="lato">10,000+</strong></li>
+                      </ul>
+                      <ol class="hashtag">
+                        <li><span class="lato">#</span>경력<span class="lato">2</span>년</li>
+                        <li><span class="lato">#AS 5</span>일</li>
+                        <li><span class="lato">#</span>여성팀</li>
+                        <li><span class="lato">#</span>내국인</li>
+                      </ol>
+                    </dd>
+                  </dl>
+                </a>
+              </div><!--.addBox-->
+            </div><!--.inner-->
+          </div><!--.addTop mobile-->
+          <div class="addTop pc">
+            <div class="inner">
+              <h5>클린벨 레드(Red)광고<span title="클린벨과 계약하여 동륵된 청소업체 입니다.&#013;고객님의 평수, 지역 등 기준에 따라 결정되었습니다."></span></h5>
+              <div class="addBox">
+                <a href="">
+                  <dl>
+                    <dt class="crown crown-gold">
+                      <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                    </dt>
+                    <dd>
+                      <h3>극한클리닝</h3>
+                      <ol class="grade">
+                        <li class="grade-1">신규</li>
+                        <li class="grade-3 lato">TOP 20</li>
+                      </ol>
+                      <small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+                      <ul>
+                        <li><strong class="star lato">4.5</strong></li>
+                        <li>상담건수<strong class="lato">1,000+</strong></li>
+                        <li>후기<strong class="lato">10,000+</strong></li>
+                      </ul>
+                      <ol class="hashtag">
+                        <li><span class="lato">#</span>경력<span class="lato">2</span>년</li>
+                        <li><span class="lato">#AS 5</span>일</li>
+                        <li><span class="lato">#</span>여성팀</li>
+                        <li><span class="lato">#</span>내국인</li>
+                      </ol>
+                    </dd>
+                  </dl>
+                </a>
+              </div><!--.addBox-->
+              <div class="addBox">
+                <a href="" class="premium">
+                  <dl>
+                    <dt class="crown crown-silver">
+                      <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                    </dt>
+                    <dd>
+                      <h3>극한클리닝</h3>
+                      <ol class="grade">
+                        <li class="grade-1">신규</li>
+                        <li class="grade-3 lato">TOP 20</li>
+                      </ol>
+                      <small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+                      <ul>
+                        <li><strong class="star lato">4.5</strong></li>
+                        <li>상담건수<strong class="lato">1,000+</strong></li>
+                        <li>후기<strong class="lato">10,000+</strong></li>
+                      </ul>
+                      <ol class="hashtag">
+                        <li><span class="lato">#</span>경력<span class="lato">2</span>년</li>
+                        <li><span class="lato">#AS 5</span>일</li>
+                        <li><span class="lato">#</span>여성팀</li>
+                        <li><span class="lato">#</span>내국인</li>
+                      </ol>
+                    </dd>
+                  </dl>
+                </a>
+              </div><!--.addBox-->
+              <div class="addBox">
+                <a href="" class="checked">
+                  <dl>
+                    <dt class="crown crown-brass">
+                      <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                    </dt>
+                    <dd>
+                      <h3>극한클리닝</h3>
+                      <ol class="grade">
+                        <li class="grade-1">신규</li>
+                        <li class="grade-3 lato">TOP 20</li>
+                      </ol>
+                      <small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+                      <ul>
+                        <li><strong class="star lato">4.5</strong></li>
+                        <li>상담건수<strong class="lato">1,000+</strong></li>
+                        <li>후기<strong class="lato">10,000+</strong></li>
+                      </ul>
+                      <ol class="hashtag">
+                        <li><span class="lato">#</span>경력<span class="lato">2</span>년</li>
+                        <li><span class="lato">#AS 5</span>일</li>
+                        <li><span class="lato">#</span>여성팀</li>
+                        <li><span class="lato">#</span>내국인</li>
+                      </ol>
+                    </dd>
+                  </dl>
+                </a>
+              </div><!--.addBox-->
+            </div><!--.inner-->
+          </div>
+          <div class="addBottom">
+            <div class="inner">
+              <h5>클린벨 블루(Blue) 광고<span title="클린벨과 계약하여 동륵된 청소업체 입니다.&#013;고객님의 평수, 지역 등 기준에 따라 결정되었습니다."></span></h5>
+              <select name="" id="addOpt" class="pc">
+                <option value="">정렬선택</option>
+                <option value="grade-average">평점순</option>
+                <option value="assigned-count">상담건수순</option>
+                <option value="review-count">후기건수순</option>
+              </select>
+              <div class="addBox">
+                <a href="">
+                  <dl>
+                    <dt>
+                      <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                    </dt>
+                    <dd>
+                      <h3>극한클리닝</h3>
+                      <ol class="grade">
+                        <li class="grade-1">신규</li>
+                        <li class="grade-3 lato">TOP 20</li>
+                      </ol>
+                      <small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+                      <ul>
+                        <li><strong class="star lato">4.5</strong></li>
+                        <li>상담건수<strong class="lato">1,000+</strong></li>
+                        <li>후기<strong class="lato">10,000+</strong></li>
+                      </ul>
+                      <ol class="hashtag">
+                        <li><span class="lato">#</span>경력<span class="lato">2</span>년</li>
+                        <li><span class="lato">#AS 5</span>일</li>
+                        <li><span class="lato">#</span>여성팀</li>
+                        <li><span class="lato">#</span>내국인</li>
+                      </ol>
+                    </dd>
+                  </dl>
+                  <div class="boxTip pc2">고객님과 비슷한 조건으로 기존에 업체가 제출한 견적을 바탕으로 산출한 내용입니다.</div>
+                </a>
+              </div><!--.addBox-->
+              <div class="addBox">
+                <a href="">
+                  <dl>
+                    <dt>
+                      <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                    </dt>
+                    <dd>
+                      <h3>극한클리닝</h3>
+                      <ol class="grade">
+                        <li class="grade-1">신규</li>
+                        <li class="grade-3 lato">TOP 20</li>
+                      </ol>
+                      <small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+                      <ul>
+                        <li><strong class="star lato">4.5</strong></li>
+                        <li>상담건수<strong class="lato">1,000+</strong></li>
+                        <li>후기<strong class="lato">10,000+</strong></li>
+                      </ul>
+                      <ol class="hashtag">
+                        <li><span class="lato">#</span>경력<span class="lato">2</span>년</li>
+                        <li><span class="lato">#AS 5</span>일</li>
+                        <li><span class="lato">#</span>여성팀</li>
+                        <li><span class="lato">#</span>내국인</li>
+                      </ol>
+                    </dd>
+                  </dl>
+                  <div class="boxTip pc2">고객님과 비슷한 조건으로 기존에 업체가 제출한 견적을 바탕으로 산출한 내용입니다.</div>
+                </a>
+              </div><!--.addBox-->
+              <div class="addBox">
+                <a href="">
+                  <dl>
+                    <dt>
+                      <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                    </dt>
+                    <dd>
+                      <h3>극한클리닝</h3>
+                      <ol class="grade">
+                        <li class="grade-1">신규</li>
+                        <li class="grade-3 lato">TOP 20</li>
+                      </ol>
+                      <small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+                      <ul>
+                        <li><strong class="star lato">4.5</strong></li>
+                        <li>상담건수<strong class="lato">1,000+</strong></li>
+                        <li>후기<strong class="lato">10,000+</strong></li>
+                      </ul>
+                      <ol class="hashtag">
+                        <li><span class="lato">#</span>경력<span class="lato">2</span>년</li>
+                        <li><span class="lato">#AS 5</span>일</li>
+                        <li><span class="lato">#</span>여성팀</li>
+                        <li><span class="lato">#</span>내국인</li>
+                      </ol>
+                    </dd>
+                  </dl>
+                  <div class="boxTip pc2">고객님과 비슷한 조건으로 기존에 업체가 제출한 견적을 바탕으로 산출한 내용입니다.</div>
+                </a>
+              </div><!--.addBox-->
+              <div class="addBox">
+                <a href="">
+                  <dl>
+                    <dt>
+                      <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                    </dt>
+                    <dd>
+                      <h3>극한클리닝</h3>
+                      <ol class="grade">
+                        <li class="grade-1">신규</li>
+                        <li class="grade-3 lato">TOP 20</li>
+                      </ol>
+                      <small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+                      <ul>
+                        <li><strong class="star lato">4.5</strong></li>
+                        <li>상담건수<strong class="lato">1,000+</strong></li>
+                        <li>후기<strong class="lato">10,000+</strong></li>
+                      </ul>
+                      <ol class="hashtag">
+                        <li><span class="lato">#</span>경력<span class="lato">2</span>년</li>
+                        <li><span class="lato">#AS 5</span>일</li>
+                        <li><span class="lato">#</span>여성팀</li>
+                        <li><span class="lato">#</span>내국인</li>
+                      </ol>
+                    </dd>
+                  </dl>
+                  <div class="boxTip pc2">고객님과 비슷한 조건으로 기존에 업체가 제출한 견적을 바탕으로 산출한 내용입니다.</div>
+                </a>
+              </div><!--.addBox-->
+              <div class="addBox pc">
+                <a href="">
+                  <dl>
+                    <dt>
+                      <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                    </dt>
+                    <dd>
+                      <h3>극한클리닝</h3>
+                      <ol class="grade">
+                        <li class="grade-1">신규</li>
+                        <li class="grade-3 lato">TOP 20</li>
+                      </ol>
+                      <small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+                      <ul>
+                        <li><strong class="star lato">4.5</strong></li>
+                        <li>상담건수<strong class="lato">1,000+</strong></li>
+                        <li>후기<strong class="lato">10,000+</strong></li>
+                      </ul>
+                      <ol class="hashtag">
+                        <li><span class="lato">#</span>경력<span class="lato">2</span>년</li>
+                        <li><span class="lato">#AS 5</span>일</li>
+                        <li><span class="lato">#</span>여성팀</li>
+                        <li><span class="lato">#</span>내국인</li>
+                      </ol>
+                    </dd>
+                  </dl>
+                  <div class="boxTip pc2">고객님과 비슷한 조건으로 기존에 업체가 제출한 견적을 바탕으로 산출한 내용입니다.</div>
+                </a>
+              </div><!--.addBox-->
+              <div class="addBox pc">
+                <a href="">
+                  <dl>
+                    <dt>
+                      <img src="../images-v4/companySample.jpg" alt="업체샘플">
+                    </dt>
+                    <dd>
+                      <h3>극한클리닝</h3>
+                      <ol class="grade">
+                        <li class="grade-1">신규</li>
+                        <li class="grade-3 lato">TOP 20</li>
+                      </ol>
+                      <small class="pc">지금껏 이렇게 깨끗한 청소는 없었다</small>
+                      <ul>
+                        <li><strong class="star lato">4.5</strong></li>
+                        <li>상담건수<strong class="lato">1,000+</strong></li>
+                        <li>후기<strong class="lato">10,000+</strong></li>
+                      </ul>
+                      <ol class="hashtag">
+                        <li><span class="lato">#</span>경력<span class="lato">2</span>년</li>
+                        <li><span class="lato">#AS 5</span>일</li>
+                        <li><span class="lato">#</span>여성팀</li>
+                        <li><span class="lato">#</span>내국인</li>
+                      </ol>
+                    </dd>
+                  </dl>
+                  <div class="boxTip pc2">고객님과 비슷한 조건으로 기존에 업체가 제출한 견적을 바탕으로 산출한 내용입니다.</div>
+                </a>
+              </div><!--.addBox-->
+            </div><!--.inner-->
+          </div><!--.addBottom-->
+        </div><!--.addList-->
+			</div><!--.companyList-->
+      <div class="floatBtn">
+        <a tel="#none"><span><strong class="lato">4</strong></span></a>
+        <!-- <div class="addListTip blinking">견적신청내역 보러가기</div> //깜빡이는 툴팁 필요하시면 주석을 해제하세요.-->
+      </div><!--.floatBtn-->
+		</article><!--#container-->
+		<footer class="ifAppBar">
+      <div class="inner">
+        <span class="caution">클린벨은 통신판매중개자로서 청소서비스의 주거래 당사자가 아니며, 청소서비스의 분쟁과 계약사항은 회원사와 당사자간에 있습니다.</span>
+        <div class="f_contents">
+          <ul class="busyInfo">
+            <li>클린벨 · ㈜ 컨트롤에프</li>
+            <li>대표 : 최광근</li>
+            <li>사업자등록번호 : <span class="lato">585-86-00882</span></li>
+            <li>통신판매업번호 : <span class="lato">2017-인천계양-0583호</span></li>
+            <li class="lato">E-mail : help@cleanbell.co.kr</li>
+            <li class="lato">FAX : 070-5165-8603</li>
+          </ul>
+          <ul class="csCenter">
+            <li>클린벨 고객센터</li>
+            <li class="lato">1600-1701</li>
+            <li>영업시간 : <span class="lato">09:00 ~ 18:00</span><span class="textblock mblock"></span>(공휴일휴무)</li>
+          </ul>
+          <ol>
+            <li><a href="">개인정보취급방침</a></li>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">클린벨 입점문의</a></li>
+          </ol>
+        </div>
+        <div class="f_bottom">
+          <span class="copyright lato">Copyright © CLEANBELL </span>
+          <ul>
+            <li><a href="#none"><img src="../images-v4/snsIcon_f.png" alt="페이스북"></a></li>
+            <li><a href="#none"><img src="../images-v4/snsIcon_b.png" alt="블로그"></a></li>
+            <li><a href="#none"><img src="../images-v4/snsIcon_i.png" alt="인스타그램"></a></li>
+            <li><a href="#none"><img src="../images-v4/snsIcon_y.png" alt="유튜브"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div id="modal_priceCheck" class="modalpopup">
+      <div class="inner">
+        <a href="#none" class="modal_close"><img src="../images-v4/close_battery.png" alt=""></a>
+        <div class="priceCheck_header">
+          <h3><span class="mblock">부가서비스</span> <span class="mblock">예상가격</span></h3>
+          <p>부가서비스에 대한<span class="mblock"> </span><span>예상 추가비용</span> 입니다.</p>
+          <sub>(고객님의 실제 청소하실 주거지에 따라 달라질 수<span class="mblock"> </span>있습니다.)</sub>
+        </div>
+        <div class="priceCheck_content">
+          <ul>
+            <li class="priceIcon01">
+              <h4>새집증후군</h4>
+              <strong><span class="lato">100,000</span>원 ~ <span class="lato">200,000</span>원</strong>
+            </li>
+            <li class="priceIcon02">
+              <h4>줄눈시공</h4>
+              <strong><span class="lato">100,000</span>원 ~ <span class="lato">200,000</span>원</strong>
+            </li>
+            <li class="priceIcon03">
+              <h4>마루광택</h4>
+              <strong><span class="lato">100,000</span>원 ~ <span class="lato">200,000</span>원</strong>
+            </li>
+            <li class="priceIcon04">
+              <h4>스티커, 시트지 제거</h4>
+              <strong><span class="lato">100,000</span>원 ~ <span class="lato">200,000</span>원</strong>
+            </li>
+            <li class="priceIcon05">
+              <h4>베란다 곰팡이 제거</h4>
+              <strong><span class="lato">100,000</span>원 ~ <span class="lato">200,000</span>원</strong>
+            </li>
+            <li class="priceIcon06">
+              <h4>페인트 흔적 제거</h4>
+              <strong><span class="lato">100,000</span>원 ~ <span class="lato">200,000</span>원</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="modal-over-apply" class="modalpopup">
+      <div class="inner small">
+        <div class="modal_quotation_top">
+          <h3>견적 초과 신청</h3>
+          <span class="one">고객님께서는 현재 5곳의 청소업체에 <span class="textblock"></span>견적을 비교 신청 하셨습니다.</span>
+          <span class="one">추가 견적 요청이 필요하시면 <s>고객센터 1600-1701</s> 로 <span class="textblock"></span>연락주시면 친절하게 도와드리겠습니다.</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="modal_close">아니오</a></dt>
+          <dd><a href="#none" class="go_ok">네</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div id="modal_quotation_ok" class="modalpopup">
+      <div class="inner">
+        <div class="modal_quotation_top">
+          <h3>견적 신청 완료</h3>
+          <span class="two">감사합니다.<span class="textblock mblock">2개의 업체에 견적신청이 완료되었습니다.</span></span>
+          <span class="one">24시간 이내에 청소업체의 견적이 도착할 예정입니다.</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dd><a href="#none" class="close_quotation">확인</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div id="modal_quotation_app" class="modalpopup">
+      <div class="inner">
+        <div class="modal_quotation_top">
+          <h3>견적 신청</h3>
+          <span class="one">2개의 업체에 견적 신청을 하셨습니다.</span>
+          <span class="two">2개의 업체만 비교하시겠습니까?</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="modal_quotation_app_close">아니오</a></dt>
+          <dd><a href="#none" class="go_ok">네</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div id="modal_quotation_end" class="modalpopup">
+      <div class="inner">
+        <div class="modal_quotation_top">
+          <h3>예약 마감</h3>
+          <span class="two">신청 하신 조건으로 조회를 해봤지만<span class="textblock mblock"></span>모든 업체가 마감 되었습니다.</span>
+          <div>
+            <ol>
+              <li><span>카드결제</span></li>
+              <li><span>내국인팀</span></li>
+            </ol>
+          </div>
+          <span class="one">위의 조건을 해제하시면 5개의 업체비교가 가능합니다.<span class="textblock mblock"></span>다시 검색을 진행하시겠습니까?</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="close_end">취소</a></dt>
+          <dd><a href="#none" class="go_research">다시검색</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div id="modal_quotation_research" class="modalpopup">
+      <div class="inner">
+        <div class="modal_quotation_top">
+          <h3>검색 종료 확인</h3>
+          <span class="two">여기서 검색을 종료하시겠어요?</span>
+          <span class="one">'계속검색'을 누르시면 이전 화면으로 돌아갑니다.</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="close_research">검색종료</a></dt>
+          <dd><a href="#none" class="go_research_again">계속검색</a></dd>
+        </dl>
+      </div>
+    </div>
+	</div><!--#wrap-->
+</body>
+</html>

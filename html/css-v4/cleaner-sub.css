@@ -1,0 +1,1559 @@
+#loading{position:fixed;top:0;left:0;right:0;bottom:0;z-index:999;background:rgba(0,0,0,0.7);}
+#loading svg{position:absolute;top:50%;left:50%;width:50% !important;height:50% !important;
+transform:translate(-50%,-50%) !important;-webkit-transform:translate(-50%,-50%) !important;-moz-transform:translate(-50%,-50%) !important;-o-transform:translate(-50%,-50%) !important;}
+#loading path{fill:rgb(157,235,149) !important;}
+#loading span{display:block;position:absolute;top:65%;left:50%;font-size:40px;line-height:40px;font-weight:500;letter-spacing:-1.5px;color:#9dec96;
+transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+.mobile{display:none !important;}
+.pc{display:block !important;}
+
+
+
+/* 청소요금계산 */
+.subcontainer .topBanner{padding:0;height:776px;background:url(https://cleanbell.blob.core.windows.net/images-v4/rate_bg.png) no-repeat;background-size:cover;}
+.subcontainer .topBanner h2{top:30%;font-size:40px;line-height:62px;text-align:left;}
+.subcontainer .topBanner h2 span.lato{display:inline;font-size:80px;vertical-align:baseline;}
+
+.subcontainer .topBanner.rate h2{top:30%;left:50%;transform:translate(-50%,0);font-size:40px;line-height:62px;text-align:left;color: #363636;}
+.subcontainer .topBanner.rate h2 span.lato{display:inline;font-size:80px;vertical-align:baseline;color: #6131CE;}
+
+.subcontainer .searchTab{top:606px;}
+.subcontainer .searchTabTop{position:absolute;top:-150px;padding:29px 40px;width:calc(100% - 80px);background:#6131ce;}
+.subcontainer .searchTabTop::after{position:absolute;top:50%;right:40px;width:54px;height:70px;background:url(https://cleanbell.blob.core.windows.net/images-v4/searchTabTop_bg_3.png) no-repeat;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.subcontainer .searchTabTop h4{margin:0 0 20px;font-size:30px;line-height:30px;font-weight:400;letter-spacing:-1.75px;color:#fff;}
+.subcontainer .searchTabTop span{display:block;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#fae6cd;}
+.subcontainer .searchTabMid{padding:40px 0 50px}
+.subcontainer .searchTabMid ul{width:100%;font-size:0}
+.subcontainer .searchTabMid li{position:relative;width:25%;display:inline-block;}
+.subcontainer .searchTabMid li:first-of-type::after, .subcontainer .searchTabMid li:nth-of-type(2)::after{position:absolute;top:50%;right:0;width:1px;height:120px;background:#e5e5e5;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.subcontainer .searchTabMid li .cleanerLocation dd a{padding:0;}
+.subcontainer .searchTabMid li .cleanerLocation li{width:100%;}
+.subcontainer .searchTabMid li .cleanerStruct dd a{padding:0;}
+.subcontainer .searchTabMid li .cleanerStruct dd a::before{display:none;}
+.subcontainer .searchTabMid li .cleanerStruct dd a::after{display:none;}
+.subcontainer .searchTabMid li .cleanerStruct dd li{margin:0 auto;width:fit-content;display:block;font-size:24px;line-height:24px;font-weight:500;letter-spacing:-1.5px;color:#464646;}
+.subcontainer .searchTabMid li .cleanerStruct dd li::after{display:none;}
+.cleanerSize dl{}
+.cleanerSize dt{position:relative;padding:0 0 18px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;text-align:center;}
+.cleanerSize dd{padding:18px 0 0;margin:0 auto;display:block;width:fit-content;font-size:24px;line-height:24px;letter-spacing:-1.5px;font-weight:500;color:#464646;}
+.cleanerSize dd input{display:inline-block;height:24px;width:50%;text-align:right;font-size:24px;line-height:24px;letter-spacing:-1.5px;font-weight:500;color:#464646;}
+.searchMarket{display:block;padding:20px 0;width:200px;font-size:24px;line-height:35px;letter-spacing:-1.5px;font-weight:500;color:#fae6cd;text-align:center;background:#322d4f;border-radius:50px;
+-webkit-box-shadow: 0px 4px 0px rgba(70,70,70,0.2);
+-moz-box-shadow: 0px 4px 0px rgba(70,70,70,0.2);
+box-shadow: 0px 4px 0px rgba(70,70,70,0.2);}
+
+.searchResult{display:none;padding:100px 0 80px;background:linear-gradient(#6b4ca6,#583480);}
+.searchResultTop{background:linear-gradient(rgba(255,255,255,0),#47256b);}
+.searchResultTop dt{font-size:40px;line-height:76px;font-weight:400;letter-spacing:-1.75px;color:#fff;text-align:center;}
+.searchResultTop dt strong{display:inline-block;padding:0 20px;font-weight:500;color:#fae6cd;background:#543a8e;}
+.searchResultTop dd{margin:80px 0 0;font-size:0}
+.searchResultTop dd div{display:inline-block;}
+.searchResultTop dd div.left{width:calc(30% - 80px);margin-right:5%;padding-left:80px;}
+.searchResultTop dd div.right{width:65%;}
+.searchResultTop .chartShape ul{width:100%;font-size:0;}
+.searchResultTop .chartShape ul li{position:relative;display:inline-block;width:33.33%;vertical-align:baseline;}
+.searchResultTop .chartShape ul li span{position:relative;display:block;width:100%;border-radius:3px;
+-webkit-box-shadow: -10px 0px 5px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: -10px 0px 5px 0px rgba(0,0,0,0.2);
+box-shadow: -10px 0px 5px 0px rgba(0,0,0,0.2);}
+.searchResultTop .chartShape ul li span::after{position:absolute;bottom:20px;left:50%;font-size:16px;line-height:16px;letter-spacing:0;font-weight:300;text-align:center;color:#fff;
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.searchResultTop .chartShape ul li:first-of-type span{display:block;width:100%;height:140px;}
+.searchResultTop .chartShape ul li:first-of-type span::before{position:absolute;top:-1px;left:-10px;width:222px;height:2px;background:url(https://cleanbell.blob.core.windows.net/images-v4/avgline.png) no-repeat;opacity:0.5;content:''}
+.searchResultTop .chartShape ul li:first-of-type span::after{content:'AVG'}
+.searchResultTop .chartShape ul li:nth-of-type(2) span{display:block;width:100%;height:200px;}
+.searchResultTop .chartShape ul li:nth-of-type(2) span::after{content:'MAX'}
+.searchResultTop .chartShape ul li:last-of-type span{display:block;width:100%;height:120px;}
+.searchResultTop .chartShape ul li:last-of-type span::after{content:'MIN'}
+.searchResultTop .chartShape ul li strong{position:absolute;top:-32px;;left:50%;font-size:22px;line-height:22px;font-weight:400;letter-spacing:0;color:#ccc;white-space:nowrap;
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.searchResultTop .chartShape ul li strong small{font-size:18px;vertical-align:baseline;}
+
+.searchResultTop .chartTxt dl{font-size:0}
+.searchResultTop .chartTxt dl dt{margin:15px 0 40px;font-size:32px;line-height:36px;font-weight:400;letter-spacing:-1.75px;color:#fff;text-align:left;}
+.searchResultTop .chartTxt dl dt strong{padding:0 10px;margin-right:20px;font-size:18px;line-height:36px;font-weight:400;color:#ccc;background:#402962;border-radius:3px;}
+.searchResultTop .chartTxt dl dd{position:relative;display:inline-block;padding:0 0 32px;margin:0;width:50%;font-size:32px;line-height:36px;font-weight:400;letter-spacing:-1.75px;color:#fff;text-align:left;}
+.searchResultTop .chartTxt dl dd strong{padding:0 10px;margin-right:20px;font-size:18px;line-height:36px;font-weight:400;color:#ccc;background:#402962;}
+.searchResultTop .chartTxt dl dd small{position:absolute;bottom:0;left:90px;font-size:16px;line-height:32px;font-weight:400;letter-spacing:-1.75px;color:#c2c2c2;}
+.searchResultTop .chartTxt dl dd small strong{padding:0;margin:0;font-weight:700;letter-spacing:0;color:#fae6cd;background:none;font-size:16px;line-height:32px;}
+.searchResultTop .chartTxt dl dd:first-of-type{color:#4cc6f7}
+.searchResultTop .chartTxt dl dd:last-of-type{color:#9dec96}
+
+.searchResultBottom{padding:80px 0 0}
+.searchResultBottom .cleanerKinds dt{color:#fae6cd;}
+.searchResultBottom .cleanerKinds dt::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/arrow_bottom_sub.png) no-repeat;}
+.searchResultBottom .cleanerKinds dd a{color:#fff;}
+.searchResultBottom .cleanerKinds dd a::before{background:url(https://cleanbell.blob.core.windows.net/images-v4/cleanerKinds_icon_01_w.png) no-repeat;}
+.searchResultBottom .cleanerKinds dd a::after{color:#c2c2c2;}
+.searchResultBottom .cleanerSeach{display:block;padding:25px 0;margin:40px auto 0;width:240px;font-size:24px;line-height:24px;font-weight:500;letter-spacing:-1.5px;color:#322d4f;background:#fae6cd;border-radius:50px;text-align:center;
+-webkit-box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.2);
+box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.2);}
+
+.gaugebar{position: relative;margin: 0 1px;width: calc(100% - 2px);height: 8px;background: #E1E1E1;}
+.gaugebar::after{position: absolute;left: 0;top: 0;bottom: 0;background: #6131CE;content: '';}
+.gaugebar.g1::after{right: 70%;}
+.gaugebar.g2::after{right: 50%;}
+.gaugebar.g3::after{right: 25%;}
+.gaugebar.g4::after{right: 15%;}
+.gaugebar.g5::after{right: 5%;}
+
+.modalpopup{display:none;position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:99999;overflow-x:hidden;overflow-y:scroll;}
+.modalpopup::-webkit-scrollbar {width:4px;}
+.modalpopup::-webkit-scrollbar * {background:transparent;}
+.modalpopup::-webkit-scrollbar-thumb {background:#6130cf !important;}
+.modalpopup .inner{position:relative;margin:80px auto;width:940px;}
+.modalpopup .inner.small{width: 100%;max-width: 560px;}
+.modalpopup .modal_intro{display:none;padding:100px;background:#322d4f;}
+.modalpopup .modal_intro h1{margin:0 0 60px;}
+.modalpopup .modal_intro h3{margin:0 0 20px;font-size:30px;line-height:30px;font-weight:400;letter-spacing:-1.75px;color:#fae6cd;}
+.modalpopup .modal_intro h2{margin:0 0 40px;font-size:54px;line-height:70px;font-weight:400;letter-spacing:-1.75px;color:#fff;}
+.modalpopup .modal_intro p{font-size:18px;line-height:32px;font-weight:400;letter-spacing:-1.5px;color:#fff;}
+.modalpopup .modal_intro a{position:relative;margin:70px 0 0;display:block;width:160px;font-size:24px;line-height:24px;font-weight:400;letter-spacing:-1.5px;color:#fae6cd;text-align:left;}
+.modalpopup .modal_intro a::after{position:absolute;right:0;top:50%;width:13px;height:20px;background:url(https://cleanbell.blob.core.windows.net/images-v4/arrow_right_sub.png) no-repeat;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+
+.modalpopup .modal_survey{display:none;padding:100px 50px;background:#f9f9f9;font-size:0;}
+
+.surveyBoxes{position:relative;}
+.surveyBoxes > section{display:none;}
+.surveyBoxes > section:first-child{display:block;}
+.surveyBoxes h3{padding:0 25px 75px;font-size:54px;line-height:70px;font-weight:400;letter-spacing:-1.75px;color:#322d4f;white-space:nowrap;}
+.surveyBoxes h3 span{color:#6131CE;}
+.surveyBoxes h3 small{display:inline-block;width:118px;height:38px;font-size:18px;line-height:37px;border-radius:3px;border:1px solid #7c7c7c;
+text-align:center;box-sizing:border-box;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;vertical-align:middle;}
+.inputbox{position: relative;padding:48px;border:1px solid #eee;box-sizing:border-box;background:#fff;}
+.inputbox ul{display:inline-block;width:calc(50% - 20px);}
+.inputbox ul:first-of-type{margin-right:20px;}
+.inputbox ul:last-of-type{margin-left:20px;}
+.inputbox ul li{position:relative;padding:5px 0;margin:0 0 20px;border-bottom:1px solid #a9a9a9;box-sizing:border-box;overflow-x:hidden;}
+.inputbox ul li:last-of-type{margin:0}
+#phoneCert{display:none;}
+.inputbox ul li label{display:block;padding:0 0 25px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;font-weight: bold;}
+.inputbox ul li input[type=text], .inputbox ul li input[type=tel]{display:block;height:20px;padding:13px 0;font-size:20px;line-height:22px;font-weight:500;letter-spacing:-1.5px;color:#464646;}
+.inputbox ul li input[type=button]{position:absolute;display:block;right:0;bottom:5px;width:130px;height:46px;font-size:16px;line-height:46px;text-align:center;
+background:#e4e4e4;color:#b5b5b5;border:0;border-radius:28px;}
+.inputbox ul li input[type=button].action{line-height: 42px;background:#6131ce;color:#fff;box-sizing: border-box;}
+.inputbox ul li input[type=button].ready{background:#6131ce;color:#fff;}
+.inputbox ul li input[type=button].ready:hover{background: #E4E4E4;color: #B5B5B5;}
+
+.inputbox dl{}
+.inputbox dl dt{position:relative;margin:0 0 60px;width:350px;border-bottom:1px solid #a9a9a9;box-sizing:border-box;}
+.inputbox dl dt label{display:block;padding:0 0 25px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;}
+.inputbox dl dt input[type=text]{display:block;padding:18px 0;height:22px;width:calc(100% - 136px);font-size:22px;line-height:22px;font-weight:500;letter-spacing:-1.5px;color:#464646;}
+.inputbox dl dt input[type=tel]{display:block;padding:18px 0;height:22px;width:calc(100% - 136px);font-size:22px;line-height:22px;font-weight:500;letter-spacing:-1.5px;color:#464646;}
+.inputbox dl dt span{position:absolute;display:block;right:0;bottom:0;width:auto;height:56px;border:0;border-radius:3px;}
+.inputbox dl dt input[type=button]{position:relative;display:inline-block;width:50%;width:67px;height:56px;font-size:16px;line-height:56px;text-align:center;background:#fff;color:#322d4f;}
+.inputbox dl dt input[type=button] + label{position:absolute;top:47%;left:83%;padding:0;width:5px;height:10px;font-family:'Lato';font-size:10px;line-height:10px;color:#322d4f;
+transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+.inputbox dl dt input[type=button].on{background:#322d4f;color:#fff;}
+.inputbox dl dt input[type=button].on + label{color:#fff;}
+.inputbox dl dd{}
+.inputbox dl dd h4{display:block;padding:0 0 40px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;}
+.inputbox dl dd h4 div{display: inline-block;vertical-align: baseline;}
+.inputbox dl dd ol{font-size:0;margin:0;}
+.inputbox dl dd ol::after{display:block;clear:both;content:'';}
+.inputbox dl dd ol li{float:left;width:calc(33.33% - 16px);margin:0 8px 16px 8px;height:70px;}
+.inputbox dl dd ol li.spaceDiInput{display:none;}
+.inputbox dl dd ol li.spaceDiInput.show{display:block;}
+.inputbox dl dd ol li input[type=checkbox]{position:absolute;display:none;}
+.inputbox dl dd ol li input[type=checkbox] + label{position:relative;display:block;padding:26px 40px 26px 140px;width:100%;height:100%;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#464646;
+background:#fafafa;box-sizing:border-box;border:1px solid #dcdcdc;text-align:center;white-space:nowrap;}
+.inputbox dl dd ol li input[type=checkbox]#spaceDi + label{padding-left:0;padding-right:0;}
+.inputbox dl dd ol li input[type=checkbox]:checked + label{background:#322d4f;border:1px solid #322d4f;border-radius:3px;color:#fff;
+-webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.3);
+box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.3);}
+.inputbox dl dd ol li input[type=checkbox].disabled + label{opacity:0.5;}
+.inputbox dl dd ol li input[type=checkbox] + label::after{position:absolute;content:'';}
+#spaceApt + label::after{left:24px;top:20px;width:75px;height:49px;background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceApt.png) center top no-repeat;}
+#spaceApt:checked + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceApt_w.png) center top no-repeat;}
+#spaceSin + label::after{left:24px;top:20px;width:77px;height:49px;background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceSin.png) center top no-repeat;}
+#spaceSin:checked + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceSin_w.png) center top no-repeat;}
+#spaceVil + label::after{left:26px;top:20px;width:71px;height:49px;background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceVil.png) center top no-repeat;}
+#spaceVil:checked + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceVil_w.png) center top no-repeat;}
+#spaceOne + label::after{left:26px;top:20px;width:70px;height:49px;background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceOne.png) center top no-repeat;}
+#spaceOne:checked + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceOne_w.png) center top no-repeat;}
+#spaceOfc + label::after{left:25px;top:20px;width:73px;height:49px;background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceOfc.png) center top no-repeat;}
+#spaceOfc:checked + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceOfc_w.png) center top no-repeat;}
+#spaceMal + label::after{left:24px;top:20px;width:76px;height:49px;background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceMal.png) center top no-repeat;}
+#spaceMal:checked + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceMal_w.png) center top no-repeat;}
+#spaceFac + label::after{left:23px;top:20px;width:75px;height:49px;background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceFac.png) center top no-repeat;}
+#spaceFac:checked + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/spaceFac_w.png) center top no-repeat;}
+.inputbox dl dd ol li input[type=text]{display:block;width:100%;height:70px;padding:22px 0;font-size:22px;line-height:22px;font-weight:500;letter-spacing:-1.5px;color:#464646;box-sizing:border-box;border-bottom:1px solid #a9a9a9;}
+
+.addService .inputbox dl dd ol li input[type=checkbox] + label{padding:26px 30px 26px 80px;}
+.addService .inputbox dl dd ol li input[type=checkbox] + label::after{top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+#structNor + label::after{left:30px;width:51px;height:51px;background:url(https://cleanbell.blob.core.windows.net/images-v4/structNor.png) center top no-repeat;}
+#structFlr + label::after{left:30px;width:51px;height:51px;background:url(https://cleanbell.blob.core.windows.net/images-v4/structFlr.png) center top no-repeat;}
+#structTer + label::after{left:24px;width:64px;height:50px;background:url(https://cleanbell.blob.core.windows.net/images-v4/structTer.png) center top no-repeat;}
+#structExp + label::after{left:24px;width:60px;height:55px;background:url(https://cleanbell.blob.core.windows.net/images-v4/structExp.png) center top no-repeat;}
+
+.addService .inputbox dl dd:first-of-type{border-bottom:1px solid #d7d7d7;}
+.addService .inputbox dl dd:last-of-type h4{margin:60px 0 0}
+.addService .inputbox ul{width:100%;margin:0;}
+.addService .inputbox ul li{display:inline-block;width:225px;border:0;margin-right:30px;}
+.addService .inputbox ul li:last-of-type{margin-right:0}
+.addService .inputbox ul li label{text-align:center;}
+.addService .inputbox ul li .numberBox{position:relative;}
+.addService .inputbox ul li .numberBox button.spaceMinus{position:absolute;left:0;top:50%;width:50px;height:40px;background:url(https://cleanbell.blob.core.windows.net/images-v4/minus.png) 50% no-repeat;content:'';border:0;padding:0;margin:0;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.addService .inputbox ul li .numberBox button.spacePlus{position:absolute;right:0;top:50%;width:50px;height:40px;background:url(https://cleanbell.blob.core.windows.net/images-v4/plus.png) 50% no-repeat;content:'';border:0;padding:0;margin:0;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.addService .inputbox ul li .numberBox input[type=text]{width:225px;height:50px;background:none;box-sizing:border-box;border:1px solid #dcdcdc;border-radius:50px;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;text-align:center;}
+
+.inputbox dl dd ol.add1016 li{float:left;margin:0 0 15px;width:calc(50% - 7.5px);height:120px;}
+.inputbox dl dd ol.add1016 li:nth-of-type(odd){margin-right:7.5px;}
+.inputbox dl dd ol.add1016 li:nth-of-type(even){margin-left:7.5px;}
+.inputbox dl dd ol.add1016 li input[type=checkbox] + label{padding:26px 75px 26px 106px;text-align:left;white-space:normal;word-break: keep-all;}
+.inputbox dl dd ol.add1016 li input[type=checkbox] + label::before{position:absolute;top:50%;right:24px;width:27px;height:21px;background:url(https://cleanbell.blob.core.windows.net/images-v4/addService_check.png) no-repeat;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.inputbox dl dd ol.add1016 li input[type=checkbox] + label::after{top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.inputbox dl dd ol.add1016 li input[type=checkbox] + label h5{padding:0 0 10px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#464646;}
+.inputbox dl dd ol.add1016 li input[type=checkbox] + label span{display: block;font-size:16px;line-height:20px;font-weight:400;letter-spacing:-1.75px;color:#7c7c7c;}
+.inputbox dl dd ol.add1016 li input[type=checkbox]:checked + label{background: #fafafa;border: 1px solid #6131CE;}
+.inputbox dl dd ol.add1016 li input[type=checkbox]:checked + label::before{background:url(https://cleanbell.blob.core.windows.net/images-v4/addService_checked.png) no-repeat;}
+
+#step5 .inputbox dl dd ol li input[type=checkbox] + label{padding:26px 30px 26px 80px;}
+#step5 .inputbox dl dd ol li input[type=checkbox] + label::after{top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+#quality01 + label::after{left:30px;width:39px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/quality01.png) center top no-repeat;}
+#quality01:checked + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/quality01_w.png) center top no-repeat;}
+#quality02 + label::after{left:30px;width:41px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/quality02.png) center top no-repeat;}
+#quality02:checked + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/quality02_w.png) center top no-repeat;}
+#quality03 + label::after{left:24px;width:64px;height:44px;background:url(https://cleanbell.blob.core.windows.net/images-v4/quality03.png) center top no-repeat;}
+#quality03:checked + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/quality03_w.png) center top no-repeat;}
+#quality04 + label::after{left:24px;width:52px;height:43px;background:url(https://cleanbell.blob.core.windows.net/images-v4/quality04.png) center top no-repeat;}
+#quality04:checked + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/quality04_w.png) center top no-repeat;}
+#quality05 + label::after{left:24px;width:63px;height:35px;background:url(https://cleanbell.blob.core.windows.net/images-v4/quality05.png) center top no-repeat;}
+#quality05:checked + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/quality05_w.png) center top no-repeat;}
+#step5 .inputbox .addOption, #step5 .inputbox .addTax{display:none;padding:0 0 20px;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;}
+#step5 .inputbox .addOption.on, #step5 .inputbox .addTax.on{display:block;}
+#step5 .inputbox .addOption span.lato, #step5 .inputbox .addTax span.lato{color:#6131ce;}
+#step5 .inputbox dl dd:first-of-type{border-bottom:1px solid #d7d7d7;}
+#step5 .inputbox dl dd.howpay{}
+#step5 .inputbox dl dd.howpay h4{margin:60px 0 0}
+#step5 .inputbox dl dd.howpay ol li input[type=checkbox] + label{padding:26px 0;}
+
+#step6 .inputbox dl dd:first-of-type{border-bottom:1px solid #d7d7d7;}
+#step6 .inputbox dl dd:last-of-type h4{margin:60px 0 0}
+#step6 .inputbox dl dd ol li{float:left;margin:0 0 15px;width:calc(50% - 7.5px);height:120px;}
+#step6 .inputbox dl dd ol li:nth-of-type(odd){margin-right:7.5px;}
+#step6 .inputbox dl dd ol li:nth-of-type(even){margin-left:7.5px;}
+#step6 .inputbox dl dd ol li input[type=checkbox] + label{padding:26px 75px 26px 106px;text-align:left;white-space:normal;}
+#step6 .inputbox dl dd ol li input[type=checkbox] + label::before{position:absolute;top:50%;right:24px;width:27px;height:21px;background:url(https://cleanbell.blob.core.windows.net/images-v4/addService_check.png) no-repeat;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+#step6 .inputbox dl dd ol li input[type=checkbox] + label::after{top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+#step6 .inputbox dl dd ol li input[type=checkbox] + label h5{padding:0 0 10px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#464646;}
+#step6 .inputbox dl dd ol li input[type=checkbox] + label span{font-size:16px;line-height:20px;font-weight:400;letter-spacing:-1.75px;color:#7c7c7c;}
+#addService01 + label::after{left:20px;width:57px;height:72px;background:url(https://cleanbell.blob.core.windows.net/images-v4/addService01.png) center top no-repeat;}
+#addService02 + label::after{left:31px;width:45px;height:66px;background:url(https://cleanbell.blob.core.windows.net/images-v4/addService02.png) center top no-repeat;}
+#addService03 + label::after{left:28px;width:51px;height:36px;background:url(https://cleanbell.blob.core.windows.net/images-v4/addService03.png) center top no-repeat;}
+#addService04 + label::after{left:25px;width:57px;height:57px;background:url(https://cleanbell.blob.core.windows.net/images-v4/addService04.png) center top no-repeat;}
+#addService05 + label::after{left:24px;width:62px;height:60px;background:url(https://cleanbell.blob.core.windows.net/images-v4/addService05.png) center top no-repeat;}
+#addService06 + label::after{left:34px;width:39px;height:66px;background:url(https://cleanbell.blob.core.windows.net/images-v4/addService06.png) center top no-repeat;}
+
+#step6 .inputbox dl dd ol li input[type=checkbox]:checked + label{padding-top:25px;background:#fafafa;border:2px solid #6131ce;box-shadow:none;}
+#step6 .inputbox dl dd ol li input[type=checkbox]:checked + label::before{background:url(https://cleanbell.blob.core.windows.net/images-v4/addService_checked.png) no-repeat;}
+#step6 .inputbox dl dd textarea{display:block;padding:20px;width:100%;max-width:738px;font-size:18px;line-height:26px;font-weight:400;letter-spacing:-1.5px;color:#464646;border:1px solid #eee;box-sizing:border-box;}
+.inputbox dl dd textarea{display:block;padding:20px;width:100%;max-width:738px;font-size:18px;line-height:26px;font-weight:400;letter-spacing:-1.5px;color:#464646;border:1px solid #eee;box-sizing:border-box;}
+
+.step_check{display:none;position:relative;padding:30px 0 30px 150px;}
+.step_check input{position:absolute;display:none;}
+.step_check input + label{position:relative;display:block;padding-left:42px;margin:0;width:fit-content;font-size:20px;line-height:30px;font-weight:400;letter-spacing:-1.5px;color:#464646;}
+.step_check input + label strong{font-weight:600;}
+.step_check input + label span{position:absolute;left:0;top:50%;width:30px;height:30px;background:url(https://cleanbell.blob.core.windows.net/images-v4/checkedFalse.png) no-repeat;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.step_check input:checked + label span{background:url(https://cleanbell.blob.core.windows.net/images-v4/checkedTrue.png) no-repeat;}
+
+.step_arrow{padding:30px 0 0;}
+.step_arrow dl{}
+.step_arrow dl::after{display:block;clear:both;content:''}
+.step_arrow dt{float:left;}
+.step_arrow dd{float:right;}
+.step_arrow dl a{position:relative;display:block;padding: 19px 40px 22px 78px;font-size:22px;line-height:33px;font-weight:400;letter-spacing:-1.1px;text-align:center;box-sizing:border-box;border-radius:4px;}
+.step_arrow dl dt a{border:1px solid #A9A9A9;color:#959595;background: url(https://cleanbell.blob.core.windows.net/images-v4/arrow_left_step.png) no-repeat 30px center #F9F9F9;}
+.step_arrow dl dd a{padding-right:33px;background:#322d4f;color:#fae6cd;}
+.step_arrow dl dd a.nextStep, .step_arrow dl dd a.finalStep{display:none;padding: 22px 164px 21px 60px;color: #FAE6CD;background: url(https://cleanbell.blob.core.windows.net/images-v4/arrow_right_step.png) no-repeat 80% center #322D4F;}
+.step_arrow dl dd a.finalStep{display: block;}
+
+/* 업체선택 */
+
+.subcontainer.selectCompany .topBanner{padding:81px 0 0;height:404px;background:url(https://cleanbell.blob.core.windows.net/images-v4/selectCompany_bg.jpg) no-repeat;background-size:cover;}
+#container.subcontainer.selectCompany .topBanner .inner{padding:68px 0 0;}
+.selectCompany{position:relative;}
+.selectCompany dl{width:calc(50% - 40px);}
+
+.topChart{position:relative;}
+.topChart dt{}
+.topChart dt::after{display:block;clear:both;content:'';}
+.topChart dt div.chartDonut{display:inline-block;position:relative;width:45%;}
+.topChart dt div span.percentage{position:absolute;top:60%;left:50%;font-size:46px;line-height:50px;font-weight:600;letter-spacing:0;color:#6131ce;
+transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+.topChart dt ol{display:inline-block;margin:40px 0 0;width:50%;}
+.topChart dt ol li:first-of-type{margin:0 0 5px;padding:0 0 10px;width:fit-content;font-size:20px;line-height:30px;border-bottom:1px solid #fff;}
+.topChart dt ol li:first-of-type strong{font-weight:600;color:#6131ce;}
+.topChart dt ol li{font-size:40px;line-height:46px;font-weight:400;letter-spacing:-1.5px;color:#464646;white-space:nowrap;}
+.topChart dt ol li:last-of-type{font-weight:600;color:#6131ce;}
+.topChart dd{margin:30px 0 0;padding:18px 0;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#fff;background:rgba(97,49,206,0.5);text-align:center;}
+
+.topCalendar{position:absolute;bottom:0;right:0;}
+.topCalendar dt{position:relative;padding:30px;background:rgba(248,248,248,0.8);}
+.topCalendar dt h4{position:relative;margin:0 0 19px;padding:6px 0 6px 24px;font-size:22px;line-height:22px;font-weight:400;letter-spacing:-1.75px;color:#464646;}
+.topCalendar dt h4::before{position:absolute;left:0;top:50%;width:15px;height:21px;background:url(https://cleanbell.blob.core.windows.net/images-v4/location_icon_01.png) no-repeat;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.topCalendar dt h4 a{position:absolute;right:0;top:50%;display:block;padding:0 10px;width:fit-content;height:36px;font-size:18px;line-height:36px;
+font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;background:#f9f9f9;text-align:center;border:1px solid #e5e5e5;border-radius:3px;box-sizing:border-box;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.topCalendar dt .dtCalendarBox{position:relative;}
+.topCalendar dt input[type=text]{position:relative;padding:15px 15px 15px 75px;width:calc(100% - 90px);height:30px;font-size:20px;line-height:30px;font-weight:400;color:#464646;background:#fff;}
+.topCalendar dt input[type=text] + label{position:absolute;left:20px;top:50%;width:21px;height:21px;background:url(https://cleanbell.blob.core.windows.net/images-v4/calendarIcon.png) no-repeat;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.topCalendar dt input[type=text] + label::after{position:absolute;left:20px;top:50%;}
+.topCalendar dt input[type=button]{position:absolute;display:none;}
+.topCalendar dt input[type=button] + label{position:absolute;top:50%;right:0;width:60px;height:60px;background:url(https://cleanbell.blob.core.windows.net/images-v4/arrow_bottom_b.png) center no-repeat;cursor:pointer;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+
+.topCalendar dd{display:none;position:absolute;top:0;padding:0;width:100%;background:#6131ce;z-index:10}
+.topCalendar dd h4{position:relative;margin:0;padding:36px 30px 54px;font-size:22px;line-height:22px;font-weight:400;letter-spacing:-1.75px;color:#fae6cd;}
+.topCalendar dd .ddCalendarBox{position:absolute;left:50%;top:81px;width:calc(100% - 60px);z-index:1;box-sizing:border-box;
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.topCalendar dd input[type=text]{position:relative;padding:15px 15px 15px 75px;width:calc(100% - 90px);height:30px;font-size:20px;line-height:30px;font-weight:400;color:#6131ce;background:#fff;border:1px solid #6131ce;}
+.topCalendar dd input[type=text] + label{position:absolute;left:20px;top:50%;width:21px;height:21px;background:url(https://cleanbell.blob.core.windows.net/images-v4/calendarIcon_p.png) no-repeat;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.topCalendar dd input[type=text] + label::after{position:absolute;left:20px;top:50%;}
+.topCalendar dd input[type=button]{position:absolute;display:none;}
+.topCalendar dd input[type=button] + label{position:absolute;top:50%;right:0;width:60px;height:60px;background:url(https://cleanbell.blob.core.windows.net/images-v4/arrow_top_p.png) center no-repeat;cursor:pointer;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.topCalendar dd #calendarChange{position:relative;}
+.topCalendar dd #calendarChange .ui-datepicker{padding:60px 30px 15px;width:calc(100% - 60px);}
+.topCalendar dd #calendarChange a.ui-state-active,
+.topCalendar dd #calendarChange a.ui-widget-content .ui-state-active,
+.topCalendar dd #calendarChange a.ui-widget-header .ui-state-active{background:#6131ce;color:#fff !important;border-radius:5px;}
+.topCalendar dd #calendarChange .ui-datepicker td{padding:0}
+.topCalendar dd #calendarChange .ui-datepicker td a{margin:0 auto;padding:18px 0;width:calc(100% - 8px);font-size:16px;line-height:16px;}
+.topCalendar dd #calendarChange .ui-datepicker td:first-child a{color:#df232a}
+.topCalendar dd #calendarChange .ui-datepicker td:last-child a{color:#448ccb}
+
+.modalpopup .modal_option{padding:40px 50px;background:#fff;}
+.modalpopup .modal_option .modal_option_top{position:relative;}
+.modalpopup .modal_option .modal_option_top h3{position:relative;padding:0 0 35px;font-size:32px;line-height:32px;font-weight:400;letter-spacing:-1.75px;color:#322d4f;text-align:center;}
+.modalpopup .modal_option .modal_option_top h3::after{position:absolute;bottom:0;left:50%;width:fit-content;height:18px;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;content:'(중복선택가능)';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.modalpopup .modal_option .modal_option_top a{position:absolute;top:0;right:0;width:28px;height:28px;background:url(https://cleanbell.blob.core.windows.net/images-v4/closeModal.png) no-repeat;content:'';}
+.modalpopup .modal_option .inputbox{padding:0;border:0;}
+.modalpopup .modal_option .inputbox dl dd{padding:60px 0 0;border-bottom:1px solid #d7d7d7;}
+.modalpopup .modal_option .inputbox dl dd ol li{width:calc(33.33% - 16px);}
+.modalpopup .modal_option .inputbox dl dd ol li input[type=checkbox] + label{padding:26px 0;}
+.modalpopup .modal_option .addTax, .modalpopup .modal_option .addPrice1, .modalpopup .modal_option .addPrice2{display:none;padding:0 0 20px;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;}
+.modalpopup .modal_option span.lato{color:#6131ce;}
+
+/* MD추천 */
+.recoMD_off{background:#f6f6f6;}
+.recoMD_off .inner{padding:60px 0 50px}
+.recoMD_off h3{position:relative;padding:0 0 40px;font-size:26px;line-height:34px;font-weight:400;letter-spacing:-1.5px;color:#322d4f;text-align:center;}
+.recoMD_off h3::after{position:absolute;bottom:0;left:50%;width:fit-content;height:18px;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;content:'가장 인기있는 청소업체로 추천드립니다.';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.recoMD_off .openMD{display:block;padding:12px 30px;margin:40px auto 0;width:230px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;background:#fff;;border:none;border-radius:50px;box-sizing:border-box;}
+
+.recoMD_on{display:none;background:#6131ce;}
+.recoMD_on .inner{padding:60px 0 50px}
+.recoMD_on h3{position:relative;padding:0 0 40px;font-size:26px;line-height:34px;font-weight:400;letter-spacing:-1.5px;color:#fae6cd;text-align:center;}
+.recoMD_on h3::after{position:absolute;bottom:0;left:50%;width:fit-content;height:18px;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#b8aad9;content:'가장 인기있는 청소업체로 추천드립니다.';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.recoMD_on h4{padding:12px 30px;margin:40px auto 0;width:230px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#fae6cd;background:none;border:1px solid #fae6cd;border-radius:50px;box-sizing:border-box;}
+
+.selectCompany dl.cleaners{width:100%;}
+.cleaners{position:relative;margin:20px 0;}
+.cleaners dt{position:absolute;left:0;top:50%;width:240px;height:200px;border-radius:3px;border:1px solid #e3e3e3;overflow:hidden;background:#fff;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);z-index:1;
+-webkit-box-shadow: 0px 15px 20px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 15px 20px 0px rgba(0,0,0,0.2);
+box-shadow: 0px 15px 20px 0px rgba(0,0,0,0.2);}
+.cleaners dt img{position:absolute;top:50%;left:50%;border:0;border-radius:3px;width:auto;height:inherit;
+transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+.cleaners dd{position:relative;left:230px;width:calc(100% - 230px);font-size:0;background:#fff;border-radius:3px;box-sizing:content-box;}
+.cleaners dd .checkMD{position:absolute;right:30px;top:20px;display:block;padding:14px 20px;border:0;border-radius:3px;background:#6131ce;
+-webkit-box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.2);
+box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.2);}
+.cleaners dd .checkMD span{position:relative;display:block;padding-left:27px;width:30px;height:20px;}
+.cleaners dd .checkMD span::before{position:absolute;left:0;top:50%;width:22px;height:18px;background:url(https://cleanbell.blob.core.windows.net/images-v4/checkMD.png) no-repeat;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.cleaners dd .checkMD span::after{position:absolute;right:0;width:fit-content;height:20px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.75px;color:#fff;content:'선택'}
+.cleaners dd h5{padding:0 0 20px;font-size:40px;line-height:40px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;cursor:pointer;}
+.cleaners dd h5 span{display:block;padding:0 0 10px !important;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;}
+.cleaners dd ol.tag{margin-left:5px;display:block;width:100%;}
+.cleaners dd ol.tag::after{display:block;clear:both;content:'';}
+.cleaners dd ol.tag li{float:left;margin:0 10px 10px 0;}
+.cleaners dd ol.tag li span{display:block;padding:11px 18px;width:fit-content;font-size:14px;line-height:14px;font-weight:400;letter-spacing:0;color:#464646;background:#f2f2f2;border:0;border-radius:50px;}
+.cleaners dd ul{display:inline-block;padding:20px 0 0;}
+.cleaners dd ul li{display:inline-block;font-family:'Lato';margin-right:40px;font-size:28px;line-height:28px;font-weight:600;letter-spacing:0;color:#6131ce;}
+.cleaners dd ul li:last-of-type{margin-right:0;}
+.cleaners dd ul li strong{display:block;padding:0 0 12px;font-family:"Noto Sans KR","Noto Sans","nanumgothic";font-size:16px;line-height:16px;font-weight:400;letter-spacing:-1.5px;color:#000;}
+.cleaners dd h6{display:inline-block;padding:20px 0 0 40px;font-size:16px;line-height:16px;font-weight:400;letter-spacing:-1.5px;color:#000;}
+.cleaners dd h6 span{display:block;padding:10px 0 0 !important;font-size:28px;line-height:28px;font-weight:700;letter-spacing:0;color:#6131ce;}
+.cleaners dd h6 span small{font-size:18px;line-height:28px;font-weight:400;vertical-align:baseline;}
+.cleaners dd input[type=checkbox]{position:absolute;display:none;}
+.cleaners dd input[type=checkbox] + label{position:relative;display:block;padding:20px 20px 20px 40px;width:calc(100% - 60px);height:auto;border-radius:3px;}
+.cleaners dd input[type=checkbox]:checked + label{background:#6131ce;border:1px solid #e3e3e3;}
+.cleaners dd input[type=checkbox]:checked + label .checkMD{background:#322d4f;}
+.cleaners dd input[type=checkbox]:checked + label .checkMD span{width:80px;}
+.cleaners dd input[type=checkbox]:checked + label .checkMD span::before{background:url(https://cleanbell.blob.core.windows.net/images-v4/checkMD_checked.png) no-repeat;}
+.cleaners dd input[type=checkbox]:checked + label .checkMD span::after{content:'선택완료'}
+.cleaners dd input[type=checkbox]:checked + label h5{color:#fae6cd;}
+.cleaners dd input[type=checkbox]:checked + label h5 span{color:#bfbfbf;}
+.cleaners dd input[type=checkbox]:checked + label ol.tag li span{color:#bfbfbf;background:#3c225f;}
+.cleaners dd input[type=checkbox]:checked + label ul li strong{color:#fff;}
+.cleaners dd input[type=checkbox]:checked + label ul li{color:#fae6cd;}
+.cleaners dd input[type=checkbox]:checked + label h6{color:#fff;}
+.cleaners dd input[type=checkbox]:checked + label h6 span{color:#fae6cd;}
+.cleaners dd input[type=checkbox]:checked + label h6 span small{color:#fae6cd;}
+
+.recoMD_on .cleaners dd input[type=checkbox]:checked + label{background:#fae6cd;border:0;}
+.recoMD_on .cleaners dd input[type=checkbox]:checked + label h5{color:#6131ce}
+.recoMD_on .cleaners dd input[type=checkbox]:checked + label h5 span{color:#464646;}
+.recoMD_on .cleaners dd input[type=checkbox]:checked + label ul li strong{color:#464646;}
+.recoMD_on .cleaners dd input[type=checkbox]:checked + label ul li{color:#6131ce;}
+.recoMD_on .cleaners dd input[type=checkbox]:checked + label h6{color:#464646;}
+.recoMD_on .cleaners dd input[type=checkbox]:checked + label h6 span{color:#6131ce;}
+.recoMD_on .cleaners dd input[type=checkbox]:checked + label h6 span small{color:#6131ce;}
+.recoMD_on .closeMD{position:relative;margin:0 auto;padding:18px 0 0;display:block;width:64px;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#ccc;}
+.recoMD_on .closeMD::before{position:absolute;top:0;left:50%;width:12px;height:8px;background:url(https://cleanbell.blob.core.windows.net/images-v4/arrow_top_g.png) no-repeat;content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+
+.comparePrice{background:#fff;}
+.comparePrice .inner{padding:100px 0 60px;}
+.comparePrice h3{font-size:50px;line-height:50px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;text-align:center;}
+.comparePrice h3 span{display:block;padding:10px 15px;margin:23px auto 40px;width:120px;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;border-radius:3px;border:1px solid #7c7c7c;}
+.comparePrice h6{font-size:24px;line-height:24px;font-weight:400;letter-spacing:-1.5px;color:#464646;text-align:center;}
+.comparePrice h6 span{color:#6131ce;}
+.comparePrice dl{margin:40px 0;padding:40px 0;width:100%;background:#f3f3f5;}
+.comparePrice dl dt{font-size:24px;line-height:24px;font-weight:700;letter-spacing:0;font-style:italic;color:#7c7c7c;text-align:center;}
+.comparePrice dl dd{padding:30px 0 0;}
+.comparePrice dl dd ol{margin:0 auto;text-align:center;}
+.comparePrice dl dd ol li{position:relative;display:inline-block;margin:0 10px 20px 10px;padding:25px;background:#fff;border:1px solid #e2e2e5;border-radius:1px;}
+.comparePrice dl dd ol li::before{position:absolute;bottom:-5px;left:50%;width:calc(100% - 10px);height:5px;background:rgba(124,124,124,0.1);content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.comparePrice dl dd ol li:last-of-type{margin-right:0;}
+.comparePrice dl dd ol li span{display:block;width:fit-content;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.75px;color:#6131ce;}
+
+.newFace{background:#f7f7f7;}
+.newFace .inner{padding:60px 0;}
+.newFace h3{position:relative;margin:0 auto;padding-right:44px;width:fit-content;font-size:32px;line-height:32px;font-weight:400;letter-spacing:-1.75px;color:#363636;text-align:center;}
+.newFace h3 a{display:block;position:absolute;right:0;top:50%;width:30px;height:30px;background:url(https://cleanbell.blob.core.windows.net/images-v4/newFaceTitle.png) no-repeat;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+
+.talkBubble{display:none;position:absolute;left:66%;top:110px;padding:25px;width:410px;height:150px;background:#fff;border:1px solid #e3e3e3;border-radius:3px;z-index:2;
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.talkBubble::before{position:absolute;left:50%;top:-14px;width:0;height:0;border-left:14px solid transparent;border-right:14px solid transparent;border-bottom:14px solid #e3e3e3;content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.talkBubble::after{position:absolute;left:50%;top:-12px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:12px solid #fff;content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.talkBubble h4{padding:0 0 20px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.75px;color:#6131ce;}
+.talkBubble p{font-size:16px;line-height:28px;font-weight:400;letter-spacing:-1.75px;color:#7c7c7c;}
+
+
+.cleanerList{background:#fff;}
+.cleanerList .inner{padding:60px 0 40px;}
+.cleanerList h3{padding:17px 0;font-size:16px;line-height:16px;font-weight:400;letter-spacing:-1.5px;color:#8c80a8;background:#efeafa;text-align:center;}
+.cleanerList .cleaners dd{background:#fafafa;}
+.cleanerList .quotation{display:block;margin:0 auto;padding:24px 80px;width:130px;background:#322d4f;color:#fff;border-radius:50px;
+-webkit-box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.2);
+box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.2);}
+.cleanerList .quotation.app{width:215px;background:#322d4f;color:#fae6cd}
+.cleanerList .quotation span{position:relative;padding-left:45px;width:85px;display:block;font-size:24px;line-height:24px;font-weight:500;letter-spacing:-1.5px;opacity:0.2;white-space:nowrap;}
+.cleanerList .quotation span::before{position:absolute;left:0;top:50%;width:34px;height:19px;background:url(https://cleanbell.blob.core.windows.net/images-v4/quotation.png) no-repeat;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.cleanerList .quotation.app span{width:168px;opacity:1;}
+
+#modal_quotation_app.modalpopup .inner{width:560px;margin-top:10%;}
+#modal_quotation_ok.modalpopup .inner{width:560px;margin-top:10%;}
+#modal_quotation_end.modalpopup .inner{width:560px;margin-top:10%;}
+#modal_quotation_research.modalpopup .inner{width:560px;margin-top:10%;}
+.modal_quotation_top{position:relative;padding:100px 0 70px;background:#fff;border-radius:3px;}
+.modal_quotation_top::before{position:absolute;top:-60px;left:50%;width:120px;height:120px;background:#322d4f;border-radius:50%;
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);content:'';
+-webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
+box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);}
+.modal_quotation_top::after{position:absolute;top:-32.5px;left:50%;width:65px;height:65px;background:url(https://cleanbell.blob.core.windows.net/images-v4/modal_notice.png) no-repeat;
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);content:'';}
+#modal_quotation_ok .modal_quotation_top::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/modal_notice_ok.png) no-repeat;}
+.modal_quotation_top.half::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/modal_notice_ok.png) no-repeat;}
+.modal_quotation_top h3{padding:0 0 40px;font-size:40px;line-height:40px;font-weight:400;letter-spacing:-1.5px;color:#322d4f;text-align:center;}
+.modal_quotation_top span{margin:0 0 10px;display:block;font-size:20px;line-height:32px;font-weight:400;letter-spacing:-1.5px;text-align:center;word-break:keep-all;}
+.modal_quotation_top.half span{margin: 0 0 40px;}
+.modal_quotation_top span.one{color:#636363;}
+.modal_quotation_top span.two{color:#6131ce;}
+.modal_quotation_top strong{margin: 16px 0 0;display: block;font-size: 20px;line-height: 29px;font-weight: 500;letter-spacing: -1px;text-align: center;color: #322D4F;}
+.modal_quotation_top div{width:calc(100% - 160px);margin:30px auto;padding:30px 0;background:#f1f1f1;}
+.modal_quotation_top div ol{margin-left:10px;display:block;width:100%;text-align:center;}
+.modal_quotation_top div ol li{position:relative;display:inline-block;margin:0 20px 20px 0;padding:25px;background:#fff;border:1px solid #e3e3e3;border-radius:3px;}
+.modal_quotation_top div ol li::before{position:absolute;bottom:-5px;left:50%;width:calc(100% - 10px);height:5px;background:rgba(124,124,124,0.1);content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.modal_quotation_top div ol li span{display:block;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.75px;color:#6131ce;}
+.modal_quotation_bottom{margin:10px 0 0}
+.modal_quotation_bottom::after{display:block;clear:both;content:'';}
+.modal_quotation_bottom dt{float:left;width:calc(33.33% - 5px);background:#7c7c7c;border-radius:3px;}
+.modal_quotation_bottom dd{float:right;width:calc(66.66% - 5px);background:#6131ce;border-radius:3px;}
+.modal_quotation_bottom.half dt{width: calc(50% - 5px);}
+.modal_quotation_bottom.half dd{width: calc(50% - 5px);}
+#modal_quotation_ok .modal_quotation_bottom dd{float:inherit;width:100%;}
+.modal_quotation_bottom a{display:block;padding:23px 0;height:24px;font-size:24px;line-height:24px;font-weight:400;letter-spacing:0;color:#fff;text-align:center;}
+
+/* 마이페이지 */
+#container.myPage{padding:193px 0 0}
+.myList{height:220px;background:#fff;}
+.myList .inner{padding:39px 0 0}
+.myList dl{font-size: 0;}
+.myList dl dt{display: inline-block;width: 50%;font-size:40px;line-height:59px;font-weight:500;letter-spacing:-2px;color:#6131ce;}
+.myList dl dt span{display: block;font-size: 22px;line-height: 33px;font-weight: 400;letter-spacing: -1.1px;color: #7C7C7C;}
+.myList dl dd{display: inline-block;width: 50%;}
+.myList dl dd ol{width: 100%;}
+.myList dl dd ol li{display:inline-block;width: 30%;text-align: center;}
+.myList dl dd ol li:first-of-type{width: 70%;}
+.myList dl dd ol li span{margin: 0 0 4px;display:block;font-size:22px;line-height:33px;font-weight:400;letter-spacing:-1.1px;color:#7c7c7c;}
+.myList dl dd ol li strong{display:block;height: 48px;font-size:40px;line-height:48px;font-weight:700;letter-spacing:0;color:#464646;}
+.myList dl dd ol li:first-of-type strong{color:#6131ce;}
+.bestCompany{position:absolute;top:160px;padding:26px 40px;width:calc(100% - 80px);background:#6131ce;}
+.bestCompany ul{width: 100%;font-size: 0;}
+.bestCompany ul li{display:inline-block;width: 33.33%;text-align: center;}
+.bestCompany ul li span{margin:0 0 4px;display:block;font-size:18px;line-height:27px;font-weight:400;letter-spacing:-0.9px;color:#fff;}
+.bestCompany ul li strong{display:block;font-size:28px;line-height:41px;font-weight:500;letter-spacing:-1.4px;color:#fae6cd;}
+.bestCompany ul li strong.lato{letter-spacing: 0;}
+.bestCompany ul li strong small{font-family:"Noto Sans KR","Noto Sans","nanumgothic";font-size:18px;line-height:28px;font-weight:400;letter-spacing:0;color:#fae6cd;vertical-align: baseline;}
+
+.myTip{background:#f6f6f6;}
+.myTip .inner{padding:100px 0 50px;}
+.myTip dt{padding:6px 15px 7px;width:78px;font-size:18px;line-height:27px;font-weight:400;letter-spacing:-1.5px;color:#322d4f;background:#fae6cd;border-radius:3px;text-align:center;}
+.myTip dd{margin:19px 0 0;font-size:18px;line-height:27px;font-weight:400;letter-spacing:-0.9px;color:#464646;}
+
+.useList .inner{padding:60px 0 40px;}
+.useList h3{position: relative;font-size: 36px;line-height: 54px;font-weight: 300;letter-spacing: -1.8px;text-align: left;color: #363636;}
+.useList h3 a{position: absolute;right: 0;bottom: 0;padding: 10px 31px 11px 56px;width: 103px;font-size: 18px;line-height: 27px;font-weight: 400;letter-spacing: -0.9px;color: #fff;background: url(https://cleanbell.blob.core.windows.net/images-v4/plus-w.png) no-repeat 30px center #322D4F;border-radius: 2px;}
+
+.useListTotal{display: block;margin: 30px 0 44px;width: 100%;font-size: 0;}
+.useListBox{display: inline-block;margin-bottom: 16px;width: calc(50% - 8px);background: #FFFFFF;border: 1px solid #E3E3E3;border-radius: 2px;box-sizing: border-box;}
+.useListBox:nth-child(even){margin-left: 16px;}
+.useListBox dt{position: relative;display: inline-block;width: 198px;height: 198px;overflow: hidden;}
+.useListBox dt img{width: 100%;}
+.useListBox dt.crown::after{position: absolute;top: 10px;left: 12px;padding: 0;width: 42px;height: 36px;}
+.useListBox dt.crown.crown-gold::after{background: url(https://cleanbell.blob.core.windows.net/images-v4/crown_1st_img.png) no-repeat;content: '';}
+.useListBox dt.crown.crown-silver::after{background: url(https://cleanbell.blob.core.windows.net/images-v4/crown_2nd_img.png) no-repeat;content: '';}
+.useListBox dt.crown.crown-brass::after{background: url(https://cleanbell.blob.core.windows.net/images-v4/crown_3rd_img.png) no-repeat;content: '';}
+.useListBox dd{display: inline-block;padding: 18px 11px 10px;width: calc(100% - 198px - 22px);}
+.useListBox dd h4{display: inline-block;margin: 0 8px 0 10px;font-size: 28px;line-height: 41px;font-weight: 500;letter-spacing: -1.4px;color: #363636;text-align: left;}
+.useListBox dd .grade{display: inline-block;margin: 0 0 7px;vertical-align: bottom;}
+.useListBox dd .grade::after{display: block;clear: both;content: '';}
+.useListBox dd .grade li{position:relative;margin-right:6px;padding:2px 10px;float: left;font-size:12px;line-height:18px;font-weight:500;letter-spacing:-0.5px;border-radius:12px;border:0;color:#fff;}
+.useListBox dd .grade li:last-of-type{margin-right: 0;}
+.useListBox dd .grade li.lato{font-size: 12px;line-height: 18px;}
+.useListBox dd .grade li.grade-1{background:#ec313a;}
+.useListBox dd .grade li.grade-2{background:#626262;}
+.useListBox dd .grade li.grade-3{background:#e59700;}
+.useListBox dd small{display: block;margin-left: 10px;font-size: 16px;line-height: 24px;font-weight: 400;letter-spacing: -0.8px;color: #ACACAC;text-align: left;}
+.useListBox dd .hashtag{display: block;margin: 10px 0 16px 10px;}
+.useListBox dd .hashtag li{display: inline-block;margin-right: 10px;padding: 6px 16px;font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -0.7px;color: #464646;background: rgba(124,124,124,0.1);border-radius: 17px;}
+.useListBox dd .hashtag li:last-of-type{margin-right: 0;}
+.useListBox dd .hashtag li span{display: inline-block;font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -0.7px;color: #464646;}
+.useListBox dd .useListBtn ul{width: 100%;font-size: 0;}
+.useListBox dd .useListBtn ul li{position: relative;display: inline-block;padding: 10px 0;width: 50%;border: 0;}
+.useListBox dd .useListBtn ul li a{display: block;padding-left: 20px;margin: 0 auto;width: 64px;font-size: 18px;line-height: 27px;font-weight: 500;letter-spacing: -0.9px;text-align: center;}
+.useListBox dd .useListBtn ul li.call{border-radius: 4px 0 0 4px;background: #FFD400;}
+.useListBox dd .useListBtn ul li.apply{border-radius: 0 4px 4px 0;background: #6131CE;}
+.useListBox dd .useListBtn ul li.call a{color: #322D4F;background: url(https://cleanbell.blob.core.windows.net/images-v4/call.png) no-repeat 0 center}
+.useListBox dd .useListBtn ul li.apply a{color: #FFF;background: url(https://cleanbell.blob.core.windows.net/images-v4/estimate.png) no-repeat 0 center}
+.callTip{position: absolute;top: -40px;left:50%;transform: translate(-50%, 0);-webkit-transform: translate(-50%, 0);-moz-transform: translate(-50%, 0);display: block;padding: 10px 38px 10px 20px;width: 101px;font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -1.05px;color: #3C225F;background: url(https://cleanbell.blob.core.windows.net/images-v4/blink-x.png) no-repeat 126px center #FFF;border: 1px solid #E3E3E3;border-radius: 2px;-webkit-box-shadow: 0px 4px 0px rgba(70,70,70,0.2);-moz-box-shadow: 0px 4px 0px rgba(70,70,70,0.2);box-shadow: 0px 4px 0px rgba(70,70,70,0.2);z-index: 1;}
+.callTip::after{position: absolute;left: 50%;transform: translate(-50%, 0);-webkit-transform: translate(-50%, 0);-moz-transform: translate(-50%, 0);bottom: -9px;border-top: 9px solid #FFF;border-left: 9px solid transparent;border-right: 9px solid transparent;content: '';}
+
+/* 업체상세 */
+#logo.center{float: none;margin: 0 auto;}
+#logo.center a{text-align: center;}
+#container.companyDetail{padding:193px 0 0}
+
+.comDetailTop{position: relative;background:#EFEAFA;border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;}
+.comDetailTop.sticky{position: fixed;left: 0;right: 0;z-index: 100;}
+#header .comDetailTop .inner{position: relative;margin: 0 auto;padding: 21px 0;}
+.comDetailTop a{z-index: 1;}
+.comDetailTop .return{position: absolute;left: 0;top: 24px;width: 32px;height: 32px;font-size: 0;background: url(https://cleanbell.blob.core.windows.net/images-v4/arrow_return.png) no-repeat;}
+.comDetailTop h3{position: relative;display: block;height: 38px;font-size: 26px;line-height: 38px;font-weight: 500;letter-spacing: -1.3px;text-align: center;color: #322D4F;}
+.comDetailTop .apply{position: absolute;right: 0;top: 17px;display: none;padding: 10px 36px 12px;width: 60px;height: 24px;font-size: 16px;line-height: 24px;font-weight: 400;letter-spacing: -0.8px;text-align: center;color: #FFF;background: #6131CE;border: 0;border-radius: 28px;}
+#header.sticky .comDetailTop .apply{display: block;}
+
+.companyTop{font-size: 0;}
+.companyTop .inner{padding:40px 0 24px;}
+.companyIntro{position: relative;margin: 0 0 30px;}
+.companyIntro h3{display: inline-block;font-size:40px;line-height:40px;font-weight:500;letter-spacing:-2px;color:#6131ce;}
+.companyIntro .grade{display: inline-block;margin-left: 8px;vertical-align: bottom;}
+.companyIntro .grade::after{display: block;clear: both;content: '';}
+.companyIntro .grade li{position:relative;margin-right:6px;padding:2px 10px;float: left;font-size:12px;line-height:18px;font-weight:500;letter-spacing:-0.5px;border-radius:12px;border:0;color:#fff;}
+.companyIntro .grade li:last-of-type{margin-right: 0;}
+.companyIntro .grade li.lato{font-size: 12px;line-height: 18px;}
+.companyIntro .grade li.grade-1{background:#ec313a;}
+.companyIntro .grade li.grade-2{background:#626262;}
+.companyIntro .grade li.grade-3{background:#e59700;}
+.companyIntro p{display: block;margin: 19px 0 0;font-size:22px;line-height:33px;font-weight:400;letter-spacing:-1.1px;color: #7C7C7C;}
+.companyIntro span{display:block;font-size:16px;line-height:16px;font-weight:400;letter-spacing:-1.5px;color: #7C7C7C;}
+.companyIntro span strong{padding-left:15px;font-size:16px;line-height:16px;font-weight:400;letter-spacing:0;color: #7C7C7C;}
+.companyIntro .estimate{position: absolute;bottom: 0;right: 0;display: block;padding: 13px 58px 16px 57px;width: 70px;height: 27px;font-size: 18px;line-height: 27px;font-weight: 400;letter-spacing: -0.9px;text-align: center;color: #FFF;background: #6131CE;border: 0;border-radius: 28px;}
+
+.companyImg{display: inline-block;width: 284px;height: 284px;overflow: hidden;}
+.companyImg.pc{display: inline-block !important;}
+.companyImg img{width: 100%;}
+
+.companyInfo{padding-left: 40px;width: calc(100% - 284px - 40px);display: inline-block;}
+.companyInfo ul{}
+.companyInfo ul li{display:inline-block;margin-right:70px;}
+.companyInfo ul li span{display: block;font-size:22px;line-height:26px;font-weight:400;letter-spacing:-1.1px;color:#464646;text-align: center;}
+.companyInfo ul li span.star{width: 124px;height: 26px;}
+.star.star-0-0{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-0.png) no-repeat center;}
+.star.star-0-5{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-0.5.png) no-repeat center;}
+.star.star-1-0{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-1.png) no-repeat center;}
+.star.star-1-5{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-1.5.png) no-repeat center;}
+.star.star-2-0{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-2.png) no-repeat center;}
+.star.star-2-5{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-2.5.png) no-repeat center;}
+.star.star-3-0{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-3.png) no-repeat center;}
+.star.star-3-5{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-3.5.png) no-repeat center;}
+.star.star-4-0{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-4.png) no-repeat center;}
+.star.star-4-5{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-4.5.png) no-repeat center;}
+.star.star-5-0{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-5.png) no-repeat center;}
+.companyInfo ul li strong{display:block;font-size:46px;line-height:55px;font-weight:700;letter-spacing:0;color:#6131ce;text-align: center;}
+
+.companyInfo h5{position:relative;margin:24px 0 16px;padding-right:32px;width:120px;font-size:22px;line-height:33px;font-weight:400;letter-spacing:-1.1px;color:#464646;}
+.companyInfo h5 a{position:absolute;right:0;top:50%;width:22px;height:22px;background:url(https://cleanbell.blob.core.windows.net/images-v4/noticeBattery.png) no-repeat;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.companyInfo .battery{font-size:0}
+.companyInfo .battery li{display:inline-block;margin-right: 36px;width:110px;}
+.companyInfo .battery li:last-of-type{margin-right: 0;}
+.companyInfo .battery li span{position:relative;display:block;padding: 15px 61px 15px 0;font-size:18px;line-height:27px;font-weight:400;letter-spacing:-0.9px;color:#7c7c7c;text-align:center;}
+.companyInfo .battery li span::before{position:absolute;top:50%;right:0;width:49px;height:58px;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%)}
+/* images-v4 폴더 안에 lv1 ~ lv3 까지 각각 들어있음 */
+.companyInfo .battery li.battery_eco span::before{width:52px;background:url(https://cleanbell.blob.core.windows.net/images-v4/battery_eco_lv3.png) no-repeat;}
+.companyInfo .battery li.battery_vet span::before{background:url(https://cleanbell.blob.core.windows.net/images-v4/battery_vet_lv1.png) no-repeat;}
+.companyInfo .battery li.battery_sat span::before{background:url(https://cleanbell.blob.core.windows.net/images-v4/battery_sat_lv2.png) no-repeat;}
+.companyInfo .battery li.battery_edu span::before{background:url(https://cleanbell.blob.core.windows.net/images-v4/battery_edu_lv3.png) no-repeat;}
+.companyInfo .tag{margin-top: 33px;}
+.companyInfo .tag ol{}
+.companyInfo .tag ol:last-of-type{margin-top: 10px;}
+.companyInfo .tag ol li{display:inline-block;margin-right:10px;}
+.companyInfo .tag ol li:last-of-type{margin-right:0;}
+.companyInfo .tag ol li span{display:block;padding: 6px 16px 8px;width:auto;font-size:14px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#727070;text-align: center;background:rgba(194, 191, 192, 0.1);border:0;border-radius:17px;}
+/* .companyInfo .tag ol.business li span{color: #6131CE; background: #E8D9FF;} */
+/* ol 태그를 늘리지 않고 li 태그만 늘리시는 경우 line 643 내용을 아래 line 645 내용으로 교체하시고 해당 li 에 class="business" 를 추가해주세요. */
+.companyInfo .tag ol li.business span{color: #6131CE; background: #E8D9FF;}
+
+.companyBottom{background:#f9f9f9;border-top:1px solid #e3e3e3;}
+.detailTab{font-size:0;}
+.detailTab li{display:inline-block;width:33.33%;}
+.detailTab li a{position:relative;display:block;padding:24px 0;text-align:center;}
+.detailTab li.active a::before{position:absolute;top:-1px;left:0;right:0;height:4px;background:#6131ce;content:'';}
+.detailTab li a h4{font-size:22px;line-height:22px;font-weight:400;letter-spacing:-1.5px;color:#464646;}
+.detailTab li.active a h4{font-weight:400;color:#6131ce;}
+
+.detailBoxes{position:relative;padding:20px 0 0;}
+.detailBoxes.app{padding: 0;}
+.detailBoxes > section{display:none;}
+.detailBoxes > section:first-child{display:block;}
+
+#cleanerDetail{}
+#cleanerDetail dl{font-size:0;}
+#cleanerDetail dl dt{position: relative;margin:0 0 16px;padding:40px;width:calc(100% - 80px);background:#fff;}
+#cleanerDetail dl dt:first-child{padding:27px 40px;background: #EFEAFA;}
+#cleanerDetail dl dt::after{display:block;clear:both;content:'';}
+#cleanerDetail dl dt span{display:block;font-size:20px;line-height:29px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;}
+#cleanerDetail dl dt span p{display: block;font-size: 16px;line-height: 24px;font-weight: 400;letter-spacing: -0.8px;color: #322D4F;}
+#cleanerDetail dl dt span p span{display: inline-block;font-size: 16px;line-height: 24px;font-weight: 400;letter-spacing: -0.8px;color: #322D4F;text-decoration: underline;}
+#cleanerDetail dl dt strong{position: absolute;right: 40px;top: 50%;transform: translate(0,-50%);-webkit-transform: translate(0,-50%);-moz-transform: translate(0,-50%);display:block;font-size:40px;line-height:48px;font-weight:700;letter-spacing:0;color:#6131ce;}
+#cleanerDetail dl dt strong small{font-family:"Noto Sans KR","Noto Sans","nanumgothic";font-size:20px;line-height:48px;font-weight:400;vertical-align:baseline;}
+#cleanerDetail dl dd{position:relative;display:inline-block;padding:40px;width:calc(50% - 90px);height:180px;background:#fff;}
+#cleanerDetail dl dd:first-of-type{margin-right:10px;}
+#cleanerDetail dl dd:first-of-type::after{position:absolute;right:40px;bottom:0;width:168px;height:116px;background:url(https://cleanbell.blob.core.windows.net/images-v4/owner_icon.png) top no-repeat;content:'';}
+#cleanerDetail dl dd:last-of-type{margin-left:10px;}
+#cleanerDetail dl dd:last-of-type::after{position:absolute;right:40px;bottom:0;width:168px;height:127px;background:url(https://cleanbell.blob.core.windows.net/images-v4/reserve_icon.png) no-repeat;content:'';}
+#cleanerDetail dl dd h6{font-size:20px;line-height:30px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;}
+#cleanerDetail dl dd ul{margin:15px 0 0;}
+#cleanerDetail dl dd ul li{display:block;font-size:20px;line-height:34px;font-weight:400;letter-spacing:-1.5px;color:#464646;}
+
+#modal_battery.modalpopup .inner{width:840px;margin-top:10%;background:#fff;}
+#modal_battery.modalpopup .close_battery{position:absolute;top:40px;right:40px;display:block;z-index:1}
+.battery_header{position:relative;padding:60px;width:calc(100% - 120px);background:url(https://cleanbell.blob.core.windows.net/images-v4/battery_header.png) top no-repeat;}
+.battery_header h3{margin:0 0 40px;padding:20px;width:245px;font-size:36px;line-height:36px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;background:#fae6cd;border-radius:3px;}
+.battery_header p{font-size:22px;line-height:34px;font-weight:400;letter-spacing:-1.5px;color:#fff;}
+.battery_content{padding:20px 60px;}
+.battery_content ul{width:100%;}
+.battery_content ul li{position:relative;margin:0 0 30px;border-bottom:1px solid #d7d7d7;}
+.battery_content ul li::before{position:absolute;top:0;right:0;height:58px;content:'';}
+.battery_content ul li.battery_eco::before{width:167px;background:url(https://cleanbell.blob.core.windows.net/images-v4/battery_eco_all.png) no-repeat;}
+.battery_content ul li.battery_vet::before{width:155px;background:url(https://cleanbell.blob.core.windows.net/images-v4/battery_vet_all.png) no-repeat;}
+.battery_content ul li.battery_sat::before{width:155px;background:url(https://cleanbell.blob.core.windows.net/images-v4/battery_sat_all.png) no-repeat;}
+.battery_content ul li.battery_edu::before{width:157px;background:url(https://cleanbell.blob.core.windows.net/images-v4/battery_edu_all.png) no-repeat;}
+.battery_content ul li dl{padding:30px 0;}
+.battery_content ul li dl dt{font-size:26px;line-height:26px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;}
+.battery_content ul li dl dd{margin:24px 0 0;font-size:18px;line-height:28px;font-weight:400;letter-spacing:-1.5px;color:#464646;}
+.battery_content ul li dl dd span{font-weight:500;color:#6131ce;}
+.battery_content ul li dl dd strong{display:inline-block;padding:0 4px;font-weight:400;background:#efefef;}
+.battery_content ul li dl dd small{display:block;font-size:16px;line-height:28px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;}
+
+/* 청소범위 */
+#cleanerRange .myTip{padding:30px 0 60px;}
+#cleanerRange .myTip .inner{padding:0;}
+
+.rangeTag{padding:70px 0 0;background:#fff;font-size:0;}
+.rangeTab li{position:relative;display:inline-block;width:16.66%;border-bottom:1px solid #e3e3e3;}
+.rangeTab li a.active::after{position:absolute;bottom:0;left:0;right:0;height:1px;background:#6131ce;content:'';}
+.rangeTab li a{position:relative;display:block;padding:60px 0 30px;}
+.rangeTab li a::before{position:absolute;top:0;left:50%;content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+
+.rangeTab li a#room::before{top:6px;width:50px;height:38px;background:url(https://cleanbell.blob.core.windows.net/images-v4/rangeIcon_room.png) no-repeat;}
+.rangeTab li a.active#room::before{top:6px;width:50px;height:38px;background:url(https://cleanbell.blob.core.windows.net/images-v4/rangeIcon_room_on.png) no-repeat;}
+.rangeTab li a#kitchen::before{top:5px;width:50px;height:40px;background:url(https://cleanbell.blob.core.windows.net/images-v4/rangeIcon_kitchen.png) no-repeat;}
+.rangeTab li a.active#kitchen::before{top:5px;width:50px;height:40px;background:url(https://cleanbell.blob.core.windows.net/images-v4/rangeIcon_kitchen_on.png) no-repeat;}
+.rangeTab li a#bath::before{top:2px;width:50px;height:46px;background:url(https://cleanbell.blob.core.windows.net/images-v4/rangeIcon_bath.png) no-repeat;}
+.rangeTab li a.active#bath::before{top:2px;width:50px;height:46px;background:url(https://cleanbell.blob.core.windows.net/images-v4/rangeIcon_bath_on.png) no-repeat;}
+.rangeTab li a#door::before{width:38px;height:50px;background:url(https://cleanbell.blob.core.windows.net/images-v4/rangeIcon_door.png) no-repeat;}
+.rangeTab li a.active#door::before{width:38px;height:50px;background:url(https://cleanbell.blob.core.windows.net/images-v4/rangeIcon_door_on.png) no-repeat;}
+.rangeTab li a#balcony::before{top:4px;width:50px;height:42px;background:url(https://cleanbell.blob.core.windows.net/images-v4/rangeIcon_balcony.png) no-repeat;}
+.rangeTab li a.active#balcony::before{top:4px;width:50px;height:42px;background:url(https://cleanbell.blob.core.windows.net/images-v4/rangeIcon_balcony_on.png) no-repeat;}
+.rangeTab li a#living::before{width:50px;height:50px;background:url(https://cleanbell.blob.core.windows.net/images-v4/rangeIcon_living.png) no-repeat;}
+.rangeTab li a.active#living::before{width:50px;height:50px;background:url(https://cleanbell.blob.core.windows.net/images-v4/rangeIcon_living_on.png) no-repeat;}
+
+.rangeTab li a span{position:relative;display:block;height:16px;font-size:16px;line-height:16px;font-weight:500;letter-spacing:-1.3px;color:#999;text-align:center;}
+.rangeTab li a.active span{color:#6131ce;}
+
+.structAll{position:relative;padding:30px 0 80px;}
+.structAll > div{display:none;position:absolute;top:0;left:0;right:0;bottom:0;background:none;}
+.structAll > div:first-child{display:block;}
+#range01{position:relative;}
+#range02{position:relative;}
+#range03{position:relative;}
+#range04{position:relative;}
+#range05{position:relative;}
+#range06{position:relative;}
+
+.rangeItem{margin-left:-8px;}
+.rangeItem dd{display:inline-block;margin:10px 8px;padding:17px 24px;width:fit-content;height:16px;font-size:16px;line-height:16px;font-weight:400;letter-spacing:-1.3px;color:#aaa;background:#f8f8f8;}
+.rangeItem dd.on{color:#6131ce;background:#f8f5ff;}
+
+/* 리뷰 */
+.reviewTop{padding:60px 0 50px;border-bottom:1px solid #e3e3e3;background:#fff;font-size: 0;}
+.reviewTop dl::after{display:block;clear:both;content:''}
+.reviewTop h3 span{margin:0 0 10px;display:block;font-size:20px;line-height:29px;font-weight:600;letter-spacing:-1px;color:#6131ce;word-break: keep-all;}
+.reviewTop h3 strong{display:block;font-size:60px;line-height:72px;font-weight:700;letter-spacing:0;color:#6131ce;}
+.reviewTop h3 small{display:block;font-size:16px;line-height:25px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;word-break: keep-all;}
+
+.reviewTotal{display:inline-block;width: 25%;}
+
+.reviewUser{display:inline-block;width: 25%;}
+
+.supervisor{background:#fff;}
+.supervisor dl{font-size:0;}
+.supervisor dl dt{display:inline-block;margin:0;width:50%;text-align:left;}
+.supervisor dl dd{display:inline-block;width:50%;word-break:keep-all;}
+.supervisor dl dd h3{font-size:32px;line-height:48px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;}
+.supervisor dl dd span{margin:30px 0 0;display:block;font-size:18px;line-height:30px;font-weight:400;letter-spacing:-1.5px;color:#555;}
+
+.reviewSlide{position: relative;display:inline-block;width:50%;}
+.reviewSlide::after{display: block;clear: both;content: '';}
+.reviewTop .reviewSlide h3{float: left;width: 150px;}
+.reviewTop .reviewSlide h3 strong{font-size: 40px;line-height: 59px;font-weight: 500;letter-spacing: -2px;color: #464646;}
+.reviewTop .reviewSlide h3 div{position: relative;padding: 0 14px;width: calc(100% - 28px);}
+.btnQuality{position: absolute;bottom: 0;display: block;width: 14px;height: 28px;z-index: 1;}
+.prev.btnQuality{left: 0;background: url(https://cleanbell.blob.core.windows.net/images-v4/prevQuality.png) no-repeat;}
+.prev.btnQuality:hover{left: 0;background: url(https://cleanbell.blob.core.windows.net/images-v4/prevQuality_hover.png) no-repeat;}
+.next.btnQuality{right: 0;background: url(https://cleanbell.blob.core.windows.net/images-v4/nextQuality.png) no-repeat;}
+.next.btnQuality:hover{right: 0;background: url(https://cleanbell.blob.core.windows.net/images-v4/nextQuality_hover.png) no-repeat;}
+.reviewDots{padding: 0;width: 100%;font-size: 0;}
+.reviewDots li{position: relative;display: inline-block;padding: 23px 0 0;width: 25%;font-size: 20px;line-height: 28px;font-weight: 700;letter-spacing: 8px;text-align: center;color: #7C7C7C;}
+.reviewDots li.active{color: #6131CE;}
+
+.qualitySlide{float: right;width:calc(100% - 200px);}
+.qualitySlide::after{display:block;clear:both;content:'';}
+.qualitySlide li{}
+.qualitySlide li.good ol{width: 100%;}
+.qualitySlide li.good ol li{position:relative;display: block;margin:0 0 17px;padding:0;width: 100%;}
+
+.qSlideContent{position: relative;display: block;}
+.qSlideContent dt, .qSlideContent dd{display: inline-block;}
+.qSlideContent .fir{padding: 0 0 15px;width: 33px;height: 33px;}
+.qSlideContent .fir.bad{background: url(https://cleanbell.blob.core.windows.net/images-v4/iconBad.png) no-repeat;background-size: 33px;}
+.qSlideContent .fir.soso{background: url(https://cleanbell.blob.core.windows.net/images-v4/iconSoso.png) no-repeat;background-size: 33px;}
+.qSlideContent .fir.nice{background: url(https://cleanbell.blob.core.windows.net/images-v4/iconNice.png) no-repeat;background-size: 33px;}
+.qSlideContent .fir.best{background: url(https://cleanbell.blob.core.windows.net/images-v4/iconBest.png) no-repeat;background-size: 33px;}
+.qSlideContent .sec{width: calc(100% - 116px);}
+.qSlideContent .sec span{position: relative;display: block;padding: 2px 8px 4px 15px;width: 56px;font-size: 16px;line-height: 24px;font-weight: 400;letter-spacing: -0.8px;color: #7C7C7C;background: url(https://cleanbell.blob.core.windows.net/images-v4/balloom.png) no-repeat;}
+
+.progress{margin: 6px 0 0 7px;width: calc(100% - 7px);background: rgba(124,124,124,0.1);}
+.progress .bar{width: 10%;height: 10px;background: #6131CE;}
+.qSlideContent .thr{position: absolute;right: 0;bottom: 0;width: auto;}
+.qSlideContent .thr strong{display: block;height: 25px;font-size: 20px;line-height: 25px;font-weight: 700;letter-spacing: 0;color: #464646;text-align: right;white-space: nowrap;}
+.qSlideContent .thr strong small{font-family: 'Noto Sans KR';font-size: 16px;line-height: 25px;font-weight: 400;letter-spacing: 0;vertical-align: baseline;}
+
+.qualitySlide li.bad ol{width: 100%;}
+.qualitySlide li.bad ol li{position:relative;margin:0 0 10px;}
+
+.bqSlideContent{position: relative;display: block;}
+.bqSlideContent dd{display: inline-block;}
+.bqSlideContent .sec{width: 100%;}
+.bqSlideContent .sec span{position: relative;display: block;padding: 2px 14px 4px 8px;max-width: calc(100% - 140px);width: fit-content;font-size: 16px;line-height: 24px;font-weight: 400;letter-spacing: -0.8px;text-align: left;color: #464646;background: rgba(124,124,124,0.1);}
+.bqSlideContent .sec span::after{position: absolute;right: -14px;top: 50%;transform: translate(0, -50%);-webkit-transform: translate(0, -50%);-moz-transform: translate(0, -50%);width: 7px;border-left: 7px solid rgba(124,124,124,0.1);border-top: 7px solid transparent;border-bottom: 7px solid transparent;content:'';}
+.bqSlideContent .progress{margin-left: 0;width: 100%;}
+.bqSlideContent .progress .bar{height: 2px;}
+.bqSlideContent .thr{position: absolute;right: 0;top: 0;width: auto;}
+.bqSlideContent .thr strong{display: block;height: 24px;font-size: 20px;line-height: 24px;font-weight: 700;letter-spacing: 0;color: #464646;text-align: right;}
+
+
+
+.reviewMid{padding:50px 0;background:#fff;}
+#reviewLine{margin: 0 auto;width: 900px !important;height: 450px !important;}
+
+.reviewBoxes{position:relative;}
+.reviewBoxes > div{display:none;position:absolute;top:0;left:0;right:0;bottom:0;background:none;}
+.reviewBoxes > div:first-child{display:block;}
+
+#reviewGood{position:relative;}
+#reviewBad{position:relative;}
+
+.reviewBot{margin:20px 0 0}
+.reviewBot.app{margin:0}
+.review{padding:60px 0 40px;background:#fff;}
+.review::after{display:block;clear:both;content:'';}
+.review.reviewBest{margin:0 0 20px;}
+.review .clearfix{position:relative;}
+.review .clearfix::after{display:block;clear:both;content:'';}
+.review h3{margin:0 0 37px;font-size:26px;line-height:26px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;}
+.review h3 span{font-weight:400;letter-spacing:0;}
+.review h4{position:relative;padding-left:63px;}
+.review h4:before{position:absolute;left:0;top:50%;width:46px;height:46px;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.review.reviewBest h4:before{background:url(https://cleanbell.blob.core.windows.net/images-v4/iconBest.png) no-repeat;}
+.review.reviewNice h4:before{background:url(https://cleanbell.blob.core.windows.net/images-v4/iconNice.png) no-repeat;}
+.review.reviewSoso h4:before{background:url(https://cleanbell.blob.core.windows.net/images-v4/iconSoso.png) no-repeat;}
+.review.reviewBad h4:before{background:url(https://cleanbell.blob.core.windows.net/images-v4/iconBad.png) no-repeat;}
+.review h4 span{position:relative;display:inline-block;padding:0 9px;width:fit-content;height:30px;font-size:16px;line-height:30px;font-weight:400;letter-spacing:-1.5px;color:#fae6cd;background:#6131ce;}
+.review.reviewBad h4 span{color:#fff;background:#7c7c7c;}
+.review h4 span::before{position:absolute;left:-7px;top:50%;border-right:7px solid #6131ce;border-top:7px solid transparent;border-bottom:7px solid transparent;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.review.reviewBad h4 span::before{border-right:7px solid #7c7c7c;}
+.review .reviewL{float:left;width:80%;padding:27px 0 0;}
+.review .reviewL dt{margin:0 0 20px;font-size:18px;line-height:30px;font-weight:400;letter-spacing:-1.3px;color:#636363;word-break:keep-all;}
+.review.reviewBest .reviewL dt{color:#3c225f;}
+.review .reviewL dd:first-of-type{font-size:16px;line-height:16px;font-weight:400;letter-spacing:-1.5px;color:#636363;}
+.review .reviewL dd:first-of-type span{position:relative;display:inline-block;padding-left:13px;margin-left:10px;font-size:16px;line-height:16px;font-weight:600;letter-spacing:0;}
+.review .reviewL dd:first-of-type span::before{position:absolute;left:0;top:50%;width:3px;height:3px;background:#636363;border-radius:3px;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.review .reviewL dd ol{margin:15px 0 0}
+.review .reviewL dd ol li{display:inline-block;margin-right:40px;}
+.review .reviewL dd ol li span{position:relative;display:inline-block;padding-right:11px;margin-right:10px;font-size:16px;line-height:16px;font-weight:400;letter-spacing:-1.5px;color:#959595;}
+.review .reviewL dd ol li span::after{position:absolute;right:0;top:60%;width:1px;height:14px;background:#c7c7c7;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.review .reviewL dd ol li strong{display:inline-block;font-size:16px;line-height:16px;font-weight:400;letter-spacing:-1.5px;color:#959595;}
+.review .reviewL dd ol li strong span{padding:0;margin:0}
+.review .reviewL dd ol li strong span::after{display:none;}
+
+.review .reviewR{position:absolute;right:0;top:0;float:right;width:15%;text-align:center;}
+.review.reviewBest .reviewR{top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.review .reviewR dt{position:relative;margin:0 auto 20px;width:120px;height:120px;background:#f9f9f9;border:1px solid #e9e9e9;border-radius:50%;overflow:hidden;}
+.review .reviewR dt img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+.review .reviewR dd{font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;}
+
+.review .reviewAnswer{padding:40px 0 0;clear:both;}
+.review .reviewAnswer dl{padding:30px;background:#e3e3e3;border-radius:3px;}
+.review .reviewAnswer dt{font-size:16px;line-height:26px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;}
+.review .reviewAnswer dt span{padding-left:20px;display:inline-block;color:#959595;}
+.review .reviewAnswer dd{font-size:16px;line-height:30px;font-weight:400;letter-spacing:-1.3px;color:#464646;word-break:keep-all;}
+
+.reviewDefault{padding:0 0 90px;background:#fff;}
+.reviewDefault ul{}
+.reviewDefault ul li{position:relative;display:inline-block;width:232px;}
+.reviewDefault ul li a{position:relative;padding:0 0 23px;display:block;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;text-align:center;}
+.reviewDefault ul li a:after{position:absolute;bottom:0;left:0;right:0;height:1px;background:#e3e3e3;content:'';}
+.reviewDefault ul li a.active{color:#6131ce;}
+.reviewDefault ul li a.active::after{height:4px;background:#6131ce;}
+.reviewDefault ul li a span{font-weight:600;}
+
+.reviewDefault .review{border-bottom:1px solid #e3e3e3;}
+
+.reviewMore{display: block;width: 150px;padding: 15px 20px;border-radius: 3px;border: 1px solid #6131CE;background: #fff;}
+.reviewMore span{display: block;font-size: 16px;line-height: 24px;font-weight: 400;letter-spacing: -0.8px;color: #6131CE;text-align: center;}
+
+.reviewNone{padding:180px 0;background:#f9f9f9;}
+.reviewNone .noReview{position:relative;display:block;}
+.reviewNone .noReview::after{position:absolute;top:50%;left:50%;width:fit-content;height:28px;font-size:28px;line-height:28px;font-weight:400;letter-spacing:-1.5px;color:#959595;white-space:nowrap;content:'등록된 리뷰가 없습니다.';
+transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+
+.reviewPage{margin:60px auto 0;width:fit-content;}
+.reviewPage a{display:inline-block;width:15px;height:24px;}
+.reviewPage a.arrowL{background:url(https://cleanbell.blob.core.windows.net/images-v4/pageArrow_l.png) no-repeat;}
+.reviewPage a.arrowL:hover{background:url(https://cleanbell.blob.core.windows.net/images-v4/pageArrow_l_on.png) no-repeat;}
+.reviewPage a.arrowR{background:url(https://cleanbell.blob.core.windows.net/images-v4/pageArrow_r.png) no-repeat;}
+.reviewPage a.arrowR:hover{background:url(https://cleanbell.blob.core.windows.net/images-v4/pageArrow_r_on.png) no-repeat;}
+.reviewPage div{display:inline-block;padding:0 40px;font-size:20px;line-height:24px;font-weight:300;letter-spacing:4;color:#7c7c7c;}
+.reviewPage div strong{font-size:20px;line-height:24px;font-weight:700;letter-spacing:4;color:#6131ce;}
+.reviewPage div span{}
+
+.floatBtn{position:fixed;right:18%;bottom:5%;z-index:50;}
+.floatBtn a{position:relative;display:block;width:120px;height:120px;background:#6131ce;border-radius:100%;
+-webkit-box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.3);
+box-shadow: 0px 4px 2px 0px rgba(0,0,0,0.3);}
+.floatBtn a span{position:absolute;top:50%;left:50%;display:block;width:70px;height:70px;border: 3px solid #FAE6CD;border-radius: 50%;background:url(https://cleanbell.blob.core.windows.net/images-v4/assignment_ind.png) center center no-repeat;
+transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+.floatBtn a span strong{position: absolute;display: block;top: -9px;right: -9px;padding: 3px 0 4px;width: 36px;font-size: 24px;line-height: 29px;font-weight: 600;letter-spacing: -1.2px;color: #fff;text-align: center;background: #EC313A;border: 0;border-radius: 50%;text-indent: -2px;}
+
+/* 190709 add */
+.step_check input#step2_agree + label{margin-top:20px;color:#6131ce;}
+.step_check input#step2_agree_easy + label{margin-top:20px;color:#6131ce;}
+#step2 .inputbox dl dt{display:inline-block;width:37%;margin-right:40px;}
+#step2 .inputbox dl dt input[type=button]{position:absolute;bottom:10px;right:0;width:132px;height:46px;line-height:46px;border-radius:23px;color:#fff;background:#322d4f;}
+#step2 .inputbox dl dd{display:inline-block;width:calc(63% - 40px);}
+#step2 .inputbox dl dd label{display:block;padding:0 0 25px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;}
+#step2 .inputbox dl dd input[type=text]{display:block;padding:18px 0;height:22px;width:100%;font-size:22px;line-height:22px;font-weight:500;letter-spacing:-1.5px;color:#464646;border-bottom:1px solid #a9a9a9;}
+#step2 .inputbox dl dd input[type=text]#detailAddress{margin-top:20px;}
+#step2 .step_arrow dl dd a.nextStep{display:block;padding:0;}
+
+#modal-one .modal-one-first .inputbox dl dd ol li{width:calc(50% - 16px);height:auto;}
+#modal-one .modal-one-first .inputbox dl dd ol li input[type=checkbox] + label{padding:26px 20px 26px 120px;}
+#modal-one .modal-one-first .inputbox dl dd ol li input[type=checkbox] + label small{margin-top:15px;display:block;font-size:16px;line-height:16px;letter-spacing:-0.75px;color:#7c7c7c;}
+#modal-one .modal-one-first .inputbox dl dd ol li input[type=checkbox] + label::after{left:40px;top:50%;width:60px;height:55px;transform:translate(0,-50%);}
+#onespace-1 + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/onespace-1.png) center no-repeat;}
+#onespace-2 + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/onespace-2.png) center no-repeat;}
+#onespace-3 + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/onespace-3.png) center no-repeat;}
+#onespace-4 + label::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/onespace-4.png) center no-repeat;}
+
+#modal-one .surveyBoxes h3 small:last-child{margin-left:10px;}
+#modal-one .addService .inputbox dl dd:first-of-type{border-bottom:0;}
+#modal-one .addService .inputbox dl dd:last-of-type h4{margin-top:50px;}
+#modal-one .addService .inputbox dl dd ol li input[type=checkbox] + label::after{top:50%;transform:translate(0,-50%);}
+#modal-one .addService .inputbox dl dd span{font-size:18px;line-height:18px;letter-spacing:-0.5px;color:#7c7c7c;}
+#modal-one .addService .inputbox dl dd span span{color:#6131ce;}
+.addService .inputbox dl dd ol li input[type=checkbox]#otherclean-6 + label{padding:26px 0;}
+#otherclean-1 + label::after{left:35px;width:42px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/otherclean-1.png) center no-repeat;}
+#otherclean-2 + label::after{left:30px;width:52px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/otherclean-2.png) center no-repeat;}
+#otherclean-3 + label::after{left:30px;width:44px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/otherclean-3.png) center no-repeat;}
+#otherclean-4 + label::after{left:30px;width:52px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/otherclean-4.png) center no-repeat;}
+#otherclean-5 + label::after{left:29px;width:58px;height:37px;background:url(https://cleanbell.blob.core.windows.net/images-v4/otherclean-5.png) center no-repeat;}
+#otherclean-1:checked + label::after{left:35px;width:42px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/othercleanW-1.png) center no-repeat;}
+#otherclean-2:checked + label::after{left:30px;width:52px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/othercleanW-2.png) center no-repeat;}
+#otherclean-3:checked + label::after{left:30px;width:44px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/othercleanW-3.png) center no-repeat;}
+#otherclean-4:checked + label::after{left:30px;width:52px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/othercleanW-4.png) center no-repeat;}
+#otherclean-5:checked + label::after{left:29px;width:58px;height:37px;background:url(https://cleanbell.blob.core.windows.net/images-v4/othercleanW-5.png) center no-repeat;}
+
+#one-otherclean-1 + label::after{left:35px;width:42px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/otherclean-1.png) center no-repeat;}
+#one-otherclean-2 + label::after{left:30px;width:52px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/otherclean-2.png) center no-repeat;}
+#one-otherclean-3 + label::after{left:30px;width:44px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/otherclean-3.png) center no-repeat;}
+#one-otherclean-4 + label::after{left:30px;width:52px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/otherclean-4.png) center no-repeat;}
+#one-otherclean-5 + label::after{left:29px;width:58px;height:37px;background:url(https://cleanbell.blob.core.windows.net/images-v4/otherclean-5.png) center no-repeat;}
+#one-otherclean-1:checked + label::after{left:35px;width:42px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/othercleanW-1.png) center no-repeat;}
+#one-otherclean-2:checked + label::after{left:30px;width:52px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/othercleanW-2.png) center no-repeat;}
+#one-otherclean-3:checked + label::after{left:30px;width:44px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/othercleanW-3.png) center no-repeat;}
+#one-otherclean-4:checked + label::after{left:30px;width:52px;height:48px;background:url(https://cleanbell.blob.core.windows.net/images-v4/othercleanW-4.png) center no-repeat;}
+#one-otherclean-5:checked + label::after{left:29px;width:58px;height:37px;background:url(https://cleanbell.blob.core.windows.net/images-v4/othercleanW-5.png) center no-repeat;}
+
+#cleanerDetail dl dt span.hello{margin: 15px 0 0;color:#464646;}
+
+.closeModal{position:absolute;top:40px;right:40px;display:block;width:20px;height:20px;font-size:0;background:url(https://cleanbell.blob.core.windows.net/images-v4/closeModalG.png) no-repeat;z-index:10;background-size: 20px;}
+.modalpopup .modal_intro a.closeModal.W{position:absolute;top:40px;right:40px;margin:0;display:block;width:20px;height:20px;font-size:0;background:url(https://cleanbell.blob.core.windows.net/images-v4/closeModalW.png) no-repeat;z-index:10;background-size: 20px;}
+.modalpopup .modal_intro a.closeModal.W::after{display:none;}
+
+/* 업체상세-new */
+#loadingCompany{position:fixed;top:0;left:0;right:0;bottom:0;z-index:110;background:rgba(0,0,0,0.75);}
+#loadingCompany .balls{position:absolute;top:50%;left:50%;width:10em;display: flex;flex-flow: row nowrap;align-items: center;justify-content: space-between;
+transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+#loadingCompany .balls div{width:2em;height:2em;border-radius: 50%;background-color: #9dec96;transform: translateY(-100%);animation: wave 0.8s ease-in-out alternate infinite;}
+#loadingCompany .balls div:nth-of-type(1) {animation-delay: -0.4s;}
+#loadingCompany .balls div:nth-of-type(2) {animation-delay: -0.2s;}
+#loadingCompany span{position:absolute;top:60%;left:50%;display:block;font-size:40px;line-height:40px;font-weight:500;letter-spacing:-0.5px;color:#9dec96;text-align:center;
+transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+@keyframes wave {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.companyList{margin:113px 0 0;}
+.filter{position:absolute;top:49px;left:0;z-index:1;}
+.filter dl{position:relative;margin:0;width:224px;background:#fff;border:1px solid #efeafa;box-sizing:border-box;}
+.filter dt{position:relative;margin-top:-1px;margin-left:-1px;margin-right:-1px;height:50px;}
+.filter dt input[type=submit]{position:relative;width:100%;height:50px;font-weight:400;letter-spacing:-0.75px;background:#6131ce;cursor:pointer;}
+.filter dt input[type=submit] + label{position:absolute;top:50%;left:50%;font-size:18px;line-height:18px;color:#fff;cursor:pointer;
+transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+.filter dt input[type=submit] + label img{margin:0.5px 10px 0 0;}
+.filter dd{position:relative;padding:20px;}
+.filter dd::before{position:absolute;top:0;left:20px;right:20px;height:1px;background:#efeafa;content:'';}
+.filter dd h4{position: relative;margin:0 0 20px;font-size:18px;line-height:20px;font-weight:400;letter-spacing:-1.35px;text-align:left;color:#7c7c7c;}
+.filter dd h4 a{position: absolute;right: 0;top: 50%;transform: translate(0, -50%);-webkit-transform: translate(0, -50%);-moz-transform: translate(0, -50%);padding-right: 16px;font-size: 14px;line-height: 14px;font-weight: 500;letter-spacing: -0.7px;text-align: left;color: #322D4F;background: url(https://cleanbell.blob.core.windows.net/images-v4/arrow_priceCheck_322d4f.png) no-repeat right bottom;background-size: 7px;}
+.filter dd .ftip{display: block;margin: -10px -20px 20px;padding: 10px 20px;font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -1.05px;text-align: left;color: #322D4F;background: #EFEAFA;}
+.filter dd .ftip span{display: inline-block;font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -1.05px;text-align: left;color: #322D4F;}
+.filter dd.filCalendar{position:relative;margin:0;padding:20px;width:calc(100% - 40px);height:84px;}
+.filter dd.filCalendar::before{display:none;}
+.filCalendar .CalendarBox{position:absolute;left:50%;width:calc(100% - 42px);
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.filCalendar input[type=text]{position:relative;padding:12px 13px 11px 56px;width:calc(100% - 71px);font-size:14px;line-height:20px;font-weight:400;color:#6131ce;background:#fff;border:1px solid #6131ce;border-radius:3px;}
+.filCalendar input[type=text] + label{position:absolute;left:14px;top:50%;width:18px;height:16px;background:url(https://cleanbell.blob.core.windows.net/images-v4/filter-calendar-i.png) no-repeat;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.filCalendar input[type=text] + label::after{position:absolute;left:29px;top:50%;width:2px;height:20px;background:#6131ce;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+
+.filter dd.filCalendar.float{margin:0 -10px;padding:0;width:calc(100% + 20px);height:360px;background:#fff;border-radius:5px;z-index:1;
+-webkit-box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+box-shadow: 0px 4px 10px rgba(0,0,0,0.5);}
+.filter dd.filCalendar.float h4{margin:0;padding:30px 35px 40px;font-size:16px;line-height:16px;color:#fae6cd;background:#3c225f;}
+.filCalendar.float .CalendarBox{top:60px;width:calc(100% - 62px);z-index:10;}
+.filCalendar.float input[type=text]{color:#3c225f;border:1px solid #3c225f;}
+.filCalendar.float input[type=text] + label{background:url(https://cleanbell.blob.core.windows.net/images-v4/filter-calendar-i-float.png) no-repeat;}
+.filCalendar.float input[type=text] + label::after{background:#3c225f;}
+
+.filCalendar #calendarChange{position:absolute;top:50%;left:50%;width:100%;
+transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+.filCalendar.float #calendarChange{top:0;}
+.filCalendar #calendarChange .ui-datepicker{padding:0;width:100%;}
+.filCalendar #calendarChange a.ui-state-active,
+.filCalendar #calendarChange a.ui-widget-content .ui-state-active,
+.filCalendar #calendarChange a.ui-widget-header .ui-state-active{background:#6131ce;color:#fff !important;border-radius:5px;}
+.filCalendar #calendarChange .ui-datepicker th{padding:20px 0 10px;}
+.filCalendar #calendarChange .ui-datepicker td{padding:0}
+.filCalendar #calendarChange .ui-datepicker td a{margin:4px auto;padding:0;width:calc(100% - 2px);font-size:16px;line-height:24px;}
+.filCalendar #calendarChange .ui-datepicker td:first-child a{color:#df232a}
+.filCalendar #calendarChange .ui-datepicker td:last-child a{color:#448ccb}
+.filCalendar #calendarChange .ui-datepicker td span{margin:6px auto;padding:0;}
+
+.filter-checkbox{}
+.filter-checkbox li{position:relative;margin-bottom:12px;}
+.filter-checkbox li:last-of-type{margin-bottom:0;}
+.filter-checkbox li input[type=checkbox]{display:none;position:absolute;top:0;left:0;width:0;height:0;font-size:0;}
+.filter-checkbox li input[type=checkbox] + label{position:relative;padding-left:30px;font-size:16px;line-height:20px;font-weight:400;letter-spacing:-0.5px;color:#464646;}
+.filter-checkbox li input[type=checkbox] + label span{position:absolute;left:0;top:50%;display:block;width:20px;height:20px;border-radius:50%;background:rgba(97,49,206,0.3);
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.filter-checkbox li input[type=checkbox]:checked + label{color:#6131ce;}
+.filter-checkbox li input[type=checkbox]:checked + label span::after{position:absolute;left:30%;top:0;width:18px;height:14px;background:url(https://cleanbell.blob.core.windows.net/images-v4/filter-check.png) no-repeat;content:'';}
+
+
+.addList{position:relative;}
+.addTop{background:#f7f7f7;}
+#container .addTop .inner{padding:49px 0 32px 254px;width:930px;}
+.addTop .addTip{top:75px;}
+#container .addTop .addBox:last-child{margin:0;}
+
+.addBottom{background:#fff;}
+#container .addBottom .inner{padding:42px 0 80px 254px;width:930px;}
+.addBottom .addTip{top:70px;}
+.addList .addBottom h5{margin:0 0 25px;}
+.addBottom #addOpt{position:absolute;right:0;top:30px;padding:0 13px;width: 150px;height:36px;font-size:14px;line-height:14px;font-weight:400;letter-spacing:-0.5px;color:#7c7c7c;border:1px solid #e3e3e3;border-radius:3px;background:#fff;box-sizing:border-box;}
+#container .addBottom .addBox:last-child{margin:0;}
+
+.newZone{background:#fff;}
+#container .newZone .inner{padding:42px 0 80px 256px;width:930px;}
+.newZone .addTip{top:70px;}
+.addList .newZone h5{margin:0 0 25px;}
+.newZone #addOpt{position:absolute;right:0;top:30px;padding:0 13px;height:36px;font-size:14px;line-height:14px;font-weight:400;letter-spacing:-0.5px;color:#7c7c7c;border:1px solid #e3e3e3;border-radius:3px;background:#fff;box-sizing:border-box;}
+#container .newZone .addBox:last-child{margin:0;}
+
+.addNone{background:#fff;min-height:1100px;}
+#container .addNone .inner{padding:42px 0 80px 256px;width:930px;}
+.addNone img{display:block;margin:90px auto 0;}
+
+.addList h5{position:relative;margin:0 0 13px;width:50%;font-size:14px;line-height:17px;letter-spacing:-0.5px;font-weight:400;color:#7c7c7c;}
+.addList h5 span{position:relative;margin:0 0 0 5px;display:inline-block;width:17px;height:17px;cursor: pointer;}
+.addList h5 span::after{position:absolute;width:100%;height:100%;background:url(https://cleanbell.blob.core.windows.net/images-v4/addTip.png) no-repeat;content:'';}
+.addTip{display:none;position:absolute;left:185px;padding:20px;width:290px;font-size:14px;line-height:20px;font-weight:400;letter-spacing:-0.75px;color:#3c225f;background:#fff;border:1px solid #e3e3e3;border-radius:3px;z-index:12;}
+.addTip::before{position:absolute;top:-10px;left:45%;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:10px solid #e3e3e3;z-index:1;content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.addTip::after{position:absolute;top:-9px;left:45%;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:9px solid #fff;z-index:2;content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.addBox{position:relative;margin:0 0 16px;font-size:0;}
+.addBox a{display:block;width:100%;height:100%;background:#fff;border:1px solid #e3e3e3;border-radius:3px;}
+.addBox a:hover{border-color: #6131CE;}
+.addBox input[type=checkbox]{display:none;position:absolute;left:0;top:0;width:0;height:0;font-size:0;}
+.addBox dl{position:relative;height:100%;}
+.addBox dl::after{display:block;clear:both;content:'';}
+.addBox dt{position: relative;display: inline-block;width: 198px;height: 198px;overflow: hidden;}
+.addBox dt.crown::before{position: absolute;top: 0;left: 0;width: 0;height: 0;border-top: 50px solid #000;border-right: 50px solid transparent;content: '';}
+.addBox dt.crown::after{position: absolute;top: 3px;left: 3px;width: 21px;height: 18px;content: '';}
+.addBox dt.crown.crown-gold::after{background: url(https://cleanbell.blob.core.windows.net/images-v4/crown_1st_img.png) no-repeat;background-size: 21px;}
+.addBox dt.crown.crown-silver::after{background: url(https://cleanbell.blob.core.windows.net/images-v4/crown_2nd_img.png) no-repeat;background-size: 21px;}
+.addBox dt.crown.crown-brass::after{background: url(https://cleanbell.blob.core.windows.net/images-v4/crown_3rd_img.png) no-repeat;background-size: 21px;}
+.addBox dd{position:relative;display: inline-block;padding:25px 30px 20px;width:calc(100% - 198px - 60px);height:153px;background: url(https://cleanbell.blob.core.windows.net/images-v4/arrow-right-959595.png) no-repeat 95% center;overflow: hidden;}
+.addBox h3{display: inline-block;max-width: 74%;font-size:28px;line-height:28px;font-weight:500;letter-spacing:-0.5px;color:#363636;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.addBox .grade{display: inline-block;margin-left: 8px;vertical-align: bottom;}
+.addBox .grade li{position:relative;margin-right:6px;padding:2px 10px;display:inline-block;font-size:12px;line-height:18px;font-weight:500;letter-spacing:-0.5px;border-radius:12px;border:0;color:#fff;}
+.addBox .grade li:last-of-type{margin-right: 0;}
+.addBox .grade li.lato{font-size: 12px;line-height: 19px;}
+.addBox .grade li.grade-1{background:#ec313a;}
+.addBox .grade li.grade-2{background:#626262;}
+.addBox .grade li.grade-3{background:#e59700;}
+.addBox small{margin:7px 0;display:block;font-size:16px;line-height:24px;font-weight:400;letter-spacing:-0.5px;color:#acacac;}
+.addBox ul{margin:0 0 7px;}
+.addBox ul li{display:inline-block;margin-right: 40px;font-size:18px;line-height:27px;letter-spacing:-0.5px;font-weight:400;color:#acacac;}
+.addBox ul li:last-of-type{margin-right:0;}
+.addBox ul li strong{display: inline-block;margin-left:10px;color:#6131ce;}
+.addBox ul li strong.star{padding-left: 24px;margin-left: 0;font-size: 20px;line-height: 27px;background: url(https://cleanbell.blob.core.windows.net/images-v4/reviewStar.png) no-repeat left center;}
+.addBox ul li strong span{display: inline-block;font-family:'Noto Sans KR';}
+.addBox .hashtag{margin: 20px 0 0;}
+.addBox .hashtag li{display: inline-block;margin-right: 10px;padding: 6px 16px;font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -0.7px;color: #464646;background: rgba(124,124,124,0.1);border-radius: 17px;}
+.addBox .hashtag li:last-of-type{margin-right: 0;}
+.addBox .hashtag li span{display: inline-block;font-size: 14px;line-height: 20px;font-weight: 400;letter-spacing: -0.7px;color: #464646;}
+
+.addBox a.premium{background:#EFEAFA;}
+.addBox .premium small{color:#636363;}
+.addBox .premium ul li{color:#636363;}
+
+.addBox a.checked{position:relative;}
+.addBox a.checked::before{position:absolute;left:0;top:0;right:0;bottom:0;background:#7c7c7c;z-index:10;opacity:0.6;content:'';}
+.addBox a.checked::after{position:absolute;top:50%;left:50%;width:72px;height:62px;background:url(https://cleanbell.blob.core.windows.net/images-v4/addList-check-i.png) no-repeat;z-index:11;content:'';
+transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+.addBox a.checked dl{mix-blend-mode:luminosity;}
+
+.showTip .boxTip{display:block;}
+.boxTip{display:none;position:absolute;right:0;bottom:-15%;padding:20px;width:290px;font-size:14px;line-height:20px;font-weight:400;letter-spacing:-0.75px;color:#3c225f;background:#fff;border:1px solid #e3e3e3;border-radius:3px;z-index:15;}
+.boxTip::before{position:absolute;top:-10px;left:45%;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:10px solid #e3e3e3;z-index:1;content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.boxTip::after{position:absolute;top:-9px;left:45%;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:9px solid #fff;z-index:2;content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+
+.addNoneTip{position:absolute;right:-100%;bottom:10%;padding:10px;width:210px;font-size:14px;line-height:20px;font-weight:400;letter-spacing:-0.75px;color:#3c225f;background:#fff;border:1px solid #e3e3e3;border-radius:3px;z-index:10;}
+.addNoneTip::before{position:absolute;top:50%;left:-10px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:10px solid #e3e3e3;z-index:1;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.addNoneTip::after{position:absolute;top:50%;left:-9px;border-top:9px solid transparent;border-bottom:9px solid transparent;border-right:9px solid #fff;z-index:2;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+
+.blinking{-webkit-animation:blink 4s ease-in-out infinite alternate; -moz-animation:blink 4s ease-in-out infinite alternate; animation:blink 4s ease-in-out infinite alternate;}
+@-webkit-keyframes blink{
+  0% {opacity:1;}
+  20% {opacity:0;}
+  40% {opacity:1;}
+  60% {opacity:0;}
+  80% {opacity:1;}
+  100% {opacity:0;}
+}
+@-moz-keyframes blink{
+  0% {opacity:1;}
+  20% {opacity:0;}
+  40% {opacity:1;}
+  60% {opacity:0;}
+  80% {opacity:1;}
+  100% {opacity:0;}
+}
+@keyframes blink{
+  0% {opacity:1;}
+  20% {opacity:0;}
+  40% {opacity:1;}
+  60% {opacity:0;}
+  80% {opacity:1;}
+  100% {opacity:0;}
+}
+
+.modal_quotation_top span s{color:#6131ce;}
+
+#modal_priceCheck.modalpopup .inner{width: 860px;background: #fff;}
+#modal_priceCheck .modal_close{position:absolute;top:40px;right:40px;display:block;width:28px;height:28px;font-size:0;background:url(https://cleanbell.blob.core.windows.net/images-v4/closeModal.png) no-repeat;z-index:10;}
+.priceCheck_header{position:relative;padding:60px;width:calc(100% - 120px);background:url(https://cleanbell.blob.core.windows.net/images-v4/battery_header.png) bottom no-repeat;background-size: cover;}
+.priceCheck_header h3{margin:0 0 30px;padding:8px 16px;width:294px;font-size:36px;line-height:54px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;background:#fae6cd;border-radius:3px;white-space: nowrap;}
+.priceCheck_header p{display: block;font-size:24px;line-height:33px;font-weight:500;letter-spacing:-1.2px;color:#fff;}
+.priceCheck_header p span{display: inline-block;font-size: 24px;line-height: 33px;font-weight: 500;letter-spacing: -1.2px;color: #FFD400;}
+.priceCheck_header sub{display: block;font-size: 20px;line-height: 33px;font-weight: 400;letter-spacing: -1px;color: #EBEBEB;}
+.priceCheck_content{padding:50px 60px;}
+.priceCheck_content ul{width:100%;font-size: 0;}
+.priceCheck_content li{display: inline-block;padding: 30px 0 29px 105px;margin-bottom: 20px;width: calc(50% - 12px - 105px);border: 1px solid #DCDCDC;}
+.priceCheck_content li:nth-of-type(even){margin-left: 20px;}
+.priceCheck_content li.priceIcon01{background: url(https://cleanbell.blob.core.windows.net/images-v4/priceIcon01.png) no-repeat 24px center #FAFAFA;}
+.priceCheck_content li.priceIcon02{background: url(https://cleanbell.blob.core.windows.net/images-v4/priceIcon02.png) no-repeat 30px center #FAFAFA;}
+.priceCheck_content li.priceIcon03{background: url(https://cleanbell.blob.core.windows.net/images-v4/priceIcon03.png) no-repeat 34px center #FAFAFA;}
+.priceCheck_content li.priceIcon04{background: url(https://cleanbell.blob.core.windows.net/images-v4/priceIcon04.png) no-repeat 26px center #FAFAFA;}
+.priceCheck_content li.priceIcon05{margin-bottom: 0;background: url(https://cleanbell.blob.core.windows.net/images-v4/priceIcon05.png) no-repeat 24px center #FAFAFA;}
+.priceCheck_content li.priceIcon06{margin-bottom: 0;background: url(https://cleanbell.blob.core.windows.net/images-v4/priceIcon06.png) no-repeat 35px center #FAFAFA;}
+.priceCheck_content li h4{font-size: 20px;line-height: 29px;font-weight: 400;letter-spacing: -1px;color: #464646;text-align: left;}
+.priceCheck_content li strong{display: block;font-size: 20px;line-height: 29px;font-weight: 400;letter-spacing: 0;color: #7B7B7B;}
+.priceCheck_content li strong span{display: inline-block;font-size: 20px;line-height: 29px;font-weight: 600;letter-spacing: 0;color: #322D4F;}
+
+/* 견적신청내역 */
+.appDetailTop{position: relative;background:#EFEAFA;border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;}
+#header .appDetailTop .inner{position: relative;margin: 0 auto;padding: 21px 0;}
+.appDetailTop a{z-index: 1;}
+.appDetailTop .return{position: absolute;left: 0;top: 24px;width: 32px;height: 32px;font-size: 0;background: url(https://cleanbell.blob.core.windows.net/images-v4/arrow_return.png) no-repeat;}
+.appDetailTop h3{position: relative;display: block;font-size: 26px;line-height: 38px;font-weight: 500;letter-spacing: -1.3px;text-align: center;color: #322D4F;}
+
+.appTop{font-size: 0;}
+.appTop .inner{padding:40px 0 24px;}
+
+.appImg{display: inline-block;width: 184px;height: 184px;overflow: hidden;}
+.appImg.pc{display: inline-block !important;}
+.appImg img{width: 100%;}
+
+.appInfo{position: relative;padding-left: 24px;width: calc(100% - 184px - 40px);display: inline-block;}
+.appInfo h3{display: inline-block;font-size: 40px;line-height: 54px;font-weight: 500;letter-spacing: -2px;color: #6131CE;}
+.appInfo p{display: block;font-size: 22px;line-height: 33px;font-weight: 400;letter-spacing: -1.1px;color: #7C7C7C;}
+.appInfo .grade{margin: 0 0 10px 8px;display: inline-block;vertical-align: bottom;}
+.appInfo .grade::after{display: block;clear: both;content: '';}
+.appInfo .grade li{position:relative;margin-right:6px;padding:2px 10px;float: left;font-size:12px;line-height:18px;font-weight:500;letter-spacing:-0.5px;border-radius:12px;border:0;color:#fff;}
+.appInfo .grade li:last-of-type{margin-right: 0;}
+.appInfo .grade li.lato{font-size: 12px;line-height: 18px;}
+.appInfo .grade li.grade-1{background:#ec313a;}
+.appInfo .grade li.grade-2{background:#626262;}
+.appInfo .grade li.grade-3{background:#e59700;}
+.appInfo .star{margin: 16px 0 0;display: block;width: 124px;height: 26px;}
+.star.star-0-0{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-0.png) no-repeat center;}
+.star.star-0-5{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-0.5.png) no-repeat center;}
+.star.star-1-0{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-1.png) no-repeat center;}
+.star.star-1-5{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-1.5.png) no-repeat center;}
+.star.star-2-0{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-2.png) no-repeat center;}
+.star.star-2-5{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-2.5.png) no-repeat center;}
+.star.star-3-0{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-3.png) no-repeat center;}
+.star.star-3-5{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-3.5.png) no-repeat center;}
+.star.star-4-0{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-4.png) no-repeat center;}
+.star.star-4-5{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-4.5.png) no-repeat center;}
+.star.star-5-0{background: url(https://cleanbell.blob.core.windows.net/images-v4/star-5.png) no-repeat center;}
+.appInfo .score{display: block;height: 48px;font-size: 40px;line-height: 48px;font-weight: 700;letter-spacing: 0;color: #6131CE;}
+
+.appInfoSide{position: absolute;right: 0;bottom: 30px;}
+.appInfoSide dt{height: 48px;font-size: 20px;line-height: 48px;font-weight: 400;letter-spacing: -1px;color: #6131CE;text-align: right;}
+.appInfoSide dt strong{display: inline-block;margin-left: 24px;height: 48px;font-size: 40px;line-height: 48px;font-weight: 700;letter-spacing: 0;color: #6131CE;}
+.appInfoSide dt strong small{display: inline-block;font-size: 20px;line-height: 48px;font-weight: 400;letter-spacing: -1px;vertical-align: baseline;}
+.appInfoSide dd{margin: 24px 0 0;}
+.appInfoSide dd ul{font-size: 0;}
+.appInfoSide dd li{position: relative;display: inline-block;padding: 10px 0;width: 182px;border: 0;}
+.appInfoSide dd li a{display: block;padding-left: 20px;margin: 0 auto;width: 64px;font-size: 18px;line-height: 27px;font-weight: 500;letter-spacing: -0.9px;text-align: center;}
+.appInfoSide dd li.call{border-radius: 4px 0 0 4px;background: #FFD400;}
+.appInfoSide dd li.apply{border-radius: 0 4px 4px 0;background: #6131CE;}
+.appInfoSide dd li.call a{color: #322D4F;background: url(https://cleanbell.blob.core.windows.net/images-v4/call.png) no-repeat 0 center}
+.appInfoSide dd li.apply a{color: #FFF;background: url(https://cleanbell.blob.core.windows.net/images-v4/estimate.png) no-repeat 0 center}
+
+.appBottom{background:#f9f9f9;border-top:1px solid #e3e3e3;}
+#appDetail{}
+#appDetail dl{font-size:0;}
+#appDetail dl dt{margin:0 0 16px;padding:40px;width:calc(100% - 80px);background:#fff;}
+#appDetail dl dt::after{display:block;clear:both;content:'';}
+#appDetail dl dt span{display:block;font-size:20px;line-height:29px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;}
+#appDetail dl dt span.hello{margin:15px 0 0;color: #464646;}
+
+#appDetail dl dd{position:relative;display:block;padding:40px;width:calc(100% - 80px);height:180px;background:#fff;}
+#appDetail dl dd::after{position:absolute;right:40px;bottom:0;width:168px;height:116px;background:url(https://cleanbell.blob.core.windows.net/images-v4/owner_icon.png) top no-repeat;content:'';}
+#appDetail dl dd h6{font-size:20px;line-height:30px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;}
+#appDetail dl dd ul{margin:15px 0 0;}
+#appDetail dl dd ul li{display:block;font-size:20px;line-height:34px;font-weight:400;letter-spacing:-1.5px;color:#464646;}
+
+.modal_quotation_top.app::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/modal_notice_app.png) no-repeat;}
+.modal_quotation_top.app h3 small{display:inline-block;width:17px;height:17px;background:url(https://cleanbell.blob.core.windows.net/images-v4/addTip.png) no-repeat;}
+.modal_quotation_top ul{margin:0 auto;width:70%;}
+.modal_quotation_top ul li{display:block;}
+.modal_quotation_top ul li input[type=checkbox]{display:none;position:absolute;top:0;left:0;width:0;height:0;font-size:0;}
+.modal_quotation_top ul li input[type=checkbox] + label{padding-left:43px;}
+.modal_quotation_top ul li input[type=checkbox] + label::after{display:block;clear:both;content:'';}
+.modal_quotation_top ul li input[type=checkbox] + label span{display:inline-block;width:29px;height:29px;background:url(https://cleanbell.blob.core.windows.net/images-v4/checkedFalse.png) no-repeat;}
+.modal_quotation_top ul li input[type=checkbox] + label span.textblock{display:block;width:0;height:0;background:none;}
+.modal_quotation_top ul li input[type=checkbox]:checked + label span{background:url(https://cleanbell.blob.core.windows.net/images-v4/checkedTrue.png) no-repeat;}
+.modal_quotation_top ul li input[type=checkbox] + label strong{display:inline-block;font-size:20px;line-height:29px;font-weight:400;letter-spacing:-0.5px;color:#7c7c7c;}
+.modal_quotation_top ul li input[type=checkbox]:checked + label strong{font-weight:500;color:#464646;}
+.modal_quotation_top ul li input[type=checkbox] + label strong small{display:none;font-size:16px;line-height:22px;font-weight:400;letter-spacing:-0.5px;color:#7c7c7c;}
+.modal_quotation_top ul li input[type=checkbox]:checked + label strong small{display:block;}
+.modal_quotation_top ul li input[type=checkbox] + label strong small s{font-weight:500;color:#6131ce;}
+
+.modal_quotation_top div.addTip{top:35%;left:37%;margin:0;padding:20px;width:50%;background:#fff;}
+.modal_quotation_top div.addTip h4{font-size:20px;line-height:26px;font-weight:400;letter-spacing:-0.75px;color:#6131ce;}
+.modal_quotation_top div.addTip span{margin:10px 0 0;font-size:14px;line-height:22px;font-weight:400;letter-spacing:-0.75px;color:#7c7c7c;text-align:left;}
+
+.searchResultBottom .cleanerKinds dd a.select-01::before{width:28px;height:24px;background:url(https://cleanbell.blob.core.windows.net/images-v4/cleanerKinds_icon_01_w.png) no-repeat;}
+.searchResultBottom .cleanerKinds dd a.select-01::after{content:'신축건물 첫 입주시';}
+.searchResultBottom .cleanerKinds dd a.select-02{padding-left:41px;}
+.searchResultBottom .cleanerKinds dd a.select-02::before{top:2px;width:35px;height:20px;background:url(https://cleanbell.blob.core.windows.net/images-v4/cleanerKinds_icon_02_w.png) no-repeat;}
+.searchResultBottom .cleanerKinds dd a.select-02::after{content:'이전 거주자가 만든 오염 제거시';}
+.searchResultBottom .cleanerKinds dd a.select-03::before{width:25px;height:24px;background:url(https://cleanbell.blob.core.windows.net/images-v4/cleanerKinds_icon_03_w.png) no-repeat;}
+.searchResultBottom .cleanerKinds dd a.select-03::after{content:'인테리어 후 하는 청소';}
+.searchResultBottom .cleanerKinds dd a.select-03{width:154px;}
+.searchResultBottom .cleanerKinds dd a.select-04::before{width:28px;height:24px;background:url(https://cleanbell.blob.core.windows.net/images-v4/cleanerKinds_icon_04_w.png) no-repeat;}
+.searchResultBottom .cleanerKinds dd a.select-04::after{content:'정기적으로 진행하는 청소';}
+.searchResultBottom .cleanerKinds dd a.select-05::before{width:28px;height:25px;background:url(https://cleanbell.blob.core.windows.net/images-v4/cleanerKinds_icon_05_w.png) no-repeat;}
+.searchResultBottom .cleanerKinds dd a.select-05::after{content:'짐이 있는 상태에서 청소';}
+
+@media (min-width:1700px) and (max-width:1850px) {
+  .floatBtn{right:15%;}
+}
+@media (min-width:1600px) and (max-width:1699px) {
+  .floatBtn{right:10%;}
+}
+@media (min-width:1200px) and (max-width:1599px) {
+  .floatBtn{right:5%;}
+}
+@media (min-width:641px) and (max-width:1199px) {
+  .floatBtn{right:0;}
+}
+
+.floatBtn.v2 a span{position:absolute;top:50%;left:50%;display:block;width:70px;height:70px;background:url(https://cleanbell.blob.core.windows.net/images-v4/floatBtn-v2.png) no-repeat;
+transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);}
+.bgNone{background:none !important;border:0 !important;}
+
+.addListTip{position:absolute;right:-20%;top:-50%;padding:10px;width:150px;font-size:14px;line-height:20px;font-weight:400;letter-spacing:-0.75px;color:#3c225f;background:#fff;border:1px solid #e3e3e3;border-radius:3px;z-index:10;text-align:center;}
+.addListTip::before{position:absolute;bottom:-10px;left:50%;border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid #e3e3e3;z-index:1;content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.addListTip::after{position:absolute;bottom:-9px;left:50%;border-left:9px solid transparent;border-right:9px solid transparent;border-top:9px solid #fff;z-index:2;content:'';
+transform:translate(-50%,0);-webkit-transform:translate(-50%,0);-moz-transform:translate(-50%,0);-o-transform:translate(-50%,0);}
+.addListTip.blinking{animation:blink 7s ease-in-out infinite alternate;-webkit-animation:blink 7s ease-in-out infinite alternate;-moz-animation:blink 7s ease-in-out infinite alternate;}
+.addListTip.v2{width:100px;right:0;}
+
+/* 190805 */
+.surveyBoxes-main{position:relative;}
+.surveyBoxes-main > section{display:none;}
+.surveyBoxes-main > section:first-child{display:block;}
+.surveyBoxes-main h3{padding:0 50px 40px;font-size:48px;line-height:70px;font-weight:400;letter-spacing:-3.6px;color:#322d4f;white-space:nowrap;}
+.surveyBoxes-main h3 span{font-weight: bold;color:#6131CE;}
+.surveyBoxes-main h4 small{display:inline-block;margin: 0 10px;width:118px;height:38px;font-size:18px;line-height:37px;border-radius:3px;border:1px solid #7c7c7c;
+text-align:center;box-sizing:border-box;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;vertical-align:middle;}
+
+.modalpopup .modal_intro-main{display:none;padding:100px;background:#322d4f;}
+.modalpopup .modal_intro-main h1{margin:0 0 60px;}
+.modalpopup .modal_intro-main h3{margin:0 0 20px;font-size:30px;line-height:30px;font-weight:400;letter-spacing:-1.75px;color:#fae6cd;}
+.modalpopup .modal_intro-main h2{margin:0 0 40px;font-size:54px;line-height:70px;font-weight:400;letter-spacing:-1.75px;color:#fff;}
+.modalpopup .modal_intro-main p{font-size:18px;line-height:32px;font-weight:400;letter-spacing:-0.9px;color:#fff;}
+.modalpopup .modal_intro-main p span.lato{display: inline-block;}
+.modalpopup .modal_intro-main a{position:relative;margin:70px 0 0;display:block;width:160px;font-size:24px;line-height:24px;font-weight:400;letter-spacing:-1.5px;color:#fae6cd;text-align:left;}
+.modalpopup .modal_intro-main a::after{position:absolute;right:0;top:50%;width:13px;height:20px;background:url(https://cleanbell.blob.core.windows.net/images-v4/arrow_right_sub.png) no-repeat;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.modalpopup .modal_intro-main a.closeModal.W{position:absolute;top:40px;right:40px;margin:0;display:block;width:28px;height:28px;font-size:0;background:url(https://cleanbell.blob.core.windows.net/images-v4/closeModalF.png) no-repeat;z-index:11;}
+.modalpopup .modal_intro-main a.closeModal.W::after{display:none;}
+
+.modalpopup .modal_survey-main{display:none;padding:70px 50px;background:#f9f9f9;font-size:0;}
+
+.addressSection .inputbox dl dt{display:inline-block;width:37%;margin-right:40px;}
+.addressSection .inputbox dl dt input[type=button]{position:absolute;bottom:10px;right:0;width:132px;height:46px;line-height:46px;border-radius:23px;color:#fff;background:#322d4f;}
+.addressSection .inputbox dl dd{display:inline-block;width:calc(63% - 40px);}
+.addressSection .inputbox dl dd label{display:block;padding:0 0 25px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#6131ce;}
+.addressSection .inputbox dl dd input[type=text]{display:block;padding:18px 0;height:22px;width:100%;font-size:22px;line-height:22px;font-weight:500;letter-spacing:-1.5px;color:#464646;border-bottom:1px solid #a9a9a9;}
+.addressSection .inputbox dl dd input[type=text]#detailAddress-main{margin-top:20px;}
+.addressSection .step_arrow dl dd a.nextStep{display:block;}
+
+.spaceSection .inputbox dl dd ol li input[type=checkbox] + label{padding:26px 30px 26px 80px;}
+.spaceSection .inputbox dl dd ol li input[type=checkbox] + label::after{top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+
+.spaceSection .inputbox dl dd:first-of-type{border-bottom:1px solid #d7d7d7;}
+.spaceSection .inputbox dl dd:last-of-type h4{margin:60px 0 0}
+.spaceSection .inputbox ul{width:100%;margin:0;}
+.spaceSection .inputbox ul li{display:inline-block;width:225px;border:0;margin-right:30px;}
+.spaceSection .inputbox ul li:last-of-type{margin-right:0}
+.spaceSection .inputbox ul li label{text-align:center;}
+.spaceSection .inputbox ul li .numberBox{position:relative;}
+.spaceSection .inputbox ul li .numberBox button.spaceMinus{position:absolute;left:0;top:50%;width:50px;height:40px;background:url(https://cleanbell.blob.core.windows.net/images-v4/minus.png) 50% no-repeat;content:'';border:0;padding:0;margin:0;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.spaceSection .inputbox ul li .numberBox button.spacePlus{position:absolute;right:0;top:50%;width:50px;height:40px;background:url(https://cleanbell.blob.core.windows.net/images-v4/plus.png) 50% no-repeat;content:'';border:0;padding:0;margin:0;
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+.spaceSection .inputbox ul li .numberBox input[type=text]{width:225px;height:50px;background:none;box-sizing:border-box;border:1px solid #dcdcdc;border-radius:50px;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;text-align:center;}
+
+#step5-main .inputbox dl dd ol li input[type=checkbox] + label{padding:26px 30px 26px 80px;}
+#step5-main .inputbox dl dd ol li input[type=checkbox] + label::after{top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+
+#step5-main .inputbox .addOption, #step5-main .inputbox .addTax{display:none;padding:0 0 20px;font-size:18px;line-height:18px;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;}
+#step5-main .inputbox .addOption.on, #step5-main .inputbox .addTax.on{display:block;}
+#step5-main .inputbox .addOption span.lato, #step5-main .inputbox .addTax span.lato{color:#6131ce;}
+#step5-main .inputbox dl dd:first-of-type{border-bottom:1px solid #d7d7d7;}
+#step5-main .inputbox dl dd.howpay{}
+#step5-main .inputbox dl dd.howpay h4{margin:60px 0 0}
+#step5-main .inputbox dl dd.howpay ol li input[type=checkbox] + label{padding:26px 0;}
+
+/* #step6-main .inputbox dl dd:first-of-type{border-bottom:1px solid #d7d7d7;}
+#step6-main .inputbox dl dd:last-of-type h4{margin:60px 0 0}
+#step6-main .inputbox dl dd ol li{float:left;margin:0 0 15px;width:calc(50% - 7.5px);height:120px;}
+#step6-main .inputbox dl dd ol li:nth-of-type(odd){margin-right:7.5px;}
+#step6-main .inputbox dl dd ol li:nth-of-type(even){margin-left:7.5px;}
+#step6-main .inputbox dl dd ol li input[type=checkbox] + label{padding:26px 75px 26px 106px;text-align:left;white-space:normal;}
+#step6-main .inputbox dl dd ol li input[type=checkbox] + label::before{position:absolute;top:50%;right:24px;width:27px;height:21px;background:url(https://cleanbell.blob.core.windows.net/images-v4/addService_check.png) no-repeat;content:'';
+transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+#step6-main .inputbox dl dd ol li input[type=checkbox] + label::after{top:50%;transform:translate(0,-50%);-webkit-transform:translate(0,-50%);-moz-transform:translate(0,-50%);-o-transform:translate(0,-50%);}
+#step6-main .inputbox dl dd ol li input[type=checkbox] + label h5{padding:0 0 10px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-1.5px;color:#464646;}
+#step6-main .inputbox dl dd ol li input[type=checkbox] + label span{font-size:16px;line-height:20px;font-weight:400;letter-spacing:-1.75px;color:#7c7c7c;}
+
+#step6-main .inputbox dl dd ol li input[type=checkbox]:checked + label{padding-top:25px;background:#fafafa;border:2px solid #6131ce;box-shadow:none;}
+#step6-main .inputbox dl dd ol li input[type=checkbox]:checked + label::before{background:url(https://cleanbell.blob.core.windows.net/images-v4/addService_checked.png) no-repeat;}
+#step6-main .inputbox dl dd textarea{display:block;padding:20px;width:100%;max-width:738px;font-size:18px;line-height:26px;font-weight:400;letter-spacing:-1.5px;color:#464646;border:1px solid #eee;box-sizing:border-box;} */
+.inputbox dl dd textarea{display:block;padding:20px;width:100%;max-width:738px;font-size:18px;line-height:26px;font-weight:400;letter-spacing:-1.5px;color:#464646;border:1px solid #eee;box-sizing:border-box;}
+
+/* 190807 */
+#phoneCert-original{display:none;}
+#phoneCert-modal{display:none;}
+#phoneCert-oneroom{display:none;}
+
+/* 190820 */
+.companyTop .appBtn .inner{padding:0;}
+.companyIntro h3:after{display:block;clear:both;content:'';}
+.companyIntro h3 a{display:block;float:right;padding:9px;font-size:20px;line-height:20px;font-weight:400;letter-spacing:-0.5px;color:#6131ce;background:none;border:1px solid #6131ce;box-sizing:border-box;}
+.companyIntro h3 a:hover{color:#fff;background:#6131ce;}
+.inputbox dl dd h4 small{display:inline-block;width:118px;height:38px;font-size:18px;line-height:37px;border-radius:3px;border:1px solid #7c7c7c;text-align:center;box-sizing:border-box;font-weight:400;letter-spacing:-1.5px;color:#7c7c7c;vertical-align:middle;}
+
+.addBox .premium dd::after{background:url(https://cleanbell.blob.core.windows.net/images-v4/companyList-arrow-m-v3.png) no-repeat;}
+
+/* tooltip */
+.ui-tooltip, .tooltip-arrow:after{background: #fff;border: 1px solid #e3e3e3;border-radius:3px;z-index: 19;box-shadow: none;}
+.ui-tooltip{padding: 20px;display: block;font-size:14px;line-height:20px;font-weight:400;letter-spacing:-0.75px;color:#3c225f;}
+.tooltip-arrow{position: absolute;left: 50%;margin-left: -35px;bottom: -16px;width: 70px;height: 16px;overflow: hidden;}
+.tooltip-arrow.top{top: -16px;bottom: auto;}
+.tooltip-arrow.left{left:20%;}
+.tooltip-arrow:after{position: absolute;left: 20px;top: -20px;width: 25px;height: 25px;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);content: ''}
+.tooltip-arrow.top:after{bottom: -20px;top: auto;}
+
+/* 랭킹 */
+.subcontainer .topBanner.ranking{height: 327px;background: url(https://cleanbell.blob.core.windows.net/images-v4/ranking_banner.png) no-repeat 50% 30%;background-size: cover;}
+.subcontainer .topBanner.ranking h2{padding: 199px 0 0;font-size: 40px;line-height: 48px;font-weight: 900;letter-spacing: 0;color: #322D4F;}
+.subcontainer .topBanner.ranking h2 span{display: inline-block;width: 40px;height: 35px;background: url(https://cleanbell.blob.core.windows.net/images-v4/icon_crown.png) no-repeat;background-size: 40px;vertical-align: baseline;}
+
+.realRanking{background: #F7F7F7;}
+.realRanking .inner{padding: 0 0 43px;}
+.realRanking h3{padding: 30px 0;font-size: 24px;line-height: 36px;font-weight: 500;letter-spacing: -1.2px;color: #6131CE;text-align: center;}
+.realRanking h3 span{display: inline-block;font-size: 26px;line-height: 36px;font-weight: 600;letter-spacing: 0px;color: #6131CE;}
+.realRanking ul{display: block;width: 100%;font-size: 0;}
+.rankBox{position: relative;padding-left: 100px;margin-bottom: 17px;cursor: pointer;}
+.rankBox:hover dl{border-color: #6131CE;}
+.rankBox::before{position: absolute;left: 0;top: 50%;transform: translate(0,-50%);-webkit-transform: translate(0,-50%);-moz-transform: translate(0,-50%);width: 80px;height: 80px;font-size: 36px;line-height: 80px;font-weight: 700;letter-spacing: -1.8px;color: #FFF;text-align: center;content: '';z-index: 1;}
+.rankBox.rank1::before{background: url(https://cleanbell.blob.core.windows.net/images-v4/icon_crown_1st.png) no-repeat;background-size: 80px;}
+.rankBox.rank2::before{background: url(https://cleanbell.blob.core.windows.net/images-v4/icon_crown_2nd.png) no-repeat;background-size: 80px;}
+.rankBox.rank3::before{background: url(https://cleanbell.blob.core.windows.net/images-v4/icon_crown_3rd.png) no-repeat;background-size: 80px;}
+.rankBox.ranknum::before{background: #322D4F;border: 0;border-radius: 50%;content: attr(href)}
+.rankBox dl{width: 100%;height: 160px;border: 1px solid #E3E3E3;border-radius: 2px;background: #FFFFFF;box-sizing: border-box;}
+.rankBox dt{position: relative;display: inline-block;width: 158px;height: 158px;overflow: hidden;}
+.rankBox dt img{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);width: 100%;}
+.rankBox dd{display: inline-block;padding: 20px 30px;height: 118px;}
+.rankBox dd h4{font-size: 36px;line-height: 54px;font-weight: 500;letter-spacing: -1.8px;color: #363636;}
+.rankBox dd ol{margin: 3px 0 5px;display: block;font-size: 0;}
+.rankBox dd ol li{display: inline-block;margin-right: 24px;font-size: 18px;line-height: 27px;font-weight: 400;letter-spacing: -0.9px;color: #ACACAC;}
+.rankBox dd ol li span{display: inline-block;margin-left: 8px;font-size: 18px;line-height: 27px;font-weight: 700;letter-spacing: 0;color: #6131CE;}
+.rankBox dd ol li.star span{padding-left: 24px;margin-left: 0;background: url(https://cleanbell.blob.core.windows.net/images-v4/star24.png) no-repeat left center;}
+.rankBox dd small{display: block;font-size: 18px;line-height: 27px;font-weight: 400;letter-spacing: -0.9px;color: #7C7C7C;}
+.rankBox dd small span{display: inline-block;margin-left: 8px;font-size: 18px;line-height: 27px;font-weight: 500;letter-spacing: -0.9px;color: #6131CE;}
+
+
+/* 입점문의 메인 */
+#header.landing.sticky{background: rgba(255,255,255,0.8);}
+#header .hd-floatBtn.applyPartner{position: absolute;right: 0;top: 32px;float: none;margin-right: 0;padding: 14px 40px 15px;line-height: 27px;background: #FFD400;border-radius: 28px;}
+#header .hd-floatBtn.applyPartner:hover{color: #322D4F;background: #FAE6CD;}
+.topBanner.landing1{height: 810px;background: url(https://cleanbell.blob.core.windows.net/images-v4/visual_area_01.png) center 30% no-repeat;background-size: cover;}
+.topBanner.landing1 .inner{height: 100%;}
+.topBanner.landing1 h2{font-size: 72px;line-height: 95px;font-weight: 500;letter-spacing: -3.6px;color: #322D4F;}
+.topBanner.landing1 h2 span{color: #6131CE;}
+.topBanner.landing1 p{font-size: 20px;line-height: 30px;}
+.topBanner.landing1 p span{display: inline-block;font-size: 20px;line-height: 30px;color: #6131CE;}
+.topBanner.landing1 p span strong{display: inline-block;font-size: 20px;line-height: 30px;}
+.topBanner.landing1 ol{margin: 80px 0 0;}
+.topBanner.landing1 ol li{margin: 0;}
+.topBanner.landing1 ol li a{padding: 14px 65px 15px 40px;color: #FFF;background: url(https://cleanbell.blob.core.windows.net/images-v4/arrow_forward_fff.png) no-repeat 200px 50% #6131CE;}
+.topBanner.landing1 .tel{position: absolute;right: 0;bottom: 78px;display: block;padding: 0 0 0 58px;font-size: 72px;line-height: 72px;font-weight: 700;letter-spacing: 0;color: #6131CE;background: url(https://cleanbell.blob.core.windows.net/images-v4/landing_call.png) no-repeat 0 80%;background-size:42px;}
+.topBanner.landing1 .tel::before{position: absolute;top: -29px;left: 58px;width: 80px;font-family: 'Noto Sans KR';font-size: 20px;line-height: 29px;font-weight: 400;letter-spacing: -1px;color: #555555;content: '상담전화';}
+
+.lineAdd{background: #322D4F;}
+.lineAdd h4{padding: 30px 0 29px;font-size: 28px;line-height: 41px;font-weight: 400;letter-spacing: -1.4px;color: #FFFFFF;text-align: center;word-break: keep-all;}
+.lineAdd h4 span.lato{display: inline-block;font-size: 28px;line-height: 41px;font-weight: 700;letter-spacing: -1.4px;color: #FFFFFF;}
+
+.requestClean{height: 600px;background: url(https://cleanbell.blob.core.windows.net/images-v4/requestClean_bg.png) 50% no-repeat;background-size: cover;}
+.requestClean h3{padding: 80px 0 0;font-size: 56px;line-height: 86px;font-weight: 400;letter-spacing: -2.8px;color: #322D4F;text-align: center;}
+.requestClean h3 strong{display: inline-block;font-size: 72px;line-height: 86px;font-weight: 700;letter-spacing: -3.6px;color: #6131CE;vertical-align: bottom;}
+.requestClean h3 strong span{font-family: 'Noto Sans KR';font-size: 56px;line-height: 86px;font-weight: 400;letter-spacing: -2.8px;color: #6131CE;}
+
+.activeCompany{height: 700px;background: url(https://cleanbell.blob.core.windows.net/images-v4/activeCompany_bg.png) 40% no-repeat;background-size: cover;}
+.activeCompany h3{padding: 80px 0 0;font-size: 56px;line-height: 86px;font-weight: 400;letter-spacing: -2.8px;color: #322D4F;text-align: left;}
+.activeCompany h3 strong{display: inline-block;font-size: 72px;line-height: 86px;font-weight: 700;letter-spacing: -3.6px;color: #6131CE;vertical-align: bottom;}
+.activeCompany h3 strong span{font-family: 'Noto Sans KR';font-size: 56px;line-height: 86px;font-weight: 400;letter-spacing: -2.8px;color: #6131CE;}
+.activeCompany p{margin: 32px 0 0;display: block;font-size: 24px;line-height: 39px;font-weight: 400;letter-spacing: -1.2px;color: #464646;}
+
+.highReserve{height: 800px;background: url(https://cleanbell.blob.core.windows.net/images-v4/highReserve_bg.png) 50% no-repeat #322D4F;background-size: cover;}
+.highReserve h3{padding: 83px 0 0;font-size: 56px;line-height: 86px;font-weight: 400;letter-spacing: -2.8px;color: #FFD400;text-align: center;}
+.highReserve h3 strong{display: inline-block;font-size: 56px;line-height: 86px;font-weight: 700;letter-spacing: -2.8px;}
+.highReserve p{display: block;margin: 32px 0 0;font-size: 24px;line-height: 39px;font-weight: 400;letter-spacing: -1.2px;color: #FFF;text-align: center;}
+.highReserve p span.lato{display: inline-block;font-size: 24px;line-height: 39px;}
+
+.forWelfare{height: 800px;background: url(https://cleanbell.blob.core.windows.net/images-v4/forWelfare_bg.png) 50% no-repeat;background-size: cover;}
+.forWelfare h3{padding: 86px 0 0;font-size: 56px;line-height: 83px;font-weight: 400;letter-spacing: -2.8px;color: #322D4F;text-align: center;}
+.forWelfare h3 span.lato{display: inline-block;font-size: 60px;line-height: 83px;font-weight: 400;letter-spacing: -3px;}
+.forWelfare h3 strong{display: inline-block;font-size: 56px;line-height: 83px;font-weight: 700;letter-spacing: -2.8px;color: #322D4F;}
+.forWelfare p{display: block;margin: 32px 0 0;font-size: 24px;line-height: 35px;font-weight: 500;letter-spacing: -1.2px;color: #232323;text-align: center;}
+.forWelfare p small{display: block;font-size: 20px;line-height: 35px;font-weight: 500;letter-spacing: -1px;color: #232323;}
+
+.manager{background: #F5F4F0;}
+.manager .inner{background: url(https://cleanbell.blob.core.windows.net/images-v4/manager_bg.png) no-repeat right 21px;}
+.manager h3{padding: 120px 0 0;font-size: 56px;line-height: 84px;font-weight: 400;letter-spacing: -2.8px;color: #6131CE;text-align: left;}
+.manager h3 strong{display: inline-block;font-size: 56px;line-height: 84px;font-weight: 700;letter-spacing: -2.8px;color: #6131CE;}
+.manager p{margin: 40px 0 100px;display: block;font-size: 24px;line-height: 39px;font-weight: 400;letter-spacing: -1.2px;color: #464646;}
+.manager p strong{display: inline-block;font-size: 24px;line-height: 39px;font-weight: 500;letter-spacing: -1.2px;}
+
+.introManager{}
+.introManager h4{font-size: 40px;line-height: 59px;font-weight: 500;letter-spacing: -2px;color: #322D4F;}
+.introManager h4 small{display: inline-block;margin: 0 0 0 20px;font-size: 18px;line-height: 59px;font-weight: 400;letter-spacing: -0.9px;vertical-align: baseline;}
+.introManager ul{display: block;width: 100%;border-top: 4px solid #6131CE;font-size: 0;}
+.introManager ul li{display: inline-block;width: 33.33%;}
+.introManager dl{padding: 0 0 120px;}
+.introManager dl dt{background: #FFF;overflow: hidden;}
+.introManager dl dd{padding: 32px 0;background: none;}
+.introManager dl dd h5{font-size: 24px;line-height: 36px;font-weight: 700;letter-spacing: -1.2px;color: #6131CE;text-align: center;word-break: keep-all;}
+.manager .introManager dl dd p{display: block;margin: 16px 0 0;font-size: 18px;line-height: 28px;font-weight: 400;letter-spacing: -0.9px;color: #363636;text-align: center;word-break: keep-all;}
+
+.experience{background: url(https://cleanbell.blob.core.windows.net/images-v4/experience_bg.png) no-repeat;background-size: cover;}
+.experience h3{padding: 100px 0 0;font-size: 56px;line-height: 83px;font-weight: 400;letter-spacing: -2.8px;color: #322D4F;text-align: center;}
+.experience h3 strong{font-size: 56px;line-height: 83px;font-weight: 700;letter-spacing: -2.8px;color: #6131CE;}
+.experience ol{display: block;margin: 60px 0;width: 100%;font-size: 0;}
+.experience ol li{display: inline-block;margin: 0 8px;width: calc(33.33% - 16px);}
+.experience h4{font-size: 40px;line-height: 59px;font-weight: 500;letter-spacing: -2px;color: #322D4F;}
+.experience h4 small{display: inline-block;margin: 0 0 0 10px;font-size: 20px;line-height: 59px;font-weight: 500;letter-spacing: -1px;color: #777777;vertical-align: baseline;}
+.experience dl{margin: 6px 0 0;}
+.experience dl dt{height: 277px;overflow: hidden;}
+.experience dl dd{position: relative;padding: 0 20px;height: 207px;background: #FFF;overflow: hidden;}
+.experience dd h5{padding: 20px 0 0;font-size: 28px;line-height: 41px;font-weight: 500;letter-spacing: -1.4px;color: #6131CE;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.experience dd p{display: block;padding: 16px 0 0;font-size: 18px;line-height: 32px;font-weight: 400;letter-spacing: -0.9px;color: #363636;word-break: keep-all;}
+.experience dd strong{position: absolute;right: 20px;bottom: 12px;display: block;font-size: 16px;line-height: 24px;font-weight: 500;letter-spacing: -0.8px;color: #6131CE;}
+.experience dd strong span{display: inline-block;font-size: 16px;line-height: 24px;font-weight: 700;letter-spacing: -0.8px;}
+.experience .applyPartner{display: block;margin: 0 auto 24px;padding: 18px 83px 19px 40px;width: 180px;font-size: 22px;line-height: 33px;font-weight: 400;letter-spacing: -1.1px;color: #FFF;background: url(https://cleanbell.blob.core.windows.net/images-v4/arrow_forward_fff.png) no-repeat 242px 50% #6131CE;border-radius: 80px;}
+.experience .applyPartner:hover{color: #322D4F;background: url(https://cleanbell.blob.core.windows.net/images-v4/arrow_forward_322d4f.png) no-repeat 242px 50% #FAE6CD;}
+
+.callCenter{margin: 0 auto;padding: 0 0 100px;text-align: center;}
+.callCenter span{display: inline-block;font-size: 32px;line-height: 47px;font-weight: 400;letter-spacing: -1.6px;color: #322D4F;}
+.callCenter .tel{display: inline-block;margin: 0 0 0 12px;padding: 0 0 0 36px;font-size: 36px;line-height: 47px;font-weight: 700;letter-spacing: 0;color: #6131CE;background: url(https://cleanbell.blob.core.windows.net/images-v4/landing_call.png) no-repeat 0 60%;background-size:24px;}
+
+.freeStart{height: 1350px;background: url(https://cleanbell.blob.core.windows.net/images-v4/freeStart_bg.png) no-repeat #F9F8FC;background-size: cover;}
+.freeStart h3{padding: 99px 0 0;font-size: 56px;line-height: 83px;font-weight: 700;letter-spacing: -2.8px;color: #6131CE;text-align: center;}
+.freeStart p{display: block;margin: 20px auto 80px;font-size: 24px;line-height: 39px;font-weight: 400;letter-spacing: -1.2px;color: #666666;text-align: center;}
+.freeStart h4{font-size: 32px;line-height: 47px;font-weight: 400;letter-spacing: -1.6px;color: #322D4F;text-align: center;}
+
+.startTab{margin: 100px auto 0;}
+.startTab ul{display: block;width: 100%;font-size: 0;}
+.startKind{position: relative;display: inline-block;margin: 0 5px;width: calc(20% - 12px);border: 1px solid #E1E1E1;background: url(https://cleanbell.blob.core.windows.net/images-v4/startKind_bg.png) no-repeat top #FFF;background-size: cover;}
+.startKind.select{margin-top: -40px;border-color: #6131CE;background: url(https://cleanbell.blob.core.windows.net/images-v4/startKind_select_bg.png) no-repeat top #FFF;background-size: cover;}
+.startKind h5{position: relative;padding: 153px 0 167px;font-size: 26px;line-height: 38px;font-weight: 500;letter-spacing: -1.3px;color: #322D4F;text-align: center;}
+.startKind.select h5{padding: 153px 0 30px;color: #6131CE;}
+.startKind h5::before{position: absolute;left:50%;transform: translate(-50%, 0);-webkit-transform: translate(-50%, 0);-moz-transform: translate(-50%, 0);content: '';}
+.startKind.s_free h5::before{top: 89px;width: 100px;height: 45px;background: url(https://cleanbell.blob.core.windows.net/images-v4/startKind_01.png) no-repeat;background-size: 100px;}
+.startKind.s_oneroom h5::before{top: 78px;width: 100px;height: 55px;background: url(https://cleanbell.blob.core.windows.net/images-v4/startKind_02.png) no-repeat;background-size: 100px;}
+.startKind.s_normal h5::before{top: 65px;width: 100px;height: 67px;background: url(https://cleanbell.blob.core.windows.net/images-v4/startKind_03.png) no-repeat;background-size: 100px;}
+.startKind.s_plus h5::before{top: 61px;width: 100px;height: 79px;background: url(https://cleanbell.blob.core.windows.net/images-v4/startKind_04.png) no-repeat;background-size: 100px;}
+.startKind.s_premium h5::before{top: 46px;width: 88px;height: 97px;background: url(https://cleanbell.blob.core.windows.net/images-v4/startKind_05.png) no-repeat;background-size: 88px;}
+.startKind a{position: absolute;bottom: 19px;left: 19px;right: 19px;display: block;padding: 10px 40px 12px;font-size: 18px;line-height: 27px;font-weight: 400;letter-spacing: -0.9px;color: #FFF;background: #322D4F;border-radius: 2px;text-align: center;}
+.startKind a:hover{color: #322D4F;background: #FAE6CD;}
+.startKind.select a{color: #FFF;background: #6131CE;}
+
+.s_con{display: none;padding: 0 18px 76px;width: calc(100% - 36px);font-size: 0;}
+.startKind.select .s_con{display: block;}
+.s_con.on{display: block;}
+.s_con .ch{display: block;margin: 0 0 24px;padding: 0 0 0 31px;font-size: 16px;line-height: 24px;font-weight: 500;letter-spacing: -0.8px;color: #322D4F;text-align: left;}
+.s_con .ch.ch_o{background: url(https://cleanbell.blob.core.windows.net/images-v4/ch_o.png) no-repeat left 4px;}
+.s_con .ch.ch_x{background: url(https://cleanbell.blob.core.windows.net/images-v4/ch_x.png) no-repeat left 2px;}
+
+#modal-partner .inputbox ul{margin: 0;width: 100%;}
+#modal-partner .inputbox ul li{display: inline-block;margin: 0 0 40px;width: calc(50% - 20px);}
+#modal-partner .inputbox ul li:nth-of-type(odd){margin-right: 20px;}
+#modal-partner .inputbox ul li:nth-of-type(even){margin-left: 20px;}
+
+.available div{position: relative;display: inline-block;width: 25%;}
+.available div input[type=checkbox]{position: absolute;left: 0;top: 0;width: 0;height: 0;font-size: 0;background: none;}
+.available div input[type=checkbox] + label{position: relative;padding: 0 0 0 30px;font-size: 16px;line-height: 24px;font-weight: 400;letter-spacing: -0.8px;color: #464646;}
+.available div input[type=checkbox] + label span{position: absolute;left: 0;top: 2px;width: 20px;height: 20px;background: rgba(97,49,206,0.3);border-radius: 50%;}
+.available div input[type=checkbox]:checked + label span::after{position: absolute;left: 2px;top: 0;width: 20px;height: 16px;background: url(https://cleanbell.blob.core.windows.net/images-v4/addService_checked.png) no-repeat;background-size: 20px;content: '';}
+
+.step_arrow dl a.applyStep{padding: 20px 106px 21px 58px;background: url(https://cleanbell.blob.core.windows.net/images-v4/arrow_right_step.png) no-repeat 80% center #322D4F;}
+
+#modal_app .modal_quotation_top strong{margin: 0;text-align: left;}
+
+/* owl */
+/* .qualitySlide.owl-carousel .owl-stage{width: 100% !important;}
+.qualitySlide.owl-carousel .owl-item{opacity: 0;}
+.qualitySlide.owl-carousel .owl-item.active{width: 100% !important;margin-right: 0 !important;opacity: 1;} */

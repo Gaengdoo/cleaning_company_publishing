@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>클린벨 청소요금계산</title>
+  <link rel="stylesheet" href="../css-v2/reset.css">
+  <link rel="stylesheet" href="../css-v2/jquery-ui.min.css">
+  <link rel="stylesheet" href="../css-v2/owl.carousel.css">
+  <link rel="stylesheet" href="../css-v2/default.css">
+  <link rel="stylesheet" href="../css-v4/cleaner.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-640.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub-640.css">
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js-v2/cleaner.js"></script>
+  <script src="../js-v2/bodymovin.js"></script>
+  <script src="../js-v2/loading.js"></script>
+</head>
+<body>
+  <div id="loading"><span>업체 조회중 입니다.</span></div>
+  <div id="wrap">
+    <header id="header" style="border-bottom-color:#a4a3a1;">
+      <div class="inner">
+        <h1 id="logo"><a href="cleaner_main.html"><img src="../images-v2/logo.png" alt="클린벨"></a></h1>
+        <a href="javascript:void(0)" class="showDropmenu"></a>
+        <nav id="nav">
+          <ul id="gnb">
+            <li class="cleanbellDrop">
+              <div class="cleanbell-dropmenu">
+                <ul>
+                  <li><a href="javascript:void(0)">청소업체 검색</a></li>
+                  <li><a href="javascript:void(0)">청소업체 선택 TIP</a></li>
+                  <li><a href="javascript:void(0)">신청내역조회</a></li>
+                  <li><a href="javascript:void(0)">손없는날</a></li>
+                  <li class="dropwidth100"><a href="javascript:void(0)">고객센터</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <article id="container" class="subcontainer selectCompany">
+      <div class="topBanner">
+        <div class="inner">
+          <dl class="topChart">
+            <dt>
+              <div class="chartDonut"><canvas id="donutChart" width="150" height="150"></canvas><span class="percentage lato">29%</span></div>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+              <script>
+                var ctx = document.getElementById("donutChart");
+                var donutChart = new Chart(ctx, {
+                  type: 'doughnut',
+                  data: {
+                      labels: [],
+                      datasets: [{
+                          label: '# of Votes',
+                          data: [29, 71],
+                          backgroundColor: [
+                              'rgba(91, 49, 206, 1)',
+                              'rgba(201, 194, 216, 1)'
+                          ],
+                          borderWidth: 0
+                      }]
+                  },
+                  options: {
+                      rotation: 0.85 * Math.PI,
+                      circumference: 1.3 * Math.PI,
+                      percentageInnerCutout: 1,
+                      cutoutPercentage: 90
+                  }
+                });
+              </script>
+              <ol>
+                <li><strong><span class="lato">4</span>월 <span class="lato">16</span>일</strong> 기준</li>
+                <li>청소업체</li>
+                <li><span class="lato">29%</span> 예약 완료!</li>
+              </ol>
+            </dt>
+            <dd>예약률이 높은 날입니다. 서두르는게 좋습니다.</dd>
+          </dl>
+          <dl class="topCalendar">
+            <dt>
+              <h4>서울 서대문구<a href="#none" class="optionChange">조건변경</a></h4>
+              <div class="dtCalendarBox">
+                <input type="text" name="" placeholder="2019-05-01 (수)" id="textCalendar_dt">
+                <label for="textCalendar_dt"></label>
+                <input type="button" id="changeCalendar_dt">
+                <label for="changeCalendar_dt"><span></span></label>
+              </div>
+            </dt>
+            <dd>
+              <h4>청소 날짜 변경</h4>
+              <div class="ddCalendarBox">
+                <input type="text" name="" placeholder="2019-05-01 (수)" id="textCalendar_dd">
+                <label for="textCalendar_dd"></label>
+                <input type="button" id="changeCalendar_dd">
+                <label for="changeCalendar_dd"><span></span></label>
+              </div>
+              <script>
+              $(document).on('ready', function(){
+                $('#calendarChange').datepicker({
+                  inline:true,
+                  showOtherMonths:true,
+                  showMonthAfterYear:true,
+                  monthNames: [ '. 01', '. 02', '. 03', '. 04', '. 05', '. 06', '. 07', '. 08', '. 09', '. 10', '. 11', '. 12' ],
+                  dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+                });
+              });
+              </script>
+              <div id="calendarChange"></div>
+            </dd>
+          </dl>
+        </div>
+      </div><!--topBanner-->
+      <div class="recoMD_off">
+        <div class="inner">
+          <h3>업체 선택이 어렵다면<span class="textblock mblock"></span>클린벨 <span class="lato">MD</span> 추천을 받아보세요!</h3>
+          <a href="#none" class="openMD">클린벨 <span class="lato">MD</span> 추천 업체</a>
+        </div>
+      </div><!--recoMD_off-->
+      <div class="recoMD_on">
+        <div class="inner">
+          <h3>업체 선택이 어렵다면<span class="textblock mblock"></span>클린벨 <span class="lato">MD</span> 추천을 받아보세요!</h3>
+          <h4>클린벨 <span class="lato">MD</span> 추천 업체</h4>
+          <dl class="cleaners">
+            <dt><img src="../images-v4/recoMD_new.jpg" alt=""></dt>
+            <dd>
+              <input type="checkbox" id="checkRecoMD">
+              <label for="checkRecoMD">
+                <strong class="checkMD"><span></span></strong>
+                <h5><span class="textblock mblock">뽀득뽀득 반짝반짝</span>빛나크린</h5>
+                <ol class="tag">
+                  <li><span class="lato">#경력18년</span></li>
+                  <li><span class="lato">#스팀청소</span></li>
+                  <li><span class="lato">#10팀보유</span></li>
+                  <li><span class="lato">#5인1팀</span></li>
+                  <li><span class="lato">#AS보증일수3일</span></li>
+                </ol>
+                <ul>
+                  <li><strong>시공건수</strong>164</li>
+                  <li><strong>누적후기</strong>86</li>
+                  <li><strong>고객만족도</strong>91%</li>
+                </ul>
+                <h6>예상가격<span class="textblock mblock lato">250,000 ~ 270,000<small>원</small></span></h6>
+              </label>
+            </dd>
+          </dl>
+          <a href="#none" class="closeMD">추천 닫기</a>
+        </div>
+      </div><!--recoMD_on-->
+      <div class="comparePrice">
+        <div class="inner">
+          <h3>견적을 받아보실 업체를 선택하세요.<span>중복 선택 가능</span></h3>
+          <h6>고객은 <span>평균 <span class="lato">2.1</span>개</span>의 업체를 선택하여 가격비교를 했습니다.</h6>
+          <dl>
+            <dt class="lato">Keywords</dt>
+            <dd>
+              <ol>
+                <li><span>청소일 4월 1일</span></li>
+                <li><span>34평</span></li>
+                <li><span>아파트</span></li>
+                <li><span>카드결제</span></li>
+                <li><span>새집증후군</span></li>
+              </ol>
+            </dd>
+          </dl>
+        </div>
+      </div><!--comparePrice-->
+      <div class="newFace">
+        <div class="inner">
+          <h3>신규업체도 살펴보세요!<a href="#none" class="noticeNew"></a></h3>
+          <div class="talkBubble">
+            <h4>당일 예약 가능 상품입니다.</h4>
+            <p>오아이스도 길지 현저하게 싹이 듣는다. 인생을 대중을 이상의 끓는 동산에는 인생에 그와 봄바람이다. 위하여 남는 사랑의 싶이 것이다. 원대하고, 두기 있으며, 이 사막이다. 심장의 얼음에 옷을 살았으며, 방지하는 위하여 것이다. 소리다.</p>
+          </div>
+          <dl class="cleaners">
+            <dt><img src="../images-v4/newFace.jpg" alt=""></dt>
+            <dd>
+              <input type="checkbox" id="checkTarget">
+              <label for="checkTarget">
+                <strong class="checkMD"><span></span></strong>
+                <h5><span class="textblock mblock">군더더기 없는 똑똑한 청소업체</span>스마트크린</h5>
+                <ol class="tag">
+                  <li><span class="lato">#경력2년</span></li>
+                  <li><span class="lato">#스팀청소</span></li>
+                  <li><span class="lato">#AS보증일수3일</span></li>
+                </ol>
+                <ul>
+                  <li><strong>시공건수</strong>164</li>
+                  <li><strong>누적후기</strong>86</li>
+                  <li><strong>고객만족도</strong>91%</li>
+                </ul>
+                <h6>예상가격<span class="textblock mblock lato">250,000 ~ 270,000<small>원</small></span></h6>
+              </label>
+            </dd>
+          </dl>
+        </div>
+      </div><!--newFace-->
+      <div class="cleanerList">
+        <div class="inner">
+          <h3>평점순으로 정렬되어 있습니다.</h3>
+          <dl class="cleaners">
+            <dt><img src="../images-v4/checkThumb01.jpg" alt=""></dt>
+            <dd>
+              <input type="checkbox" id="checkList01">
+              <label for="checkList01">
+                <strong class="checkMD"><span></span></strong>
+                <h5><span class="textblock mblock">지금껏 이렇게 깨끗한 청소는 없었다</span>극한클리닝</h5>
+                <ol class="tag">
+                  <li><span class="lato">#경력16년</span></li>
+                  <li><span class="lato">#엄마의손길</span></li>
+                  <li><span class="lato">#1일한집청소보장</span></li>
+                  <li><span class="lato">#AS보증일수3일</span></li>
+                </ol>
+                <ul>
+                  <li><strong>시공건수</strong>1,217</li>
+                  <li><strong>누적후기</strong>1,003</li>
+                  <li><strong>고객만족도</strong>95%</li>
+                </ul>
+                <h6>예상가격<span class="textblock mblock lato">290,000 ~ 310,000<small>원</small></span></h6>
+              </label>
+            </dd>
+          </dl>
+          <dl class="cleaners">
+            <dt><img src="../images-v4/noImage.jpg" alt=""></dt>
+            <dd>
+              <input type="checkbox" id="checkList03">
+              <label for="checkList03">
+                <strong class="checkMD"><span></span></strong>
+                <h5><span class="textblock mblock">청소를 못하면 우리는 망한다!</span>스팀보이즈</h5>
+                <ol class="tag">
+                  <li><span class="lato">#경력6년</span></li>
+                  <li><span class="lato">#3인1팀</span></li>
+                  <li><span class="lato">#5팀보유</span></li>
+                  <li><span class="lato">#AS보증일수3일</span></li>
+                </ol>
+                <ul>
+                  <li><strong>시공건수</strong>268</li>
+                  <li><strong>누적후기</strong>188</li>
+                  <li><strong>고객만족도</strong>92%</li>
+                </ul>
+                <h6>예상가격<span class="textblock mblock lato">270,000 ~ 290,000<small>원</small></span></h6>
+              </label>
+            </dd>
+          </dl>
+          <dl class="cleaners">
+            <dt><img src="../images-v4/noImage.jpg" alt=""></dt>
+            <dd>
+              <input type="checkbox" id="checkList02">
+              <label for="checkList02">
+                <strong class="checkMD"><span></span></strong>
+                <h5><span class="textblock mblock">청소를 못하면 우리는 망한다!</span>스팀보이즈</h5>
+                <ol class="tag">
+                  <li><span class="lato">#경력6년</span></li>
+                  <li><span class="lato">#3인1팀</span></li>
+                  <li><span class="lato">#5팀보유</span></li>
+                  <li><span class="lato">#AS보증일수3일</span></li>
+                </ol>
+                <ul>
+                  <li><strong>시공건수</strong>268</li>
+                  <li><strong>누적후기</strong>188</li>
+                  <li><strong>고객만족도</strong>92%</li>
+                </ul>
+                <h6>예상가격<span class="textblock mblock lato">270,000 ~ 290,000<small>원</small></span></h6>
+              </label>
+            </dd>
+          </dl>
+          <a href="#none" class="quotation"><span>견적신청</span></a>
+        </div>
+      </div><!--cleanerList-->
+    </article>
+    <footer>
+      <div class="inner">
+        <span class="caution">클린벨은 통신판매중개자로서 청소서비스의 주거래 당사자가 아니며, 청소서비스의 분쟁과 계약사항은 회원사와 당사자간에 있습니다.</span>
+        <div class="f_contents">
+          <ul class="busyInfo">
+            <li>클린벨 · ㈜ 컨트롤에프</li>
+            <li>대표 : 최광근</li>
+            <li>사업자등록번호 : <span class="lato">585-86-00882</span></li>
+            <li>통신판매업번호 : <span class="lato">2017-인천계양-0583호</span></li>
+            <li class="lato">E-mail : help@cleanbell.co.kr</li>
+            <li class="lato">FAX : 070-5165-8603</li>
+          </ul>
+          <ul class="csCenter">
+            <li>클린벨 고객센터</li>
+            <li class="lato">1600-1701</li>
+            <li>영업시간 : <span class="lato">09:00 ~ 18:00</span><span class="textblock mblock"></span>(공휴일휴무)</li>
+          </ul>
+          <ol>
+            <li><a href="">개인정보취급방침</a></li>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">클린벨 입점문의</a></li>
+          </ol>
+        </div>
+        <div class="f_bottom">
+          <span class="copyright lato">Copyright © CLEANBELL </span>
+          <ul>
+            <li><a href="#none"><img src="../images-v4/snsIcon_f.png" alt="페이스북"></a></li>
+            <li><a href="#none"><img src="../images-v4/snsIcon_b.png" alt="블로그"></a></li>
+            <li><a href="#none"><img src="../images-v4/snsIcon_i.png" alt="인스타그램"></a></li>
+            <li><a href="#none"><img src="../images-v4/snsIcon_y.png" alt="유튜브"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div id="modal_optionChange" class="modalpopup">
+      <div class="inner">
+        <div class="modal_option">
+          <div class="modal_option_top">
+            <h3>검색 조건 변경</h3>
+            <a href="#none" class="modal_option_close"></a>
+          </div>
+          <div class="inputbox">
+            <dl>
+              <dd>
+                <h4>결제방법</h4>
+                <ol class="option1">
+                  <li><input type="checkbox" id="option1_1"><label for="option1_1">현금 결제</label></li>
+                  <li><input type="checkbox" id="option1_2" class="optionCredit"><label for="option1_2">카드 결제</label></li>
+                  <li><input type="checkbox" id="option1_3" class="optionCredit"><label for="option1_3">현금영수증</label></li>
+                  <li><input type="checkbox" id="option1_4" class="optionCredit"><label for="option1_4">세금계산서</label></li>
+                </ol>
+                <span class="addTax">부가세 <span class="lato">10%</span>가 발생합니다.</span>
+              </dd>
+              <dd>
+                <h4>품질</h4>
+                <ol class="option2">
+                  <li><input type="checkbox" id="option2_1"><label for="option2_1">패키지상품 할인</label></li>
+                  <li><input type="checkbox" id="option2_2"><label for="option2_2">가격 흥정</label></li>
+                  <li><input type="checkbox" id="option2_3"><label for="option2_3">친환경세제</label></li>
+                  <li><input type="checkbox" id="option2_4" class="optionQuality"><label for="option2_4">스팀청소</label></li>
+                  <li><input type="checkbox" id="option2_5" class="optionQuality"><label for="option2_5">하루 한집 청소</label></li>
+                </ol>
+                <span class="addPrice1">가격이 약 <span class="lato">5%</span> 상승할 수 있습니다.</span>
+              </dd>
+              <dd>
+                <h4>부가서비스</h4>
+                <ol class="option3">
+                  <li><input type="checkbox" id="option3_1" class="optionService"><label for="option3_1">새집증후군</label></li>
+                  <li><input type="checkbox" id="option3_2"><label for="option3_2">줄눈시공</label></li>
+                  <li><input type="checkbox" id="option3_3"><label for="option3_3">싱크대연마</label></li>
+                  <li><input type="checkbox" id="option3_4" class="optionService"><label for="option3_4">실리콘시공</label></li>
+                  <li><input type="checkbox" id="option3_5"><label for="option3_5">마루 광택</label></li>
+                </ol>
+                <span class="addPrice2">가격이 약 <span class="lato">5%</span> 상승할 수 있습니다.</span>
+              </dd>
+              <dd>
+                <h4>인력구성</h4>
+                <ol class="option4">
+                  <li><input type="checkbox" id="option4_1"><label for="option4_1">내국인만</label></li>
+                  <li><input type="checkbox" id="option4_2"><label for="option4_2">외국인 포함</label></li>
+                  <li><input type="checkbox" id="option4_3"><label for="option4_3">남성팀</label></li>
+                  <li><input type="checkbox" id="option4_4"><label for="option4_4">여성팀</label></li>
+                  <li><input type="checkbox" id="option4_5"><label for="option4_5">혼성팀</label></li>
+                </ol>
+              </dd>
+            </dl>
+          </div>
+          <div class="step_arrow">
+            <dl>
+              <dt><a href="#none" class="modal_option_close">닫기</a></dt>
+              <dd><a href="#none" class="modal_option_close" style="display:block;padding-right:0;">검색적용</a></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_quotation_app" class="modalpopup">
+      <div class="inner">
+        <div class="modal_quotation_top">
+          <h3>견적 신청</h3>
+          <span class="one">2개의 업체에 견적 신청을 하셨습니다.</span>
+          <span class="two">2개의 업체만 비교하시겠습니까?</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="modal_quotation_app_close">아니오</a></dt>
+          <dd><a href="#none" class="go_ok">네</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div id="modal_quotation_ok" class="modalpopup">
+      <div class="inner">
+        <div class="modal_quotation_top">
+          <h3>견적 신청 완료</h3>
+          <span class="two">감사합니다.<span class="textblock mblock">2개의 업체에 견적신청이 완료되었습니다.</span></span>
+          <span class="one">24시간 이내에 청소업체의 견적이 도착할 예정입니다.</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dd><a href="#none" class="close_quotation">확인</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div id="modal_quotation_end" class="modalpopup">
+      <div class="inner">
+        <div class="modal_quotation_top">
+          <h3>예약 마감</h3>
+          <span class="two">신청 하신 조건으로 조회를 해봤지만<span class="textblock mblock"></span>모든 업체가 마감 되었습니다.</span>
+          <div>
+            <ol>
+              <li><span>카드결제</span></li>
+              <li><span>내국인팀</span></li>
+            </ol>
+          </div>
+          <span class="one">위의 조건을 해제하시면 5개의 업체비교가 가능합니다.<span class="textblock mblock"></span>다시 검색을 진행하시겠습니까?</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="close_end">취소</a></dt>
+          <dd><a href="#none" class="go_research">다시검색</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div id="modal_quotation_research" class="modalpopup">
+      <div class="inner">
+        <div class="modal_quotation_top">
+          <h3>검색 종료 확인</h3>
+          <span class="two">여기서 검색을 종료하시겠어요?</span>
+          <span class="one">'계속검색'을 누르시면 이전 화면으로 돌아갑니다.</span>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="close_research">검색종료</a></dt>
+          <dd><a href="#none" class="go_research_again">계속검색</a></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

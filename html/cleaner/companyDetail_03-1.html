@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>클린벨 청소요금계산</title>
+  <link rel="stylesheet" href="../css-v2/reset.css">
+  <link rel="stylesheet" href="../css-v2/jquery-ui.min.css">
+  <link rel="stylesheet" href="../css-v4/slick.css">
+  <link rel="stylesheet" href="../css-v2/default.css">
+  <link rel="stylesheet" href="../css-v4/cleaner.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-640.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub-640.css">
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js-v2/slick.min.js"></script>
+  <script src="../js-v2/cleaner.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <header id="header" style="border-bottom-color:#a4a3a1;">
+      <div class="inner pc">
+        <h1 id="logo" class="center"><a href="cleaner_main.html"><img src="../images-v2/logo.png" alt="클린벨"></a></h1>
+      </div>
+      <div class="comDetailTop">
+        <div class="inner">
+          <a href="#" class="return">돌아가기</a>
+          <h3>청소매니아</h3>
+          <a href="#" class="apply">견적 신청</a>
+        </div>
+      </div>
+    </header>
+    <article id="container" class="subcontainer companyDetail">
+      <div class="companyTop">
+        <div class="inner">
+          <div class="companyImg mobile">
+            <img src="../images-v4/companyLogo.png" alt="">
+          </div>
+          <div class="companyIntro">
+            <h3>청소매니아</h3>
+            <ol class="grade">
+              <li class="grade-1">신규</li>
+              <li class="grade-3 lato">TOP 20</li>
+            </ol>
+            <p>지금껏 이렇게 깨끗한 청소는 없었다</p>
+            <a href="#" class="estimate">견적 신청</a>
+          </div>
+          <div class="companyImg pc">
+            <img src="../images-v4/companySample.jpg" alt="">
+          </div>
+          <div class="companyInfo">
+            <ul>
+              <li><span>상담건수</span><strong class="lato">164</strong></li>
+              <li><span>전체리뷰수</span><strong class="lato">86</strong></li>
+              <li><span class="star star-5-0"></span><strong class="lato">5.0</strong></li>
+            </ul>
+            <h5>클린벨 배터리<a href="#" class="noticeBattery"></a></h5>
+            <ol class="battery">
+              <li class="battery_eco"><span>친환경</span></li>
+              <li class="battery_vet"><span>베테랑</span></li>
+              <li class="battery_sat"><span>만족도</span></li>
+              <li class="battery_edu"><span>교육</span></li>
+            </ol>
+            <div class="tag">
+              <ol>
+                <li><span>#경력2년</span></li>
+                <li><span>#AS 5일</span></li>
+                <li><span>#여성팀</span></li>
+                <li><span>#내국인</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="companyBottom">
+        <div class="inner">
+          <ul class="detailTab">
+            <li><a href="companyDetail_01.html"><h4>업체상세</h4></a></li>
+            <li><a href="companyDetail_02.html"><h4>청소범위</h4></a></li>
+            <li class="active"><a href="#none"><h4>리뷰</h4></a></li>
+          </ul>
+        </div>
+        <div class="detailBoxes">
+          <section id="cleanerReview">
+            <div class="reviewTop">
+              <div class="inner">
+                <dl>
+                  <dd class="reviewTotal">
+                    <h3>
+                      <span>전체리뷰수</span>
+                      <strong class="lato">1,258</strong>
+                    </h3>
+                  </dd>
+                  <dd class="reviewUser">
+                    <h3>
+                      <span>이용고객 경험</span>
+                      <strong class="lato">335</strong>
+                      <small>명이 실제로 서비스를 이용하고 이 업체를 추천합니다.</small>
+                    </h3>
+                  </dd>
+                  <dd class="reviewSlide">
+                    <h3>
+                      <span>청소품질</span>
+                      <strong>만족해요</strong>
+                      <div>
+                        <a href="#" onclick="return false;" class="prev btnQuality"></a>
+                        <ul class="reviewDots">
+                          <li class="rDot one" data-target="0">1</li>
+                          <li class="rDot two" data-target="1">2</li>
+                          <li class="rDot three" data-target="2">3</li>
+                          <li class="rDot four" data-target="3">4</li>
+                        </ul>
+                        <a href="#" onclick="return false;" class="next btnQuality"></a>
+                      </div>
+                    </h3>
+                    <!-- .bar 안의 텍스트 숫자만큼 게이지 채워집니다. ex) 0 => 0%, 5 => 5%, 70 => 70%, 10 => 10% -->
+                    <ul class="qualitySlide">
+                      <li class="item good">
+                        <ol>
+                          <li>
+                            <dl class="qSlideContent">
+                              <dt class="fir bad"></dt>
+                              <dd class="sec">
+                                <span>아쉬워요</span>
+                                <div class="progress">
+                                  <div class="bar">0</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">0<small>명</small></strong>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li>
+                            <dl class="qSlideContent">
+                              <dt class="fir soso"></dt>
+                              <dd class="sec">
+                                <span>보통이요</span>
+                                <div class="progress">
+                                  <div class="bar">5</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">1<small>명</small></strong>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li>
+                            <dl class="qSlideContent">
+                              <dt class="fir nice"></dt>
+                              <dd class="sec">
+                                <span>만족해요</span>
+                                <div class="progress">
+                                  <div class="bar">70</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">17<small>명</small></strong>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li>
+                            <dl class="qSlideContent">
+                              <dt class="fir best"></dt>
+                              <dd class="sec">
+                                <span>최고예요</span>
+                                <div class="progress">
+                                  <div class="bar">10</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">3<small>명</small></strong>
+                              </dd>
+                            </dl>
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="item good">
+                        <ol>
+                          <li>
+                            <dl class="qSlideContent">
+                              <dt class="fir bad"></dt>
+                              <dd class="sec">
+                                <span>아쉬워요</span>
+                                <div class="progress">
+                                  <div class="bar">0</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">0<small>명</small></strong>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li>
+                            <dl class="qSlideContent">
+                              <dt class="fir soso"></dt>
+                              <dd class="sec">
+                                <span>보통이요</span>
+                                <div class="progress">
+                                  <div class="bar">5</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">1<small>명</small></strong>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li>
+                            <dl class="qSlideContent">
+                              <dt class="fir nice"></dt>
+                              <dd class="sec">
+                                <span>만족해요</span>
+                                <div class="progress">
+                                  <div class="bar">70</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">17<small>명</small></strong>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li>
+                            <dl class="qSlideContent">
+                              <dt class="fir best"></dt>
+                              <dd class="sec">
+                                <span>최고예요</span>
+                                <div class="progress">
+                                  <div class="bar">10</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">3<small>명</small></strong>
+                              </dd>
+                            </dl>
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="item good">
+                        <ol>
+                          <li>
+                            <dl class="qSlideContent">
+                              <dt class="fir bad"></dt>
+                              <dd class="sec">
+                                <span>아쉬워요</span>
+                                <div class="progress">
+                                  <div class="bar">0</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">0<small>명</small></strong>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li>
+                            <dl class="qSlideContent">
+                              <dt class="fir soso"></dt>
+                              <dd class="sec">
+                                <span>보통이요</span>
+                                <div class="progress">
+                                  <div class="bar">5</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">1<small>명</small></strong>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li>
+                            <dl class="qSlideContent">
+                              <dt class="fir nice"></dt>
+                              <dd class="sec">
+                                <span>만족해요</span>
+                                <div class="progress">
+                                  <div class="bar">70</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">17<small>명</small></strong>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li>
+                            <dl class="qSlideContent">
+                              <dt class="fir best"></dt>
+                              <dd class="sec">
+                                <span>최고예요</span>
+                                <div class="progress">
+                                  <div class="bar">10</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">3<small>명</small></strong>
+                              </dd>
+                            </dl>
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="item bad">
+                        <ol>
+                          <li>
+                            <dl class="bqSlideContent">
+                              <dd class="sec">
+                                <span>청소품질이 낮았습니다.</span>
+                                <div class="progress">
+                                  <div class="bar">84</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">84%</strong>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li>
+                            <dl class="bqSlideContent">
+                              <dd class="sec">
+                                <span>가격이 너무 비쌉니다.</span>
+                                <div class="progress">
+                                  <div class="bar">1</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">1%</strong>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li>
+                            <dl class="bqSlideContent">
+                              <dd class="sec">
+                                <span>불친절 했습니다.</span>
+                                <div class="progress">
+                                  <div class="bar">1</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">1%</strong>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li>
+                            <dl class="bqSlideContent">
+                              <dd class="sec">
+                                <span>시간약속을 지키지 않았습니다.</span>
+                                <div class="progress">
+                                  <div class="bar">3</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">3%</strong>
+                              </dd>
+                            </dl>
+                          </li>
+                          <li>
+                            <dl class="bqSlideContent">
+                              <dd class="sec">
+                                <span>상담했던 내용과 다르게 청소하였습니다.</span>
+                                <div class="progress">
+                                  <div class="bar">3</div>
+                                </div>
+                              </dd>
+                              <dd class="thr">
+                                <strong class="lato">3%</strong>
+                              </dd>
+                            </dl>
+                          </li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div><!--reviewTop-->
+            <div class="reviewMid">
+              <div class="inner">
+                <canvas id="reviewLine" width="" height=""></canvas>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+                <script>
+                var reviewCanvas = document.getElementById('reviewLine');
+
+                Chart.defaults.global.defaultFontFamily = "Noto";
+                Chart.defaults.global.defaultFontSize = 16;
+                Chart.defaults.scale.ticks.padding = 0;
+
+                var reviewData = {
+                  labels: ['', '8월', '9월', '10월', ''],
+                  datasets: [{
+                    label: "평점",
+                    data : [null, 3.5, 2, 4.5, null],
+                    lineTension: 0,
+                    fill: false,
+                    borderColor: 'rgb(97, 49, 206)',
+                    backgroundColor: 'transparent',
+                    pointBorderColor: 'rgb(97, 49, 206)',
+                    pointBackgroundColor: 'rgba(97, 49, 206, 0.5)',
+                    //borderDash: [5, 5],
+                    pointRadius: 5,
+                    pointHoverRadius: 10,
+                    pointHitRadius: 30,
+                    pointBorderWidth: 2,
+                    pointStyle: 'rectRounded'
+                  }]
+                };
+
+                var reviewOptions = {
+                  responsive: true,
+                  layout: {
+                    padding: {
+                      left: 0,
+                      right: 0,
+                      top: 0,
+                      bottom: 0
+                    }
+                  },
+                  legend: {
+                    display: false
+                  },
+                  scales: {
+                    xAxes: [{
+                      gridLines: {
+                        display: false,
+                        color: '#666'
+                      },
+                      scaleLabel: {
+                        display: false
+                      },
+                      ticks: {
+                        stepSize: 1
+                      }
+                    }],
+                    yAxes: [{
+                      gridLines: {
+                        color: '#666',
+                        borderDash: [2, 5]
+                      },
+                      scaleLabel: {
+                        display: false,
+                        labelString: '평점',
+                        fontColor: 'rgb(97, 49, 206)',
+                        fontStyle: 'bold'
+                      },
+                      ticks: {
+                        min: 0,
+                        max: 5,
+                        stepSize: 1
+                      }
+                    }]
+                  },
+                  title: {
+                    display: true,
+                    position: 'top',
+                    fontSize: 30,
+                    fontWeight: 'bold',
+                    text: '최근 3개월 간 평점'
+                  }
+                };
+
+                var lineChart = new Chart(reviewCanvas, {
+                  type: 'line',
+                  data: reviewData,
+                  options: reviewOptions
+                });
+                </script>
+              </div>
+            </div><!--reviewMid-->
+            <!--리뷰 10개 이상-->
+            <div class="reviewBot">
+              <div class="review reviewBest">
+                <div class="inner">
+                  <h3><span class="lato">BEST</span> 리뷰</h3>
+                  <h4><span>최고예요</span></h4>
+                  <div class="clearfix">
+                    <dl class="reviewL">
+                      <dt>9시 전에 도착 하셔서 오후 6시 넘게 일하시고 가셨네요. 역시 후기가 너무 좋아서 선택했는데 저도 저절로 쓰게되네요. 애쓰셨습니다 감사합니다!</dt>
+                      <dd>입주청소<span class="lato">2019-01-06</span></dd>
+                      <dd>
+                        <ol>
+                          <li><span>지역</span><strong>경기도 안양시 만안구</strong></li>
+                          <li><span>구조</span><strong>아파트</strong></li>
+                          <li><span>평수</span><strong><span class="lato">32</span>평</strong></li>
+                        </ol>
+                      </dd>
+                    </dl>
+                    <dl class="reviewR">
+                      <dt><img src="../images-v4/clientImg.png" alt=""></dt>
+                      <dd>정**</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div><!--review reviewBest-->
+              <div class="reviewDefault">
+                <div class="inner">
+                  <div class="reviewBoxes">
+                    <div id="reviewGood">
+                      <div class="review reviewNice">
+                        <div class="inner">
+                          <h4><span>만족해요</span></h4>
+                          <div class="clearfix">
+                            <dl class="reviewL">
+                              <dt>모든 직원이 친절하고, 실력 및 서비스도 출중합니다. 추천드려요.</dt>
+                              <dd>입주청소<span class="lato">2019-01-06</span></dd>
+                              <dd>
+                                <ol>
+                                  <li><span>지역</span><strong>경기도 안양시 만안구</strong></li>
+                                  <li><span>구조</span><strong>아파트</strong></li>
+                                  <li><span>평수</span><strong><span class="lato">32</span>평</strong></li>
+                                </ol>
+                              </dd>
+                            </dl>
+                            <dl class="reviewR">
+                              <dt><img src="../images-v4/clientImg.png" alt=""></dt>
+                              <dd>정**</dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div><!--review reviewNice-->
+                    </div><!--reviewGood-->
+                  </div><!--reviewBoxes-->
+                  <div class="reviewBoxes">
+                    <div id="reviewGood">
+                      <div class="review reviewNice">
+                        <div class="inner">
+                          <h4><span>만족해요</span></h4>
+                          <div class="clearfix">
+                            <dl class="reviewL">
+                              <dt>모든 직원이 친절하고, 실력 및 서비스도 출중합니다. 추천드려요.</dt>
+                              <dd>입주청소<span class="lato">2019-01-06</span></dd>
+                              <dd>
+                                <ol>
+                                  <li><span>지역</span><strong>경기도 안양시 만안구</strong></li>
+                                  <li><span>구조</span><strong>아파트</strong></li>
+                                  <li><span>평수</span><strong><span class="lato">32</span>평</strong></li>
+                                </ol>
+                              </dd>
+                            </dl>
+                            <dl class="reviewR">
+                              <dt><img src="../images-v4/clientImg.png" alt=""></dt>
+                              <dd>정**</dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div><!--review reviewNice-->
+                    </div><!--reviewGood-->
+                  </div><!--reviewBoxes-->
+                  <div class="reviewPage pc">
+                    <a href="#none" class="arrowL"></a>
+                    <div><strong class="lato">1</strong> / <span class="lato">5</span></div>
+                    <a href="#none" class="arrowR"></a>
+                  </div>
+                  <a href="#none" class="reviewMore mobile"><span>후기 더 불러오기</span></a>
+                </div>
+              </div>
+            </div><!--reviewBot-->
+          </section>
+        </div>
+      </div>
+      <div class="floatBottom mobile">
+        <ul>
+          <li class="call"><span class="callTip">전화상담은 여기서!</span><a href="#">전화하기</a></li>
+          <li class="apply"><a href="#">견적신청</a></li>
+        </ul>
+      </div>
+    </article>
+    <footer>
+      <div class="inner">
+        <span class="caution">클린벨은 통신판매중개자로서 청소서비스의 주거래 당사자가 아니며, 청소서비스의 분쟁과 계약사항은 회원사와 당사자간에 있습니다.</span>
+        <div class="f_contents">
+          <ul class="busyInfo">
+            <li>클린벨 · ㈜ 컨트롤에프</li>
+            <li>대표 : 최광근</li>
+            <li>사업자등록번호 : <span class="lato">585-86-00882</span></li>
+            <li>통신판매업번호 : <span class="lato">2017-인천계양-0583호</span></li>
+            <li class="lato">E-mail : help@cleanbell.co.kr</li>
+            <li class="lato">FAX : 070-5165-8603</li>
+          </ul>
+          <ul class="csCenter">
+            <li>클린벨 고객센터</li>
+            <li class="lato">1600-1701</li>
+            <li>영업시간 : <span class="lato">09:00 ~ 18:00</span><span class="textblock mblock"></span>(공휴일휴무)</li>
+          </ul>
+          <ol>
+            <li><a href="">개인정보취급방침</a></li>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">클린벨 입점문의</a></li>
+          </ol>
+        </div>
+        <div class="f_bottom">
+          <span class="copyright lato">Copyright © CLEANBELL </span>
+          <ul>
+            <li><a href="#none"><img src="../images-v4/snsIcon_f.png" alt="페이스북"></a></li>
+            <li><a href="#none"><img src="../images-v4/snsIcon_b.png" alt="블로그"></a></li>
+            <li><a href="#none"><img src="../images-v4/snsIcon_i.png" alt="인스타그램"></a></li>
+            <li><a href="#none"><img src="../images-v4/snsIcon_y.png" alt="유튜브"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div id="modal_battery" class="modalpopup">
+      <div class="inner">
+        <a href="#none" class="close_battery"><img src="../images-v4/close_battery.png" alt=""></a>
+        <div class="battery_header">
+          <h3>클린벨 배터리란?</h3>
+          <p>클린벨에서 정한 4가지 기준으로 업체를 구분한것 입니다.<span class="textblock mblock"></span>(배터리는 실시간으로 변경됩니다)</p>
+        </div>
+        <div class="battery_content">
+          <ul>
+            <li class="battery_eco">
+              <dl>
+                <dt>친환경 배터리</dt>
+                <dd>
+                  <span>스팀장비와 친환경세제를 사용</span>하는 업체입니다. <strong>신생아, 아토피 등 예민한 고객이 선호</strong>합니다.<small>(현장 환경에 따라 달라질 수 있습니다)</small>
+                </dd>
+              </dl>
+            </li>
+            <li class="battery_vet">
+              <dl>
+                <dt>베테랑 배터리</dt>
+                <dd>
+                  <span>다양한 경험과 오랜 경력</span>을 가진 청소 업체입니다. <strong>청소하기 어려운 현장의 고객이 선호</strong>합니다.
+                </dd>
+              </dl>
+            </li>
+            <li class="battery_sat">
+              <dl>
+                <dt>만족도 배터리</dt>
+                <dd>
+                  <span>최근 한달간 청소서비스를 경험한 고객님들의 만족도</span>를 표현한 배터리입니다.
+                </dd>
+              </dl>
+            </li>
+            <li class="battery_edu">
+              <dl>
+                <dt>교육 배터리</dt>
+                <dd>
+                  고객님들께 좋은 서비스를 제공하기 위한 <span>클린벨 교육 시스템을 이수한 청소업체</span>로 청소 전문업체의 기본을 다진 청소업체입니다.
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="modal_app" class="modalpopup">
+      <div class="inner small">
+        <div class="modal_quotation_top app">
+          <h3>견적 신청<small></small></h3>
+          <div id="addTip-small" class="addTip">
+            <h4>견적신청이란?</h4>
+            <span>고객님이 입력하신 정보를 기반으로 선택하신 청소업체에게 청소서비스 예상가격을 요청합니다.</span>
+          </div>
+          <ul>
+            <li><input type="checkbox" id="appCheck-1" class="appCheck"><label for="appCheck-1"><span></span> <strong>견적만 받고 싶어요.<small>선택하신 업체에게 <s>견적 비용만 받아봅니다.</s></small></strong></label></li>
+            <li><input type="checkbox" id="appCheck-2" class="appCheck"><label for="appCheck-2"><span></span> <strong>견적과 상담 모두 받고 싶어요.<small>선택하신 업체에게 <s>견적 비용도 받고 전화로<span class="textblock mblock"></span>상담을 요청</s>합니다.</small></strong></label></li>
+          </ul>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#none" class="close_end">취소</a></dt>
+          <dd><a href="#none" class="go_ok">견적신청</a></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

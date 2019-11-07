@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>클린벨 청소요금계산</title>
+  <link rel="stylesheet" href="../css-v2/reset.css">
+  <link rel="stylesheet" href="../css-v2/jquery-ui.min.css">
+  <link rel="stylesheet" href="../css-v2/owl.carousel.css">
+  <link rel="stylesheet" href="../css-v2/default.css">
+  <link rel="stylesheet" href="../css-v4/cleaner.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-640.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub.css">
+  <link rel="stylesheet" href="../css-v4/cleaner-sub-640.css">
+  <script src="../js/jquery-1.11.3.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js-v2/cleaner.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <header id="header" style="border-bottom-color:#a4a3a1;">
+      <div class="inner pc">
+        <h1 id="logo" class="center"><a href="cleaner_main.html"><img src="../images-v2/logo.png" alt="클린벨"></a></h1>
+      </div>
+      <div class="appDetailTop">
+        <div class="inner">
+          <a href="#" class="return">돌아가기</a>
+          <h3>견적 신청 업체 상세 정보</h3>
+        </div>
+      </div>
+    </header>
+    <article id="container" class="subcontainer companyDetail">
+      <div class="appTop">
+        <div class="inner">
+          <div class="appImg pc">
+            <img src="../images-v4/companySample.jpg" alt="">
+          </div>
+          <div class="appInfo">
+            <h3>청소매니아</h3>
+            <ol class="grade pc">
+              <li class="grade-1">신규</li>
+              <li class="grade-3 lato">TOP 20</li>
+            </ol>
+            <p class="pc">지금껏 이렇게 깨끗한 청소는 없었다</p>
+            <span class="star star-5-0"></span><strong class="score lato">5.0</strong>
+            <ul class="mobile">
+              <li>상담건수<strong class="lato">1,000+</strong></li>
+              <li>리뷰<strong class="lato">109</strong></li>
+            </ul>
+            <div class="appInfoSide">
+              <dl>
+                <dt>예상 견적<strong class="lato">340,000<small>원</small></strong></dt>
+                <dd>
+                  <ul>
+                    <li class="call"><span class="callTip">전화상담은 여기서!</span><a href="#" onclick="return false;">전화하기</a></li>
+                    <li class="apply"><a href="#" onclick="return false;">상담신청</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="companyBottom applyfixbottom">
+        <div class="inner">
+          <ul class="detailTab">
+            <li><a href="applyDetail_01.html"><h4>업체상세</h4></a></li>
+            <li class="active"><a href="#" onclick="return false;"><h4>청소범위</h4></a></li>
+            <li><a href="applyDetail_03.html"><h4>리뷰</h4></a></li>
+          </ul>
+        </div>
+        <div class="detailBoxes app">
+          <div id="cleanerRange">
+            <div class="myTip">
+              <div class="inner">
+                <dl>
+                  <dt>클린벨 <span>TIP</span></dt>
+                  <dd>평점 우수 업체의 경우 예약이 빠르게 진행됩니다. 상담전화를 통해 예약 가능여부를 파악하는게 좋습니다.</dd>
+                </dl>
+              </div>
+            </div><!--myTip-->
+            <div class="rangeTag blind_m">
+              <div class="inner">
+                <ul class="rangeTab">
+                  <li><a href="#none" id="room" class="structTab active" data-rel="range01"><span>방</span></a></li>
+                  <li><a href="#none" id="kitchen" class="structTab" data-rel="range02"><span>주방</span></a></li>
+                  <li><a href="#none" id="bath" class="structTab" data-rel="range03"><span>화장실</span></a></li>
+                  <li><a href="#none" id="door" class="structTab" data-rel="range04"><span>현관</span></a></li>
+                  <li><a href="#none" id="balcony" class="structTab" data-rel="range05"><span>발코니</span></a></li>
+                  <li><a href="#none" id="living" class="structTab" data-rel="range06"><span>거실</span></a></li>
+                </ul>
+                <div class="structAll">
+                  <div id="range01">
+                    <dl class="rangeItem">
+                      <dd class="on">문(문틀, 경첩)</dd>
+                      <dd>천장(스프링쿨러, 에어컨, 벽지)</dd>
+                      <dd class="on">천장몰딩</dd>
+                      <dd>등탈거</dd>
+                      <dd class="on">벽지먼지제거</dd>
+                      <dd>스위치</dd>
+                      <dd class="on">콘센트</dd>
+                      <dd>창문</dd>
+                      <dd class="on">창틀먼지제거</dd>
+                      <dd>창틀얼룩제거(시멘트, 페인트제거)</dd>
+                      <dd class="on">유리창 실리콘 곰팡이제거</dd>
+                      <dd>방충망</dd>
+                      <dd class="on">바닥몰딩</dd>
+                      <dd>바닥</dd>
+                      <dd class="on">바닥얼룩</dd>
+                      <dd>붙박이장 선반 탈거</dd>
+                      <dd class="on">붙박이장 수납장 탈거</dd>
+                    </dl>
+                  </div>
+                  <div id="range02">
+                    <dl class="rangeItem">
+                      <dd>문(문틀, 경첩)</dd>
+                      <dd class="on">천장(스프링쿨러, 에어컨, 벽지)</dd>
+                      <dd>천장몰딩</dd>
+                      <dd class="on">등탈거</dd>
+                      <dd>벽지먼지제거</dd>
+                      <dd class="on">스위치</dd>
+                      <dd>콘센트</dd>
+                      <dd class="on">창문</dd>
+                      <dd>창틀먼지제거</dd>
+                      <dd class="on">창틀얼룩제거(시멘트, 페인트제거)</dd>
+                      <dd>유리창 실리콘 곰팡이제거</dd>
+                      <dd class="on">방충망</dd>
+                      <dd>바닥몰딩</dd>
+                      <dd class="on">바닥</dd>
+                      <dd>바닥얼룩</dd>
+                      <dd class="on">붙박이장 선반 탈거</dd>
+                      <dd>붙박이장 수납장 탈거</dd>
+                    </dl>
+                  </div>
+                  <div id="range03">
+                    <dl class="rangeItem">
+                      <dd class="on">문(문틀, 경첩)</dd>
+                      <dd>천장(스프링쿨러, 에어컨, 벽지)</dd>
+                      <dd class="on">천장몰딩</dd>
+                      <dd>등탈거</dd>
+                      <dd class="on">벽지먼지제거</dd>
+                      <dd>스위치</dd>
+                      <dd class="on">콘센트</dd>
+                      <dd>창문</dd>
+                      <dd class="on">창틀먼지제거</dd>
+                      <dd>창틀얼룩제거(시멘트, 페인트제거)</dd>
+                      <dd class="on">유리창 실리콘 곰팡이제거</dd>
+                      <dd>방충망</dd>
+                      <dd class="on">바닥몰딩</dd>
+                      <dd>바닥</dd>
+                      <dd class="on">바닥얼룩</dd>
+                      <dd>붙박이장 선반 탈거</dd>
+                      <dd class="on">붙박이장 수납장 탈거</dd>
+                    </dl>
+                  </div>
+                  <div id="range04">
+                    <dl class="rangeItem">
+                      <dd>문(문틀, 경첩)</dd>
+                      <dd class="on">천장(스프링쿨러, 에어컨, 벽지)</dd>
+                      <dd>천장몰딩</dd>
+                      <dd class="on">등탈거</dd>
+                      <dd>벽지먼지제거</dd>
+                      <dd class="on">스위치</dd>
+                      <dd>콘센트</dd>
+                      <dd class="on">창문</dd>
+                      <dd>창틀먼지제거</dd>
+                      <dd class="on">창틀얼룩제거(시멘트, 페인트제거)</dd>
+                      <dd>유리창 실리콘 곰팡이제거</dd>
+                      <dd class="on">방충망</dd>
+                      <dd>바닥몰딩</dd>
+                      <dd class="on">바닥</dd>
+                      <dd>바닥얼룩</dd>
+                      <dd class="on">붙박이장 선반 탈거</dd>
+                      <dd>붙박이장 수납장 탈거</dd>
+                    </dl>
+                  </div>
+                  <div id="range05">
+                    <dl class="rangeItem">
+                      <dd class="on">문(문틀, 경첩)</dd>
+                      <dd>천장(스프링쿨러, 에어컨, 벽지)</dd>
+                      <dd class="on">천장몰딩</dd>
+                      <dd>등탈거</dd>
+                      <dd class="on">벽지먼지제거</dd>
+                      <dd>스위치</dd>
+                      <dd class="on">콘센트</dd>
+                      <dd>창문</dd>
+                      <dd class="on">창틀먼지제거</dd>
+                      <dd>창틀얼룩제거(시멘트, 페인트제거)</dd>
+                      <dd class="on">유리창 실리콘 곰팡이제거</dd>
+                      <dd>방충망</dd>
+                      <dd class="on">바닥몰딩</dd>
+                      <dd>바닥</dd>
+                      <dd class="on">바닥얼룩</dd>
+                      <dd>붙박이장 선반 탈거</dd>
+                      <dd class="on">붙박이장 수납장 탈거</dd>
+                    </dl>
+                  </div>
+                  <div id="range06">
+                    <dl class="rangeItem">
+                      <dd>문(문틀, 경첩)</dd>
+                      <dd class="on">천장(스프링쿨러, 에어컨, 벽지)</dd>
+                      <dd>천장몰딩</dd>
+                      <dd class="on">등탈거</dd>
+                      <dd>벽지먼지제거</dd>
+                      <dd class="on">스위치</dd>
+                      <dd>콘센트</dd>
+                      <dd class="on">창문</dd>
+                      <dd>창틀먼지제거</dd>
+                      <dd class="on">창틀얼룩제거(시멘트, 페인트제거)</dd>
+                      <dd>유리창 실리콘 곰팡이제거</dd>
+                      <dd class="on">방충망</dd>
+                      <dd>바닥몰딩</dd>
+                      <dd class="on">바닥</dd>
+                      <dd>바닥얼룩</dd>
+                      <dd class="on">붙박이장 선반 탈거</dd>
+                      <dd>붙박이장 수납장 탈거</dd>
+                    </dl>
+                  </div>
+                </div><!--rangeBoxes-->
+              </div>
+            </div>
+            <div class="rangeTag blind_pc">
+              <div class="inner">
+                <div class="rangeBtn">
+                  <a href="#none" id="room" class="rangeTog on" data-rel="rangeRoom"><span>방</span></a>
+                  <dl class="rangeItem on" id="rangeRoom">
+                    <dd class="on">문(문틀, 경첩)</dd>
+                    <dd>천장(스프링쿨러, 에어컨, 벽지)</dd>
+                    <dd class="on">천장몰딩</dd>
+                    <dd>등탈거</dd>
+                    <dd class="on">벽지먼지제거</dd>
+                    <dd>스위치</dd>
+                    <dd class="on">콘센트</dd>
+                    <dd>창문</dd>
+                    <dd class="on">창틀먼지제거</dd>
+                    <dd>창틀얼룩제거(시멘트, 페인트제거)</dd>
+                    <dd class="on">유리창 실리콘 곰팡이제거</dd>
+                    <dd>방충망</dd>
+                    <dd class="on">바닥몰딩</dd>
+                    <dd>바닥</dd>
+                    <dd class="on">바닥얼룩</dd>
+                    <dd>붙박이장 선반 탈거</dd>
+                    <dd class="on">붙박이장 수납장 탈거</dd>
+                  </dl>
+                </div>
+                <div class="rangeBtn">
+                  <a href="#none" id="kitchen" class="rangeTog" data-rel="rangeKitchen"><span>주방</span></a>
+                  <dl class="rangeItem" id="rangeKitchen">
+                    <dd class="on">문(문틀, 경첩)</dd>
+                    <dd>천장(스프링쿨러, 에어컨, 벽지)</dd>
+                    <dd class="on">천장몰딩</dd>
+                    <dd>등탈거</dd>
+                    <dd class="on">벽지먼지제거</dd>
+                    <dd>스위치</dd>
+                    <dd class="on">콘센트</dd>
+                    <dd>창문</dd>
+                    <dd class="on">창틀먼지제거</dd>
+                    <dd>창틀얼룩제거(시멘트, 페인트제거)</dd>
+                    <dd class="on">유리창 실리콘 곰팡이제거</dd>
+                    <dd>방충망</dd>
+                    <dd class="on">바닥몰딩</dd>
+                    <dd>바닥</dd>
+                    <dd class="on">바닥얼룩</dd>
+                    <dd>붙박이장 선반 탈거</dd>
+                    <dd class="on">붙박이장 수납장 탈거</dd>
+                  </dl>
+                </div>
+                <div class="rangeBtn">
+                  <a href="#none" id="bath" class="rangeTog" data-rel="rangeBath"><span>화장실</span></a>
+                  <dl class="rangeItem" id="rangeBath">
+                    <dd class="on">문(문틀, 경첩)</dd>
+                    <dd>천장(스프링쿨러, 에어컨, 벽지)</dd>
+                    <dd class="on">천장몰딩</dd>
+                    <dd>등탈거</dd>
+                    <dd class="on">벽지먼지제거</dd>
+                    <dd>스위치</dd>
+                    <dd class="on">콘센트</dd>
+                    <dd>창문</dd>
+                    <dd class="on">창틀먼지제거</dd>
+                    <dd>창틀얼룩제거(시멘트, 페인트제거)</dd>
+                    <dd class="on">유리창 실리콘 곰팡이제거</dd>
+                    <dd>방충망</dd>
+                    <dd class="on">바닥몰딩</dd>
+                    <dd>바닥</dd>
+                    <dd class="on">바닥얼룩</dd>
+                    <dd>붙박이장 선반 탈거</dd>
+                    <dd class="on">붙박이장 수납장 탈거</dd>
+                  </dl>
+                </div>
+                <div class="rangeBtn">
+                  <a href="#none" id="door" class="rangeTog" data-rel="rangeDoor"><span>현관</span></a>
+                  <dl class="rangeItem" id="rangeDoor">
+                    <dd class="on">문(문틀, 경첩)</dd>
+                    <dd>천장(스프링쿨러, 에어컨, 벽지)</dd>
+                    <dd class="on">천장몰딩</dd>
+                    <dd>등탈거</dd>
+                    <dd class="on">벽지먼지제거</dd>
+                    <dd>스위치</dd>
+                    <dd class="on">콘센트</dd>
+                    <dd>창문</dd>
+                    <dd class="on">창틀먼지제거</dd>
+                    <dd>창틀얼룩제거(시멘트, 페인트제거)</dd>
+                    <dd class="on">유리창 실리콘 곰팡이제거</dd>
+                    <dd>방충망</dd>
+                    <dd class="on">바닥몰딩</dd>
+                    <dd>바닥</dd>
+                    <dd class="on">바닥얼룩</dd>
+                    <dd>붙박이장 선반 탈거</dd>
+                    <dd class="on">붙박이장 수납장 탈거</dd>
+                  </dl>
+                </div>
+                <div class="rangeBtn">
+                  <a href="#none" id="balcony" class="rangeTog" data-rel="rangeBalcony"><span>발코니</span></a>
+                  <dl class="rangeItem" id="rangeBalcony">
+                    <dd class="on">문(문틀, 경첩)</dd>
+                    <dd>천장(스프링쿨러, 에어컨, 벽지)</dd>
+                    <dd class="on">천장몰딩</dd>
+                    <dd>등탈거</dd>
+                    <dd class="on">벽지먼지제거</dd>
+                    <dd>스위치</dd>
+                    <dd class="on">콘센트</dd>
+                    <dd>창문</dd>
+                    <dd class="on">창틀먼지제거</dd>
+                    <dd>창틀얼룩제거(시멘트, 페인트제거)</dd>
+                    <dd class="on">유리창 실리콘 곰팡이제거</dd>
+                    <dd>방충망</dd>
+                    <dd class="on">바닥몰딩</dd>
+                    <dd>바닥</dd>
+                    <dd class="on">바닥얼룩</dd>
+                    <dd>붙박이장 선반 탈거</dd>
+                    <dd class="on">붙박이장 수납장 탈거</dd>
+                  </dl>
+                </div>
+                <div class="rangeBtn">
+                  <a href="#none" id="living" class="rangeTog" data-rel="rangeLiving"><span>거실</span></a>
+                  <dl class="rangeItem" id="rangeLiving">
+                    <dd class="on">문(문틀, 경첩)</dd>
+                    <dd>천장(스프링쿨러, 에어컨, 벽지)</dd>
+                    <dd class="on">천장몰딩</dd>
+                    <dd>등탈거</dd>
+                    <dd class="on">벽지먼지제거</dd>
+                    <dd>스위치</dd>
+                    <dd class="on">콘센트</dd>
+                    <dd>창문</dd>
+                    <dd class="on">창틀먼지제거</dd>
+                    <dd>창틀얼룩제거(시멘트, 페인트제거)</dd>
+                    <dd class="on">유리창 실리콘 곰팡이제거</dd>
+                    <dd>방충망</dd>
+                    <dd class="on">바닥몰딩</dd>
+                    <dd>바닥</dd>
+                    <dd class="on">바닥얼룩</dd>
+                    <dd>붙박이장 선반 탈거</dd>
+                    <dd class="on">붙박이장 수납장 탈거</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <footer>
+      <div class="inner">
+        <span class="caution">클린벨은 통신판매중개자로서 청소서비스의 주거래 당사자가 아니며, 청소서비스의 분쟁과 계약사항은 회원사와 당사자간에 있습니다.</span>
+        <div class="f_contents">
+          <ul class="busyInfo">
+            <li>클린벨 · ㈜ 컨트롤에프</li>
+            <li>대표 : 최광근</li>
+            <li>사업자등록번호 : <span class="lato">585-86-00882</span></li>
+            <li>통신판매업번호 : <span class="lato">2017-인천계양-0583호</span></li>
+            <li class="lato">E-mail : help@cleanbell.co.kr</li>
+            <li class="lato">FAX : 070-5165-8603</li>
+          </ul>
+          <ul class="csCenter">
+            <li>클린벨 고객센터</li>
+            <li class="lato">1600-1701</li>
+            <li>영업시간 : <span class="lato">09:00 ~ 18:00</span><span class="textblock mblock"></span>(공휴일휴무)</li>
+          </ul>
+          <ol>
+            <li><a href="">개인정보취급방침</a></li>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">클린벨 입점문의</a></li>
+          </ol>
+        </div>
+        <div class="f_bottom">
+          <span class="copyright lato">Copyright © CLEANBELL </span>
+          <ul>
+            <li><a href="#"><img src="../images-v4/snsIcon_f.png" alt="페이스북"></a></li>
+            <li><a href="#"><img src="../images-v4/snsIcon_b.png" alt="블로그"></a></li>
+            <li><a href="#"><img src="../images-v4/snsIcon_i.png" alt="인스타그램"></a></li>
+            <li><a href="#"><img src="../images-v4/snsIcon_y.png" alt="유튜브"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div id="modal_app" class="modalpopup">
+      <div class="inner small">
+        <div class="modal_quotation_top app">
+          <h3>견적 신청<small></small></h3>
+          <div id="addTip-small" class="addTip">
+            <h4>견적신청이란?</h4>
+            <span>고객님이 입력하신 정보를 기반으로 선택하신 청소업체에게 청소서비스 예상가격을 요청합니다.</span>
+          </div>
+          <ul>
+            <li><input type="checkbox" id="appCheck-1" class="appCheck"><label for="appCheck-1"><span></span> <strong>견적만 받고 싶어요.<small>선택하신 업체에게 <s>견적 비용만 받아봅니다.</s></small></strong></label></li>
+            <li><input type="checkbox" id="appCheck-2" class="appCheck"><label for="appCheck-2"><span></span> <strong>견적과 상담 모두 받고 싶어요.<small>선택하신 업체에게 <s>견적 비용도 받고 전화로<span class="textblock mblock"></span>상담을 요청</s>합니다.</small></strong></label></li>
+          </ul>
+        </div>
+        <dl class="modal_quotation_bottom">
+          <dt><a href="#" class="close_end">취소</a></dt>
+          <dd><a href="#" class="go_ok">견적신청</a></dd>
+        </dl>
+      </div>
+    </div>
+  </div><!--#wrap-->
+</body>
+</html>
